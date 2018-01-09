@@ -45,13 +45,8 @@ def main():
         print('\n')
         pprint(data.events(session_id))'''
 
-    clubs = data.clubs()
-    for club in clubs:
-        club_id = club['code']
-        print('\n')
-        pprint(data.athletes(club_id))
-        break
-
+    # pprint(data.athletes())
+    pprint(data.results(135))
 
 if __name__ == '__main__':
     main()

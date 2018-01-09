@@ -2,6 +2,7 @@
 
 # Standard imports
 import xml.etree.ElementTree as ET
+from copy import deepcopy
 import sys
 from pprint import pprint
 
@@ -70,11 +71,11 @@ class File(object):
             data.append(node.attrib)
         return data
 
-    def events(self, session_id):
+    def events(self):
         """Get all event information.
 
         Args:
-            session_id: Session ID number
+            None
 
         Returns:
             data: List of dicts with information
@@ -83,27 +84,33 @@ class File(object):
         # Get data
         data = []
 
-        # Get event data
-        for event in self._root.findall(
-                './MEETS/MEET/SESSIONS/SESSION[@number="{}"]/EVENTS/EVENT'
-                ''.format(session_id)):
-            # Store event attributes
-            event_id = event.attrib['eventid']
-            item = {}
-            for key, value in event.attrib.items():
-                item[key] = value
+        # Get sesssions
+        sessions = self.sessions()
+        for session in sessions:
+            session_id = session['number']
 
-            # Store swimstyle attributes for the event
-            for swimstyle in self._root.findall(
-                    './MEETS/MEET/SESSIONS/SESSION/EVENTS/EVENT'
-                    '[@eventid="{}"]/SWIMSTYLE'.format(event_id)):
-                for key, value in swimstyle.attrib.items():
+            # Get event data
+            for event in self._root.findall(
+                    './MEETS/MEET/SESSIONS/SESSION[@number="{}"]/EVENTS/EVENT'
+                    ''.format(session_id)):
+                # Store event attributes
+                event_id = event.attrib['eventid']
+                item = {}
+                item['sessionid'] = session_id
+                for key, value in event.attrib.items():
                     item[key] = value
-            data.append(item)
+
+                # Store swimstyle attributes for the event
+                for swimstyle in self._root.findall(
+                        './MEETS/MEET/SESSIONS/SESSION/EVENTS/EVENT'
+                        '[@eventid="{}"]/SWIMSTYLE'.format(event_id)):
+                    for key, value in swimstyle.attrib.items():
+                        item[key] = value
+                data.append(item)
 
         return data
 
-    def event(self, session_id, event_id):
+    def event(self, event_id):
         """Get event information.
 
         Args:
@@ -116,7 +123,7 @@ class File(object):
         """
         # Get data
         data = None
-        for event in self.events(session_id):
+        for event in self.events():
             if int(event_id) == int(event['eventid']):
                 data = event
         return data
@@ -137,11 +144,11 @@ class File(object):
             data.append(node.attrib)
         return data
 
-    def athletes(self, club_id):
+    def athletes(self):
         """Get all athlete information.
 
         Args:
-            club_id: Session ID number
+            None
 
         Returns:
             data: List of dicts with information
@@ -150,26 +157,36 @@ class File(object):
         # Get data
         data = []
 
-        # Get athlete data
-        for athlete in self._root.findall(
-                './MEETS/MEET/CLUBS/CLUB[@code="{}"]/ATHLETES/ATHLETE'
-                ''.format(club_id)):
-            # Store athlete attributes
-            athlete_id = athlete.attrib['athleteid']
-            item = {}
-            for key, value in athlete.attrib.items():
-                item[key] = value
+        clubs = self.clubs()
+        for club in clubs:
+            club_id = club['code']
 
-            # Store entry attributes for the athlete
-            entries = self._athlete_entries(club_id, athlete_id)
-            item['entries'] = [entries]
+            # Get athlete data
+            for athlete in self._root.findall(
+                    './MEETS/MEET/CLUBS/CLUB[@code="{}"]/ATHLETES/ATHLETE'
+                    ''.format(club_id)):
+                # Store athlete attributes
+                athlete_id = athlete.attrib['athleteid']
+                item = {}
 
-            # Store result attributes for the athlete
-            results = self._athlete_results(club_id, athlete_id)
-            item['results'] = [results]
+                # Store vitals for athtlete
+                vitals = {}
+                vitals['clubid'] = club_id
+                for key, value in athlete.attrib.items():
+                    vitals[key] = value
+                item['vitals'] = vitals
 
-            data.append(item)
-            break
+                # Store entry attributes for the athlete
+                entries = self._athlete_entries(club_id, athlete_id)
+                item['entries'] = entries
+
+                # Store result attributes for the athlete
+                results = self._athlete_results(club_id, athlete_id)
+                item['results'] = results
+
+                data.append(item)
+                '''    break
+                break'''
 
         return data
 
@@ -177,7 +194,7 @@ class File(object):
         """Get all athlete information.
 
         Args:
-            club_id: Session ID number
+            club_id: Club ID number
             athlete_id: Athlete ID
 
         Returns:
@@ -211,7 +228,7 @@ class File(object):
         """Get all athlete information.
 
         Args:
-            club_id: Session ID number
+            club_id: Club ID number
             athlete_id: Athlete ID
 
         Returns:
@@ -230,6 +247,16 @@ class File(object):
             for key, value in result.attrib.items():
                 attributes[key] = value
 
+            # Get the swimtime in seconds
+            swimtime = attributes['swimtime']
+            if ':' in swimtime:
+                (hours, minutes, seconds) = swimtime.split(':')
+                total_seconds = (int(hours) * 3600) + (
+                    int(minutes) * 60) + float(seconds)
+                attributes['time'] = '{}'.format(total_seconds)
+            else:
+                attributes['time'] = None
+
             # Get SPLITS data by additionally filtering by eventid
             attributes['splits'] = []
             event_id = attributes['eventid']
@@ -247,12 +274,11 @@ class File(object):
 
         return data
 
-    def athlete(self, club_id, athlete_id):
+    def athlete(self, athlete_id):
         """Get athlete information.
 
         Args:
-            club_id: Session ID number
-            athlete_id: Event ID number
+            athlete_id: Athlete ID number
 
         Returns:
             data: dict with information. None if not found
@@ -260,7 +286,36 @@ class File(object):
         """
         # Get data
         data = None
-        for athlete in self.athletes(club_id):
-            if int(athlete_id) == int(athlete['athleteid']):
+        for athlete in self.athletes():
+            if int(athlete_id) == int(athlete['vitals']['athleteid']):
                 data = athlete
+
+        return data
+
+    def results(self, event_id):
+        """Get results for an event.
+
+        Args:
+            event_id: Event ID number
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Initialize key variables
+        data = []
+
+        # Get athlete data for event
+        athletes = self.athletes()
+
+        for athlete in athletes:
+            if 'results' in athlete:
+                for event in athlete['results']:
+                    if 'eventid' in event:
+                        if int(event['eventid']) == int(event_id):
+                            result = {}
+                            result['vitals'] = athlete['vitals']
+                            result['results'] = [event]
+                            data.append(result)
+
         return data
