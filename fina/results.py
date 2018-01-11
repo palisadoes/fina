@@ -2,8 +2,7 @@
 
 # Standard imports
 import xml.etree.ElementTree as ET
-from copy import deepcopy
-import sys
+import operator
 from pprint import pprint
 
 # Fina imports
@@ -71,11 +70,12 @@ class File(object):
             data.append(node.attrib)
         return data
 
-    def events(self):
+    def events(self, stage=None):
         """Get all event information.
 
         Args:
-            None
+            stage: Round of event
+
 
         Returns:
             data: List of dicts with information
@@ -99,6 +99,13 @@ class File(object):
                 item['sessionid'] = session_id
                 for key, value in event.attrib.items():
                     item[key] = value
+
+                # Skip rounds depending on 'stage' filter
+                if stage is None:
+                    pass
+                else:
+                    if item['round'].upper() != stage.upper():
+                        continue
 
                 # Store swimstyle attributes for the event
                 for swimstyle in self._root.findall(
@@ -185,8 +192,6 @@ class File(object):
                 item['results'] = results
 
                 data.append(item)
-                '''    break
-                break'''
 
         return data
 
@@ -319,3 +324,111 @@ class File(object):
                             data.append(result)
 
         return data
+
+    def results_csv(self, _event_id):
+        """Get results for an event.
+
+        Args:
+            _event_id: Event ID number
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Initialize key variables
+        event_id = str(_event_id)
+        participants = self.results(event_id)
+        event = self.event(event_id)
+        meet = self.meet()
+        data = []
+
+        # Get data for the meet
+        city = meet[0]['city']
+        nation = meet[0]['nation']
+        course = meet[0]['course']
+        name = meet[0]['name']
+
+        # Get data for participants
+        for participant in participants:
+            firstname = participant['vitals']['firstname']
+            lastname = participant['vitals']['lastname']
+            gender = participant['vitals']['gender']
+            swimtime = participant['results'][0]['time']
+            stroke = event['stroke']
+            distance = event['distance']
+            _round = event['round']
+
+            # Create list for output ignoring None values it may contain
+            output = [
+                name, city, nation, course,
+                event_id, distance, stroke, _round,
+                gender, firstname, lastname, swimtime]
+            if None in output:
+                continue
+            data.append(output)
+
+        return data
+
+    def allresults(self, stage=None):
+        """Get results for all events.
+
+        Args:
+            stage: Round of event
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Initialize key variables
+        event_ids = []
+        _data = []
+
+        # Get results for each event
+        for event in self.events(stage=stage):
+            event_ids.append(int(event['eventid']))
+        for event_id in sorted(event_ids):
+            result = self.results(event_id)
+            _data.extend(result)
+
+        data = results_csv_sorter(_data)
+        return data
+
+    def allresults_csv(self, stage=None):
+        """Get results for all events.
+
+        Args:
+            stage: Round of event
+
+        Returns:
+            data: List of lists with information
+
+        """
+        # Initialize key variables
+        event_ids = []
+        _data = []
+
+        # Get results for each event
+        for event in self.events(stage=stage):
+            event_ids.append(int(event['eventid']))
+        for event_id in sorted(event_ids):
+            result = self.results_csv(event_id)
+            _data.extend(result)
+
+        data = results_csv_sorter(_data)
+        return data
+
+
+def results_csv_sorter(_data):
+    """Get results for all events.
+
+    Args:
+        _data: List of lists to sort
+
+    Returns:
+        data: Sorted list of lists
+
+    """
+    time_sorted = sorted(_data, key=operator.itemgetter(11), reverse=True)
+    data = sorted(time_sorted, key=operator.itemgetter(
+        0, 1, 2, 3, 4, 5, 6, 7, 8))
+    return data

@@ -29,24 +29,44 @@ def main():
     Process Fina XML file
 
     """
+    # Initialize key variables
+    alldata = []
+
     # Get filename
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-f', '--filename', help='Name of CSV file to read.',
+        '-f', '--directory', help='Name of directory with XML files.',
         type=str, required=True)
     args = parser.parse_args()
-    filename = args.filename
+    directory = args.directory
 
-    # Get event data
-    data = results.File(filename)
-    '''sessions = data.sessions()
-    for session in sessions:
-        session_id = session['number']
-        print('\n')
-        pprint(data.events(session_id))'''
+    # Get a list of files in the directory
+    files = os.listdir(directory)
+    filenames = ['{}{}{}'.format(
+        directory, os.sep, nextfile) for nextfile in files]
 
-    # pprint(data.athletes())
-    pprint(data.results(135))
+    for _filename in sorted(filenames):
+        # Get rid of excess os.sep separators
+        pathitems = _filename.split(os.sep)
+        filename = os.sep.join(pathitems)
+
+        # Skip obvious
+        if os.path.isfile(filename) is False:
+            continue
+        if filename.lower().endswith('.xml') is False:
+            continue
+
+        # Get event data
+        data = results.File(filename)
+
+        # pprint(data.athletes())
+        # pprint(data.results_csv(131))
+        meet_results = data.allresults_csv(stage='fin')
+        for item in meet_results:
+            alldata.append(item)
+
+
+    pprint(alldata)
 
 
 if __name__ == '__main__':
