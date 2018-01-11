@@ -12,17 +12,19 @@ from fina import log
 class File(object):
     """Process XML data from http://www.omegatiming.com."""
 
-    def __init__(self, filename):
+    def __init__(self, filename, profiles):
         """Method to instantiate the class.
 
         Args:
             filename: Name of file to process
+            profiles: dict of athlete profiles
 
         Returns:
             None
 
         """
         self._root = ET.parse(filename)
+        self._profiles = profiles
 
         # Verify the file version is correct
         for node in self._root.iter('LENEX'):
@@ -353,16 +355,36 @@ class File(object):
             firstname = participant['vitals']['firstname']
             lastname = participant['vitals']['lastname']
             gender = participant['vitals']['gender']
+            birthdate = participant['vitals']['birthdate']
             swimtime = participant['results'][0]['time']
             stroke = event['stroke']
             distance = event['distance']
             _round = event['round']
 
+            # Don't process people with zero times
+            if bool(swimtime) is False:
+                continue
+
+            # Get height and weight data
+            values = self._height_weight(firstname, lastname, birthdate)
+            if bool(values) is False:
+                continue
+            else:
+                (height, weight) = values
+                bmi = weight / ((height / 100) * (height / 100))
+                speed = float(distance) / float(swimtime)
+                speed_per_kg = speed / weight
+
             # Create list for output ignoring None values it may contain
             output = [
                 name, city, nation, course,
                 event_id, distance, stroke, _round,
-                gender, firstname, lastname, swimtime]
+                gender, firstname, lastname,
+                str(height), str(weight),
+                str(round(bmi, 6)),
+                str(round(speed_per_kg, 6)),
+                str(round(speed, 6)),
+                swimtime]
             if None in output:
                 continue
             data.append(output)
@@ -415,6 +437,33 @@ class File(object):
             _data.extend(result)
 
         data = results_csv_sorter(_data)
+        return data
+
+    def _height_weight(self, firstname, lastname, birthdate):
+        """Get weight and height of athlete.
+
+        Args:
+            firstname: Athlete first name
+            lastname: Athlete last name
+            birthdate: Athlete birth date
+
+        Returns:
+            data: tuple of (height, weight)
+
+        """
+        # Initialize key variables
+        data = None
+        profiles = self._profiles
+
+        # Get data
+        if lastname in profiles:
+            if firstname in profiles[lastname]:
+                if birthdate in profiles[lastname][firstname]:
+                    values = profiles[lastname][firstname][birthdate]
+                    height = values['height']
+                    weight = values['weight']
+                    data = (height, weight)
+
         return data
 
 

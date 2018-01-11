@@ -6,6 +6,10 @@ import sys
 import os
 import argparse
 from pprint import pprint
+from collections import defaultdict
+
+# pip3 imports
+import yaml
 
 
 # Try to create a working PYTHONPATH
@@ -23,6 +27,55 @@ else:
 from fina import results
 
 
+def _read_profiles(profile_directory):
+    """Function to read profile files.
+
+    Args:
+        directory: Name of directory containing data
+
+    Returns:
+        profiles: Dict of profiles keyed by lastname, firstname
+
+    """
+    # Initialize key variables
+    profiles = defaultdict(
+        lambda: defaultdict(lambda: defaultdict()))
+
+    # Read the yaml files in the profiles directory
+    files = os.listdir(profile_directory)
+    filenames = ['{}{}{}'.format(
+        profile_directory, os.sep, nextfile) for nextfile in files]
+
+    for _filename in sorted(filenames):
+        # Get rid of excess os.sep separators
+        pathitems = _filename.split(os.sep)
+        filename = os.sep.join(pathitems)
+
+        # Skip obvious
+        if os.path.isfile(filename) is False:
+            continue
+        if filename.lower().endswith('.yaml') is False:
+            continue
+
+        with open(filename, 'r') as stream:
+            try:
+                _profiles = yaml.load(stream)['data']
+            except yaml.YAMLError as exc:
+                print(exc)
+
+    # Create dictionary
+    for item in _profiles:
+        firstname = item['firstname']
+        lastname = item['lastname']
+        height = item['height']
+        weight = item['weight']
+        birthdate = item['birthdate']
+        profiles[lastname][firstname][birthdate] = {
+            'height': height, 'weight': weight}
+
+    return profiles
+
+
 def main():
     """Main Function.
 
@@ -35,15 +88,23 @@ def main():
     # Get filename
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-f', '--directory', help='Name of directory with XML files.',
+        '-m', '--meet_directory', help='Name of directory with XML files.',
+        type=str, required=True)
+    parser.add_argument(
+        '-p', '--profile_directory',
+        help='Name of directory with athlete profiles.',
         type=str, required=True)
     args = parser.parse_args()
-    directory = args.directory
+    meet_directory = args.meet_directory
+    profile_directory = args.profile_directory
 
-    # Get a list of files in the directory
-    files = os.listdir(directory)
+    # Get the profiles
+    profiles = _read_profiles(profile_directory)
+
+    # Get a list of files in the meet directory
+    files = os.listdir(meet_directory)
     filenames = ['{}{}{}'.format(
-        directory, os.sep, nextfile) for nextfile in files]
+        meet_directory, os.sep, nextfile) for nextfile in files]
 
     for _filename in sorted(filenames):
         # Get rid of excess os.sep separators
@@ -57,16 +118,16 @@ def main():
             continue
 
         # Get event data
-        data = results.File(filename)
+        data = results.File(filename, profiles)
 
         # pprint(data.athletes())
         # pprint(data.results_csv(131))
-        meet_results = data.allresults_csv(stage='fin')
+        meet_results = data.allresults_csv(stage=None)
         for item in meet_results:
             alldata.append(item)
 
-
     pprint(alldata)
+    print('\n', len(alldata))
 
 
 if __name__ == '__main__':
