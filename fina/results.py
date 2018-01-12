@@ -3,13 +3,260 @@
 # Standard imports
 import xml.etree.ElementTree as ET
 import operator
+import xlrd
+import sys
 from pprint import pprint
 
 # Fina imports
 from fina import log
 
 
-class File(object):
+class FileOlympics2016(object):
+    """Process XLSX Olympics data."""
+
+    def __init__(self, filename, profiles, with_na=False):
+        """Method to instantiate the class.
+
+        Args:
+            filename: Name of file to process
+            profiles: dict of athlete profiles
+            with_na: Include swimmers where there are N/A values for
+                weight or height
+
+        Returns:
+            None
+
+        """
+        # Initialize key variables
+        self._results = []
+
+        # Start handling the workbook
+        xl_workbook = xlrd.open_workbook(filename)
+        xl_sheet = xl_workbook.sheet_by_index(0)
+
+        # Get row data
+        _num_cols = xl_sheet.ncols
+
+        # Get header information
+        header = []
+        for col_idx in range(0, _num_cols):
+            value = xl_sheet.cell_value(0, col_idx)
+            if bool(value) is True:
+                header.append(value)
+        num_cols = len(header)
+
+        # Get row data
+        for row_idx in range(0, xl_sheet.nrows):
+            row = []
+            for col_idx in range(0, num_cols):
+                cell_value = str(xl_sheet.cell_value(row_idx, col_idx)).strip()
+                row.append(cell_value)
+                self._results.append(row)
+            pprint(row)
+
+        sys.exit(0)
+
+        self._profiles = profiles
+        self._with_na = with_na
+
+    def events(self, stage=None):
+        """Get all event information.
+
+        Args:
+            stage: Round of event
+
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        pass
+
+    def event(self, event_id):
+        """Get event information.
+
+        Args:
+            session_id: Session ID number
+            event_id: Event ID number
+
+        Returns:
+            data: dict with information. None if not found
+
+        """
+        # Get data
+        pass
+
+    def athletes(self):
+        """Get all athlete information.
+
+        Args:
+            None
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Get data
+        pass
+
+    def athlete(self, athlete_id):
+        """Get athlete information.
+
+        Args:
+            athlete_id: Athlete ID number
+
+        Returns:
+            data: dict with information. None if not found
+
+        """
+        # Get data
+        pass
+
+    def results(self, event_id):
+        """Get results for an event.
+
+        Args:
+            event_id: Event ID number
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Initialize key variables
+        pass
+
+    def results_csv(self, _event_id):
+        """Get results for an event.
+
+        Args:
+            _event_id: Event ID number
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Initialize key variables
+        event_id = str(_event_id)
+        participants = self.results(event_id)
+        event = self.event(event_id)
+        data = []
+        factor = 6
+
+        # Get data for the meet
+        city = 'Rio de Janeiro'
+        nation = 'BRA'
+        course = 'LONG'
+        name = '2016 Olympics'
+
+        # Get data for participants
+        for participant in participants:
+            firstname = participant['vitals']['firstname']
+            lastname = participant['vitals']['lastname']
+            gender = participant['vitals']['gender']
+            birthdate = participant['vitals']['birthdate']
+            swimtime = participant['results'][0]['time']
+            stroke = event['stroke']
+            distance = event['distance']
+            _round = event['round']
+
+            # Don't process people with zero times
+            if bool(swimtime) is False:
+                continue
+
+            # Get height and weight data
+            values = self._height_weight(firstname, lastname, birthdate)
+            if bool(values) is False:
+                if self._with_na is True:
+                    bmi = 'N/A'
+                    speed = 'N/A'
+                    speed_per_kg = 'N/A'
+                    weight = 'N/A'
+                    height = 'N/A'
+                else:
+                    continue
+            else:
+                (height, weight) = values
+
+                _bmi = weight / ((height / 100) * (height / 100))
+                bmi = str(round(_bmi, factor))
+
+                _speed = float(distance) / float(swimtime)
+                speed = str(round(_speed, factor))
+
+                _speed_per_kg = _speed / weight
+                speed_per_kg = str(round(_speed_per_kg, factor))
+
+            # Create list for output ignoring None values it may contain
+            output = [
+                name, city, nation, course,
+                event_id, distance, stroke, _round,
+                gender, firstname, lastname,
+                str(height), str(weight),
+                bmi,
+                speed_per_kg,
+                speed,
+                swimtime]
+            if None in output:
+                continue
+            data.append(output)
+
+        return data
+
+    def allresults(self, stage=None):
+        """Get results for all events.
+
+        Args:
+            stage: Round of event
+
+        Returns:
+            data: List of dicts with information
+
+        """
+        # Initialize key variables
+        pass
+
+    def allresults_csv(self, stage=None):
+        """Get results for all events.
+
+        Args:
+            stage: Round of event
+
+        Returns:
+            data: List of lists with information
+
+        """
+        # Initialize key variables
+        pass
+
+    def _height_weight(self, firstname, lastname, birthdate):
+        """Get weight and height of athlete.
+
+        Args:
+            firstname: Athlete first name
+            lastname: Athlete last name
+            birthdate: Athlete birth date
+
+        Returns:
+            data: tuple of (height, weight)
+
+        """
+        # Initialize key variables
+        data = None
+        profiles = self._profiles
+
+        # Get data
+        if lastname in profiles:
+            if firstname in profiles[lastname]:
+                if birthdate in profiles[lastname][firstname]:
+                    values = profiles[lastname][firstname][birthdate]
+                    height = values['height']
+                    weight = values['weight']
+                    data = (height, weight)
+
+        return data
+
+
+class FileFina(object):
     """Process XML data from http://www.omegatiming.com."""
 
     def __init__(self, filename, profiles, with_na=False):
@@ -103,7 +350,7 @@ class File(object):
                 item = {}
                 item['sessionid'] = session_id
                 for key, value in event.attrib.items():
-                    item[key] = value
+                    item[key] = value.strip()
 
                 # Skip rounds depending on 'stage' filter
                 if stage is None:
@@ -117,7 +364,7 @@ class File(object):
                         './MEETS/MEET/SESSIONS/SESSION/EVENTS/EVENT'
                         '[@eventid="{}"]/SWIMSTYLE'.format(event_id)):
                     for key, value in swimstyle.attrib.items():
-                        item[key] = value
+                        item[key] = value.strip()
                 data.append(item)
 
         return data
@@ -185,7 +432,7 @@ class File(object):
                 vitals = {}
                 vitals['clubid'] = club_id
                 for key, value in athlete.attrib.items():
-                    vitals[key] = value
+                    vitals[key] = value.strip()
                 item['vitals'] = vitals
 
                 # Store entry attributes for the athlete
@@ -220,7 +467,7 @@ class File(object):
                 '[@athleteid="{}"]/ENTRIES/ENTRY'.format(club_id, athlete_id)):
             attributes = {}
             for key, value in entry.attrib.items():
-                attributes[key] = value
+                attributes[key] = value.strip()
 
             # Get MEETINFO data by additionally filtering by eventid
             event_id = attributes['eventid']
@@ -229,7 +476,7 @@ class File(object):
                     '[@athleteid="{}"]/ENTRIES/ENTRY[@eventid="{}"]/MEETINFO'
                     ''.format(club_id, athlete_id, event_id)):
                 for key, value in meetinfo.attrib.items():
-                    attributes[key] = value
+                    attributes[key] = value.strip()
             data.append(attributes)
 
         return data
@@ -255,7 +502,7 @@ class File(object):
                 ''.format(club_id, athlete_id)):
             attributes = {}
             for key, value in result.attrib.items():
-                attributes[key] = value
+                attributes[key] = value.strip()
 
             # Get the swimtime in seconds
             swimtime = attributes['swimtime']
@@ -277,7 +524,7 @@ class File(object):
                     ''.format(club_id, athlete_id, event_id)):
                 splits = []
                 for key, value in split.attrib.items():
-                    splits.append({key: value})
+                    splits.append({key: value.strip()})
                 attributes['splits'].append(splits)
 
             data.append(attributes)

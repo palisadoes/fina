@@ -77,40 +77,24 @@ def _read_profiles(profile_directory):
     return profiles
 
 
-def main():
-    """Main Function.
+def _fina(fina_directory, profiles):
+    """Process Fina result files.
 
-    Process Fina XML file
+    Args:
+        fina_directory: Name of directory containing data
+        profiles: Dict of swimmer profiles for height / weight lookup
+
+    Returns:
+        alldata: List of list of data
 
     """
     # Initialize key variables
     alldata = []
 
-    # Get filename
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        '-m', '--meet_directory', help='Name of directory with XML files.',
-        type=str, required=True)
-    parser.add_argument(
-        '-p', '--profile_directory',
-        help='Name of directory with athlete profiles.',
-        type=str, required=True)
-    parser.add_argument(
-        '-o', '--output_file',
-        help='Name of output file.',
-        type=str, required=True)
-    args = parser.parse_args()
-    meet_directory = args.meet_directory
-    profile_directory = args.profile_directory
-    output_file = args.output_file
-
-    # Get the profiles
-    profiles = _read_profiles(profile_directory)
-
     # Get a list of files in the meet directory
-    files = os.listdir(meet_directory)
+    files = os.listdir(fina_directory)
     filenames = ['{}{}{}'.format(
-        meet_directory, os.sep, nextfile) for nextfile in files]
+        fina_directory, os.sep, nextfile) for nextfile in files]
 
     for _filename in sorted(filenames):
         # Get rid of excess os.sep separators
@@ -124,7 +108,7 @@ def main():
             continue
 
         # Get event data
-        data = results.File(filename, profiles)
+        data = results.FileFina(filename, profiles)
 
         # pprint(data.athletes())
         # pprint(data.results_csv(131))
@@ -132,11 +116,102 @@ def main():
         for item in meet_results:
             alldata.append(item)
 
-    pprint(alldata)
-    print('\n', len(alldata))
+    return alldata
+
+
+def _olympic(olympic_directory, profiles):
+    """Process Fina result files.
+
+    Args:
+        olympic_directory: Name of directory containing data
+        profiles: Dict of swimmer profiles for height / weight lookup
+
+    Returns:
+        alldata: List of list of data
+
+    """
+    # Initialize key variables
+    alldata = []
+
+    # Get a list of files in the meet directory
+    files = os.listdir(olympic_directory)
+    filenames = ['{}{}{}'.format(
+        olympic_directory, os.sep, nextfile) for nextfile in files]
+
+    for _filename in sorted(filenames):
+        # Get rid of excess os.sep separators
+        pathitems = _filename.split(os.sep)
+        filename = os.sep.join(pathitems)
+
+        # Skip obvious
+        if os.path.isfile(filename) is False:
+            continue
+        if filename.lower().endswith('.xlsx') is False:
+            continue
+
+        # Get event data
+        data = results.FileOlympics2016(filename, profiles)
+
+        meet_results = data.allresults_csv(stage=None)
+        for item in meet_results:
+            alldata.append(item)
+
+    return alldata
+
+
+def main():
+    """Main Function.
+
+    Process Fina XML file
+
+    """
+    # Initialize key variables
+    alldata = []
+    finadata = []
+    olympicdata = []
+
+    # Get filename
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-f', '--fina_directory',
+        help='Name of directory with FINA XML files.',
+        type=str, required=True)
+    parser.add_argument(
+        '-o', '--olympic_directory',
+        help='Name of directory with Olympic XLSX files.',
+        type=str, required=True)
+    parser.add_argument(
+        '-p', '--profile_directory',
+        help='Name of directory with athlete profiles.',
+        type=str, required=True)
+    parser.add_argument(
+        '-r', '--result_file',
+        help='Name of output file.',
+        type=str, required=True)
+    args = parser.parse_args()
+    fina_directory = args.fina_directory
+    profile_directory = args.profile_directory
+    result_file = args.result_file
+    olympic_directory = args.olympic_directory
+
+    # Get the profiles
+    profiles = _read_profiles(profile_directory)
+
+    # Process Fina data
+    # finadata = _fina(fina_directory, profiles)
+
+    # Process Olympic data
+    olympicdata = _olympic(olympic_directory, profiles)
+
+    # Get all data
+    alldata.extend(finadata)
+    alldata.extend(olympicdata)
+
+    pprint(olympicdata)
+    print('\n', len(olympicdata))
 
     # Create output file
-    with open(output_file, 'w') as f_handle:
+    with open(result_file, 'w') as f_handle:
         writer = csv.writer(f_handle)
         writer.writerows(alldata)
 
