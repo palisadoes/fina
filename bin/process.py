@@ -5,6 +5,7 @@
 import sys
 import os
 import argparse
+import csv
 from pprint import pprint
 from collections import defaultdict
 
@@ -94,9 +95,14 @@ def main():
         '-p', '--profile_directory',
         help='Name of directory with athlete profiles.',
         type=str, required=True)
+    parser.add_argument(
+        '-o', '--output_file',
+        help='Name of output file.',
+        type=str, required=True)
     args = parser.parse_args()
     meet_directory = args.meet_directory
     profile_directory = args.profile_directory
+    output_file = args.output_file
 
     # Get the profiles
     profiles = _read_profiles(profile_directory)
@@ -128,6 +134,11 @@ def main():
 
     pprint(alldata)
     print('\n', len(alldata))
+
+    # Create output file
+    with open(output_file, 'w') as f_handle:
+        writer = csv.writer(f_handle)
+        writer.writerows(alldata)
 
 
 if __name__ == '__main__':

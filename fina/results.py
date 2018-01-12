@@ -12,12 +12,14 @@ from fina import log
 class File(object):
     """Process XML data from http://www.omegatiming.com."""
 
-    def __init__(self, filename, profiles):
+    def __init__(self, filename, profiles, with_na=False):
         """Method to instantiate the class.
 
         Args:
             filename: Name of file to process
             profiles: dict of athlete profiles
+            with_na: Include swimmers where there are N/A values for
+                weight or height
 
         Returns:
             None
@@ -25,6 +27,7 @@ class File(object):
         """
         self._root = ET.parse(filename)
         self._profiles = profiles
+        self._with_na = with_na
 
         # Verify the file version is correct
         for node in self._root.iter('LENEX'):
@@ -343,6 +346,7 @@ class File(object):
         event = self.event(event_id)
         meet = self.meet()
         data = []
+        factor = 6
 
         # Get data for the meet
         city = meet[0]['city']
@@ -368,12 +372,25 @@ class File(object):
             # Get height and weight data
             values = self._height_weight(firstname, lastname, birthdate)
             if bool(values) is False:
-                continue
+                if self._with_na is True:
+                    bmi = 'N/A'
+                    speed = 'N/A'
+                    speed_per_kg = 'N/A'
+                    weight = 'N/A'
+                    height = 'N/A'
+                else:
+                    continue
             else:
                 (height, weight) = values
-                bmi = weight / ((height / 100) * (height / 100))
-                speed = float(distance) / float(swimtime)
-                speed_per_kg = speed / weight
+
+                _bmi = weight / ((height / 100) * (height / 100))
+                bmi = str(round(_bmi, factor))
+
+                _speed = float(distance) / float(swimtime)
+                speed = str(round(_speed, factor))
+
+                _speed_per_kg = _speed / weight
+                speed_per_kg = str(round(_speed_per_kg, factor))
 
             # Create list for output ignoring None values it may contain
             output = [
@@ -381,9 +398,9 @@ class File(object):
                 event_id, distance, stroke, _round,
                 gender, firstname, lastname,
                 str(height), str(weight),
-                str(round(bmi, 6)),
-                str(round(speed_per_kg, 6)),
-                str(round(speed, 6)),
+                bmi,
+                speed_per_kg,
+                speed,
                 swimtime]
             if None in output:
                 continue

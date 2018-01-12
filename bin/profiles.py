@@ -186,8 +186,8 @@ def _rio_xml(directory):
                     found = regex_name.match(text)
                     if bool(found) is True:
                         # Some names have asterisks after them
-                        firstname = found.group(1).replace('*', '')
-                        lastname = found.group(2).replace('*', '')
+                        lastname = found.group(1).replace('*', '')
+                        firstname = found.group(2).replace('*', '')
                         profile['firstname'] = firstname
                         profile['lastname'] = lastname.upper()
 
@@ -200,8 +200,8 @@ def _rio_xml(directory):
                 # weight
                 elif ' left="727" ' in line:
                     text = _get_text(line)
-                    value = float(text.split()[0])
-                    profile['weight'] = value
+                    _value = float(text.split()[0])
+                    profile['weight'] = _value
 
                     # We have all the data we have the right
                     # most relevant value
@@ -223,7 +223,7 @@ def _dedup(profiles):
 
     """
     # Initialize key variables
-    results = defaultdict(lambda: defaultdict())
+    results = defaultdict(lambda: defaultdict(lambda: defaultdict()))
     data = []
 
     # Get rid of any duplicates from the profiles list of dicts
@@ -233,20 +233,19 @@ def _dedup(profiles):
         height = item['height']
         weight = item['weight']
         dob = item['birthdate']
-        if lastname not in results:
-            if firstname not in results[lastname]:
-                results[lastname][firstname] = [height, weight, dob]
+        results[lastname][firstname][dob] = [height, weight]
 
     for lastname in sorted(results.keys()):
         for firstname in sorted(results[lastname].keys()):
-            _profile = {}
-            _profile['firstname'] = firstname
-            _profile['lastname'] = lastname
-            [height, weight, dob] = results[lastname][firstname]
-            _profile['height'] = height
-            _profile['weight'] = weight
-            _profile['birthdate'] = dob
-            data.append(_profile)
+            for dob in sorted(results[lastname][firstname].keys()):
+                _profile = {}
+                _profile['firstname'] = firstname
+                _profile['lastname'] = lastname
+                [height, weight] = results[lastname][firstname][dob]
+                _profile['height'] = height
+                _profile['weight'] = weight
+                _profile['birthdate'] = dob
+                data.append(_profile)
 
     return data
 
