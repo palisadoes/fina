@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Script to process FINA results."""
+"""Script to process FINA and Olympic athlete profile data.
+
+Data is output to a unified profile YAML file.
+
+"""
 
 # Standard imports
 import sys
@@ -13,7 +17,6 @@ from collections import defaultdict
 from bs4 import BeautifulSoup
 import yaml
 
-
 # Try to create a working PYTHONPATH
 _BIN_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 _ROOT_DIRECTORY = os.path.abspath(os.path.join(_BIN_DIRECTORY, os.pardir))
@@ -24,6 +27,9 @@ else:
         'This script is not installed in the "fina/bin" directory. '
         'Please fix.')
     sys.exit(2)
+
+# fina imports
+from fina import general
 
 
 def _month_number(month):
@@ -140,7 +146,6 @@ def _rio_xml(directory):
     """
     # Initialize key variables
     profiles = []
-    regex_name = re.compile(r'^([A-Z]+)\s+(.*?)$')
     regex_date = re.compile(r'^.*?>([0-9]+ [A-Z]+ [0-9]+)</text>$')
 
     # Get a list of files in the directory
@@ -183,13 +188,9 @@ def _rio_xml(directory):
                 if ' left="395" ' in line:
                     profile = {}
                     text = _get_text(line)
-                    found = regex_name.match(text)
+                    found = general.olympic_name(text)
                     if bool(found) is True:
-                        # Some names have asterisks after them
-                        lastname = found.group(1).replace('*', '')
-                        firstname = found.group(2).replace('*', '')
-                        profile['firstname'] = firstname
-                        profile['lastname'] = lastname.upper()
+                        (profile['firstname'], profile['lastname']) = found
 
                 # height:
                 elif ' left="655" ' in line:
@@ -279,29 +280,29 @@ def main():
     # Get CLI arguments
     parser = argparse.ArgumentParser()
     parser.add_argument(
+        '-f', '--fina_directory',
+        help='Name of directory containing FINA athlete profiles.',
+        type=str, required=True)
+    parser.add_argument(
+        '-o', '--olympic_directory',
+        help='Name of directory containing Rio2016 athlete profiles.',
+        type=str, required=True)
+    parser.add_argument(
         '-p', '--profile_directory',
-        help='Name of directory containing profiles.',
-        type=str, required=True)
-    parser.add_argument(
-        '-r', '--rio_directory',
-        help='Name of directory containing Rio2016 profiles.',
-        type=str, required=True)
-    parser.add_argument(
-        '-o', '--output_directory',
-        help='Name of directory containing the final output.',
+        help='Name of directory in which combined profiles will be stored.',
         type=str, required=True)
     args = parser.parse_args()
+    fina_directory = args.fina_directory
+    olympic_directory = args.olympic_directory
     profile_directory = args.profile_directory
-    rio_directory = args.rio_directory
-    output_directory = args.output_directory
 
     # Get profiles
-    profiles.extend(_fina_html(profile_directory))
-    profiles.extend(_rio_xml(rio_directory))
+    profiles.extend(_fina_html(fina_directory))
+    profiles.extend(_rio_xml(olympic_directory))
     uniques = _dedup(profiles)
 
     data = yaml.dump({'data': uniques}, default_flow_style=False)
-    with open('{}/athletes.yaml'.format(output_directory), 'w') as writer:
+    with open('{}/athletes.yaml'.format(profile_directory), 'w') as writer:
         writer.write(data)
 
 

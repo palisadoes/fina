@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Script to process FINA results."""
+"""Script to process FINA and Olympic results.
+
+The final data is stored in a database CSV file.
+
+"""
 
 # Standard imports
 import sys
@@ -185,20 +189,20 @@ def main():
         help='Name of directory with athlete profiles.',
         type=str, required=True)
     parser.add_argument(
-        '-r', '--result_file',
-        help='Name of output file.',
+        '-d', '--database_file',
+        help='Name of database file.',
         type=str, required=True)
     args = parser.parse_args()
     fina_directory = args.fina_directory
     profile_directory = args.profile_directory
-    result_file = args.result_file
+    database_file = args.database_file
     olympic_directory = args.olympic_directory
 
     # Get the profiles
     profiles = _read_profiles(profile_directory)
 
     # Process Fina data
-    # finadata = _fina(fina_directory, profiles)
+    finadata = _fina(fina_directory, profiles)
 
     # Process Olympic data
     olympicdata = _olympic(olympic_directory, profiles)
@@ -207,11 +211,11 @@ def main():
     alldata.extend(finadata)
     alldata.extend(olympicdata)
 
-    pprint(olympicdata)
-    print('\n', len(olympicdata))
+    #pprint(alldata)
+    print('\n', len(alldata))
 
     # Create output file
-    with open(result_file, 'w') as f_handle:
+    with open(database_file, 'w') as f_handle:
         writer = csv.writer(f_handle)
         writer.writerows(alldata)
 

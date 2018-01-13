@@ -9,6 +9,7 @@ from pprint import pprint
 
 # Fina imports
 from fina import log
+from fina import general
 
 
 class FileOlympics2016(object):
@@ -28,7 +29,7 @@ class FileOlympics2016(object):
 
         """
         # Initialize key variables
-        self._results = []
+        self._results= []
 
         # Start handling the workbook
         xl_workbook = xlrd.open_workbook(filename)
@@ -46,15 +47,53 @@ class FileOlympics2016(object):
         num_cols = len(header)
 
         # Get row data
-        for row_idx in range(0, xl_sheet.nrows):
+        for row_idx in range(1, xl_sheet.nrows):
             row = []
+            # Read each column
             for col_idx in range(0, num_cols):
                 cell_value = str(xl_sheet.cell_value(row_idx, col_idx)).strip()
-                row.append(cell_value)
-                self._results.append(row)
-            pprint(row)
 
-        sys.exit(0)
+                # Calculate time in seconds
+                if col_idx != num_cols - 1:
+                    row.append(cell_value)
+                else:
+                    components = cell_value.split(':')
+                    if len(components) == 1:
+                        row.append(cell_value)
+                        row.append(cell_value)
+                    else:
+                        minutes = float(components[0])
+                        seconds = float(components[1])
+                        swimtime = round((minutes * 60) + seconds, 3)
+                        row.append(cell_value)
+                        row.append(str(swimtime))
+
+            # Convert all row items to string
+            for index, value in enumerate(row):
+                row[index] = str(value)
+
+            # Create participant information
+            paricipant = {}
+            paricipant['city'] = 'Rio de Janeiro'
+            paricipant['nation'] = 'BRA'
+            paricipant['course'] = 'LCM'
+            paricipant['meet'] = '2016 Olympics'
+            paricipant['event'] = row[0]
+            paricipant['round'] = row[1]
+            paricipant['stroke'] = row[2]
+            paricipant['event_id'] = row[3]
+            paricipant['distance'] = row[4]
+            paricipant['gender'] = row[5]
+            paricipant['rank'] = row[6]
+            paricipant['heat'] = row[7]
+            paricipant['lane'] = row[8]
+            (paricipant['firstname'],
+             paricipant['lastname']) = general.olympic_name(row[9])
+            paricipant['birthyear'] = row[10]
+            paricipant['nation'] = row[11]
+            paricipant['swimtime'] = row[12]
+            paricipant['time'] = row[13]
+            self._results.append(paricipant)
 
         self._profiles = profiles
         self._with_na = with_na
@@ -125,46 +164,42 @@ class FileOlympics2016(object):
         # Initialize key variables
         pass
 
-    def results_csv(self, _event_id):
+    def results_csv(self):
         """Get results for an event.
 
         Args:
-            _event_id: Event ID number
+            None
 
         Returns:
             data: List of dicts with information
 
         """
         # Initialize key variables
-        event_id = str(_event_id)
-        participants = self.results(event_id)
-        event = self.event(event_id)
         data = []
         factor = 6
 
-        # Get data for the meet
-        city = 'Rio de Janeiro'
-        nation = 'BRA'
-        course = 'LONG'
-        name = '2016 Olympics'
-
         # Get data for participants
-        for participant in participants:
-            firstname = participant['vitals']['firstname']
-            lastname = participant['vitals']['lastname']
-            gender = participant['vitals']['gender']
-            birthdate = participant['vitals']['birthdate']
-            swimtime = participant['results'][0]['time']
-            stroke = event['stroke']
-            distance = event['distance']
-            _round = event['round']
+        for participant in self._results:
+            firstname = participant['firstname']
+            lastname = participant['lastname']
+            gender = participant['gender']
+            birthyear = participant['birthyear']
+            swimtime = participant['time']
+            stroke = participant['stroke']
+            distance = participant['distance']
+            city = participant['city']
+            nation = participant['nation']
+            meet = participant['meet']
+            course = participant['course']
+            event_id = participant['event_id']
+            _round = participant['round']
 
             # Don't process people with zero times
             if bool(swimtime) is False:
                 continue
 
             # Get height and weight data
-            values = self._height_weight(firstname, lastname, birthdate)
+            values = self._height_weight(firstname, lastname)
             if bool(values) is False:
                 if self._with_na is True:
                     bmi = 'N/A'
@@ -188,9 +223,9 @@ class FileOlympics2016(object):
 
             # Create list for output ignoring None values it may contain
             output = [
-                name, city, nation, course,
+                meet, city, nation, course,
                 event_id, distance, stroke, _round,
-                gender, firstname, lastname,
+                gender, firstname, lastname, birthyear,
                 str(height), str(weight),
                 bmi,
                 speed_per_kg,
@@ -212,7 +247,6 @@ class FileOlympics2016(object):
             data: List of dicts with information
 
         """
-        # Initialize key variables
         pass
 
     def allresults_csv(self, stage=None):
@@ -226,15 +260,21 @@ class FileOlympics2016(object):
 
         """
         # Initialize key variables
-        pass
+        _data = []
 
-    def _height_weight(self, firstname, lastname, birthdate):
+        # Get results
+        result = self.results_csv()
+        _data.extend(result)
+
+        data = results_csv_sorter(_data)
+        return data
+
+    def _height_weight(self, firstname, lastname):
         """Get weight and height of athlete.
 
         Args:
             firstname: Athlete first name
             lastname: Athlete last name
-            birthdate: Athlete birth date
 
         Returns:
             data: tuple of (height, weight)
@@ -247,11 +287,13 @@ class FileOlympics2016(object):
         # Get data
         if lastname in profiles:
             if firstname in profiles[lastname]:
-                if birthdate in profiles[lastname][firstname]:
+                # Just get the first match
+                for birthdate in sorted(profiles[lastname][firstname].keys()):
                     values = profiles[lastname][firstname][birthdate]
                     height = values['height']
                     weight = values['weight']
                     data = (height, weight)
+                    break
 
         return data
 
@@ -599,7 +641,7 @@ class FileFina(object):
         city = meet[0]['city']
         nation = meet[0]['nation']
         course = meet[0]['course']
-        name = meet[0]['name']
+        meet = meet[0]['name']
 
         # Get data for participants
         for participant in participants:
@@ -639,11 +681,14 @@ class FileFina(object):
                 _speed_per_kg = _speed / weight
                 speed_per_kg = str(round(_speed_per_kg, factor))
 
+            # Get birthyear
+            birthyear = int(birthdate.split('-')[0])
+
             # Create list for output ignoring None values it may contain
             output = [
-                name, city, nation, course,
+                meet, city, nation, course,
                 event_id, distance, stroke, _round,
-                gender, firstname, lastname,
+                gender, firstname, lastname, birthyear,
                 str(height), str(weight),
                 bmi,
                 speed_per_kg,
