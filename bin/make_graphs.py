@@ -5,10 +5,7 @@
 import sys
 import os
 import argparse
-import csv
-import hashlib
 from pprint import pprint
-from collections import defaultdict
 
 # pip3 imports
 import yaml
@@ -27,79 +24,7 @@ else:
 
 # Fina imports
 from fina import results
-
-
-def _read_database(filename):
-    """Process the database file.
-
-    Args:
-        filename: Database filename
-
-    Returns:
-        events: Anonymized dict of best results per athlete keyed by
-            hash, stroke, distance and gender
-
-    """
-    # Initialize key variables
-    athletes = {}
-    events = defaultdict(lambda: defaultdict(
-        lambda: defaultdict(lambda: defaultdict())))
-
-    # Read CSV file
-    with open(filename) as csvfile:
-        f_handle = csv.reader(csvfile, delimiter=',')
-        for row in f_handle:
-            (firstname, lastname, birthyear, gender, stroke,
-             distance, _time, data, superkey) = _process_row(row)
-
-            if superkey in athletes:
-                athletes[superkey] = max(_time, athletes[superkey])
-            else:
-                athletes[superkey] = _time
-
-    # Read CSV file again
-    with open(filename) as csvfile:
-        f_handle = csv.reader(csvfile, delimiter=',')
-        for row in f_handle:
-            (firstname, lastname, birthyear, gender, stroke,
-             distance, _time, data, superkey) = _process_row(row)
-
-            if athletes[superkey] == _time:
-                events[superkey][stroke][distance][gender] = data
-
-    return events
-
-def _process_row(row):
-    """Process the database row.
-
-    Args:
-        row: Database row
-
-    Returns:
-        data: tuple of important row data
-
-    """
-    firstname = row[9]
-    lastname = row[10]
-    birthyear = row[11]
-    gender = row[8]
-    stroke = row[6]
-    distance = row[5]
-    _time = row[-1]
-    _data = {
-        'bmi': float(row[14]),
-        'speed_per_kg': float(row[15]),
-        'speed': float(row[16])}
-    superkey = hashlib.sha256(
-        bytes('{}{}{}{}{}'.format(
-            firstname, lastname, birthyear, stroke, distance),
-        'utf-8')).hexdigest()
-
-    data = (
-        firstname, lastname, birthyear, gender, stroke,
-        distance, _time, _data, superkey)
-
-    return data
+from fina import graph
 
 
 def main():
@@ -119,11 +44,13 @@ def main():
     args = parser.parse_args()
     database_file = args.database_file
 
+    distance = 1500
+    gender = 'm'
+    stroke = 'free'
     # Create database in memory
-    database = _read_database(database_file)
-
-    pprint(database)
-    pprint(len(database))
+    plot = graph.Graph(database_file)
+    plot.bmi_kgspeed(stroke, distance, gender)
+    plot.bmi_speed(stroke, distance, gender)
 
 
 if __name__ == '__main__':

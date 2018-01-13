@@ -1,4 +1,4 @@
-"""Module to process FINA results files."""
+"""Module to process FINA and Olympics results files."""
 
 # Standard imports
 import xml.etree.ElementTree as ET
