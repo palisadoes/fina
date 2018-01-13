@@ -44,7 +44,7 @@ def main():
     args = parser.parse_args()
     database_file = args.database_file
 
-    distance = 1500
+    distance = 200
     gender = 'm'
     stroke = 'free'
     # Create database in memory
@@ -52,6 +52,9 @@ def main():
     plot.bmi_kgspeed(stroke, distance, gender)
     plot.bmi_speed(stroke, distance, gender)
 
+    plot = graph.Graph(database_file, fastest=False)
+    plot.bmi_kgspeed(stroke, distance, gender)
+    plot.bmi_speed(stroke, distance, gender)
 
 if __name__ == '__main__':
     main()

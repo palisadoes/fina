@@ -26,6 +26,7 @@ class Data(object):
         """
         # Initialize key variables
         self._filename = filename
+        self._fastest = fastest
 
         # Generate globally necessary data
         self._events = self._read_database()
@@ -142,7 +143,8 @@ class Data(object):
         with open(filename) as csvfile:
             f_handle = csv.reader(csvfile, delimiter=',')
             for row in f_handle:
-                (_, _, _, _, _, _time, _, superkey) = _process_row(row)
+                (_, _, _, _, _, _time, _, superkey) = _process_row(
+                    row, fastest=self._fastest)
                 if superkey in athletes:
                     athletes[superkey] = max(_time, athletes[superkey])
                 else:
@@ -153,7 +155,8 @@ class Data(object):
             f_handle = csv.reader(csvfile, delimiter=',')
             for row in f_handle:
                 (_, _, gender, stroke,
-                 distance, _time, data, superkey) = _process_row(row)
+                 distance, _time, data, superkey) = _process_row(
+                    row, fastest=self._fastest)
                 if athletes[superkey] == _time:
                     events[superkey][stroke][distance][gender] = data
 
@@ -163,7 +166,7 @@ class Data(object):
 class Graph(object):
     """Create graphs."""
 
-    def __init__(self, filename):
+    def __init__(self, filename, fastest=True):
         """Method to instantiate the class.
 
         Args:
@@ -174,7 +177,7 @@ class Graph(object):
 
         """
         # Initialize key variables
-        self._database = Data(filename)
+        self._database = Data(filename, fastest=fastest)
         self._strokes = {
             'FLY': 'FLY',
             'BUT': 'FLY',
@@ -341,7 +344,7 @@ class Graph(object):
         plt.show()
 
 
-def _process_row(row):
+def _process_row(row, fastest=True):
     """Process the database row.
 
     Args:
@@ -362,11 +365,17 @@ def _process_row(row):
         'bmi': float(row[14]),
         'speed_per_kg': float(row[15]),
         'speed': float(row[16])}
-    superkey = hashlib.sha256(
-        bytes('{}{}{}{}'.format(
-            firstname, lastname, stroke, distance),
-        'utf-8')).hexdigest()
 
+    if fastest is True:
+        event = ''
+    else:
+        event = '{}{}{}{}{}'.format(
+            row[0], row[1], row[2], row[3], int(float(row[4])))
+
+    superkey = hashlib.sha256(
+        bytes('{}{}{}{}{}'.format(
+            firstname, lastname, stroke, distance, event),
+        'utf-8')).hexdigest()
     data = (
         firstname, lastname, gender, stroke,
         distance, _time, _data, superkey)
