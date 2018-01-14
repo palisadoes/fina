@@ -4,6 +4,7 @@
 import xml.etree.ElementTree as ET
 import operator
 import xlrd
+import re
 import sys
 from pprint import pprint
 
@@ -571,6 +572,7 @@ class FileFina(object):
         """
         # Get data
         data = []
+        regex = re.compile(r'^\d{2}:\d{2}:[0-9\.]+$')
 
         # Store results attributes for the athlete
         for result in self._root.findall(
@@ -583,7 +585,8 @@ class FileFina(object):
 
             # Get the swimtime in seconds
             swimtime = attributes['swimtime']
-            if ':' in swimtime:
+            valid = regex.match(swimtime)
+            if bool(valid) is True:
                 (hours, minutes, seconds) = swimtime.split(':')
                 total_seconds = (int(hours) * 3600) + (
                     int(minutes) * 60) + float(seconds)
