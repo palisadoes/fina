@@ -1,0 +1,1768 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<LENEX version="2.0">
+    <CONSTRUCTOR name="Swiss Timing DRC Swimming" version="04.05.0000">
+        <CONTACT name="Swiss Timing Ltd." zip="CH-2606" city="Corgemont" email="info@swisstiming.com" internet="http:\\www.omegatiming.com"/>
+    </CONSTRUCTOR>
+    <MEETS>
+        <MEET name="Mutual of Omaha Duel in the Pool" city="Indianapolis" nation="USA" course="SCM" timing="AUTOMATIC">
+            <POINTTABLE name="FINA Point Scoring" version="2004"/>
+            <SESSIONS>
+                <SESSION number="1" date="2015-12-11" daytime="1900">
+                    <EVENTS>
+                        <EVENT eventid="101" number="101" preveventid="1" gender="F" round="FIN" daytime="1902" order="1">
+                            <SWIMSTYLE distance="400" relaycount="1" stroke="MEDLEY"/>
+                        </EVENT>
+                        <EVENT eventid="102" number="102" preveventid="2" gender="M" round="FIN" daytime="1912" order="2">
+                            <SWIMSTYLE distance="400" relaycount="1" stroke="MEDLEY"/>
+                        </EVENT>
+                        <EVENT eventid="103" number="103" preveventid="3" gender="F" round="FIN" daytime="1923" order="3">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="104" number="104" preveventid="4" gender="M" round="FIN" daytime="1928" order="4">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="105" number="105" preveventid="5" gender="F" round="FIN" daytime="1933" order="5">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="BACK"/>
+                        </EVENT>
+                        <EVENT eventid="106" number="106" preveventid="6" gender="M" round="FIN" daytime="1940" order="6">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="BACK"/>
+                        </EVENT>
+                        <EVENT eventid="107" number="107" preveventid="7" gender="F" round="FIN" daytime="1948" order="7">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="BREAST"/>
+                        </EVENT>
+                        <EVENT eventid="108" number="108" preveventid="8" gender="M" round="FIN" daytime="1955" order="8">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="BREAST"/>
+                        </EVENT>
+                        <EVENT eventid="109" number="109" preveventid="9" gender="F" round="FIN" daytime="2002" order="9">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="FLY"/>
+                        </EVENT>
+                        <EVENT eventid="110" number="110" preveventid="10" gender="M" round="FIN" daytime="2008" order="10">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="FLY"/>
+                        </EVENT>
+                        <EVENT eventid="111" number="111" preveventid="11" gender="F" round="FIN" daytime="2015" order="11">
+                            <SWIMSTYLE distance="400" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="112" number="112" preveventid="12" gender="M" round="FIN" daytime="2024" order="12">
+                            <SWIMSTYLE distance="400" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="113" number="113" preveventid="13" gender="F" round="FIN" daytime="2032" order="13">
+                            <SWIMSTYLE distance="100" relaycount="4" stroke="MEDLEY"/>
+                        </EVENT>
+                        <EVENT eventid="114" number="114" preveventid="14" gender="M" round="FIN" daytime="2041" order="14">
+                            <SWIMSTYLE distance="100" relaycount="4" stroke="MEDLEY"/>
+                        </EVENT>
+                    </EVENTS>
+                </SESSION>
+                <SESSION number="2" date="2015-12-12" daytime="1400">
+                    <EVENTS>
+                        <EVENT eventid="115" number="115" preveventid="15" gender="F" round="FIN" daytime="1400" order="1">
+                            <SWIMSTYLE distance="800" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="116" number="116" preveventid="16" gender="M" round="FIN" daytime="1413" order="2">
+                            <SWIMSTYLE distance="1500" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="117" number="117" preveventid="17" gender="F" round="FIN" daytime="1433" order="3">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="118" number="118" preveventid="18" gender="M" round="FIN" daytime="1440" order="4">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="119" number="119" preveventid="19" gender="F" round="FIN" daytime="1448" order="5">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="BACK"/>
+                        </EVENT>
+                        <EVENT eventid="120" number="120" preveventid="20" gender="M" round="FIN" daytime="1454" order="6">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="BACK"/>
+                        </EVENT>
+                        <EVENT eventid="121" number="121" preveventid="21" gender="F" round="FIN" daytime="1459" order="7">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="BREAST"/>
+                        </EVENT>
+                        <EVENT eventid="122" number="122" preveventid="22" gender="M" round="FIN" daytime="1505" order="8">
+                            <SWIMSTYLE distance="100" relaycount="1" stroke="BREAST"/>
+                        </EVENT>
+                        <EVENT eventid="123" number="123" preveventid="23" gender="F" round="FIN" daytime="1513" order="9">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="FLY"/>
+                        </EVENT>
+                        <EVENT eventid="124" number="124" preveventid="24" gender="M" round="FIN" daytime="1519" order="10">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="FLY"/>
+                        </EVENT>
+                        <EVENT eventid="125" number="125" preveventid="25" gender="F" round="FIN" daytime="1526" order="11">
+                            <SWIMSTYLE distance="50" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="126" number="126" preveventid="26" gender="M" round="FIN" daytime="1531" order="12">
+                            <SWIMSTYLE distance="50" relaycount="1" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="127" number="127" preveventid="27" gender="F" round="FIN" daytime="1536" order="13">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="MEDLEY"/>
+                        </EVENT>
+                        <EVENT eventid="128" number="128" preveventid="28" gender="M" round="FIN" daytime="1544" order="14">
+                            <SWIMSTYLE distance="200" relaycount="1" stroke="MEDLEY"/>
+                        </EVENT>
+                        <EVENT eventid="129" number="129" preveventid="29" gender="F" round="FIN" daytime="1551" order="15">
+                            <SWIMSTYLE distance="100" relaycount="4" stroke="FREE"/>
+                        </EVENT>
+                        <EVENT eventid="130" number="130" preveventid="30" gender="M" round="FIN" daytime="1559" order="16">
+                            <SWIMSTYLE distance="100" relaycount="4" stroke="FREE"/>
+                        </EVENT>
+                    </EVENTS>
+                </SESSION>
+            </SESSIONS>
+            <CLUBS>
+                <CLUB name="Europe All-Stars" shortname="Europe" code="EUR" nation="EUR" type="CLUB">
+                    <ATHLETES>
+                        <ATHLETE athleteid="37" lastname="Bernek" firstname="Peter" gender="M" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="112" place="6" lane="3" heat="1" swimtime="00:03:43.16" points="860" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.70" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.46" distance="100"/>
+                                        <SPLIT swimtime="00:01:21.28" distance="150"/>
+                                        <SPLIT swimtime="00:01:49.50" distance="200"/>
+                                        <SPLIT swimtime="00:02:17.50" distance="250"/>
+                                        <SPLIT swimtime="00:02:45.54" distance="300"/>
+                                        <SPLIT swimtime="00:03:14.57" distance="350"/>
+                                        <SPLIT swimtime="00:03:43.16" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="38" lastname="Bromer" firstname="Viktor" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="110" place="4" lane="5" heat="1" swimtime="00:00:51.38" points="840" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.32" distance="50"/>
+                                        <SPLIT swimtime="00:00:51.38" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="124" place="2" lane="5" heat="1" swimtime="00:01:52.39" points="914" reactiontime="+61">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.11" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.58" distance="100"/>
+                                        <SPLIT swimtime="00:01:22.41" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.39" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="39" lastname="Carlin" firstname="Jazmin" gender="F" birthdate="1990-01-01">
+                            <RESULTS>
+                                <RESULT eventid="111" place="1" lane="3" heat="1" swimtime="00:03:58.07" points="959" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.80" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.58" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.53" distance="150"/>
+                                        <SPLIT swimtime="00:01:57.76" distance="200"/>
+                                        <SPLIT swimtime="00:02:27.82" distance="250"/>
+                                        <SPLIT swimtime="00:02:57.99" distance="300"/>
+                                        <SPLIT swimtime="00:03:28.49" distance="350"/>
+                                        <SPLIT swimtime="00:03:58.07" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="115" place="6" lane="3" heat="1" swimtime="00:08:21.33" points="883" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.81" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.45" distance="100"/>
+                                        <SPLIT swimtime="00:01:30.38" distance="150"/>
+                                        <SPLIT swimtime="00:02:01.40" distance="200"/>
+                                        <SPLIT swimtime="00:02:32.62" distance="250"/>
+                                        <SPLIT swimtime="00:03:03.87" distance="300"/>
+                                        <SPLIT swimtime="00:03:35.00" distance="350"/>
+                                        <SPLIT swimtime="00:04:06.03" distance="400"/>
+                                        <SPLIT swimtime="00:04:37.01" distance="450"/>
+                                        <SPLIT swimtime="00:05:08.59" distance="500"/>
+                                        <SPLIT swimtime="00:05:40.31" distance="550"/>
+                                        <SPLIT swimtime="00:06:12.36" distance="600"/>
+                                        <SPLIT swimtime="00:06:44.74" distance="650"/>
+                                        <SPLIT swimtime="00:07:17.21" distance="700"/>
+                                        <SPLIT swimtime="00:07:49.76" distance="750"/>
+                                        <SPLIT swimtime="00:08:21.33" distance="800"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="40" lastname="Cseh" firstname="Laszlo" gender="M" birthdate="1985-01-01">
+                            <RESULTS>
+                                <RESULT eventid="110" place="2" lane="3" heat="1" swimtime="00:00:49.55" points="936" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.10" distance="50"/>
+                                        <SPLIT swimtime="00:00:49.55" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="41" lastname="Efimova" firstname="Yuliya" gender="F" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="107" place="2" lane="3" heat="1" swimtime="00:02:18.55" points="916" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:33.01" distance="50"/>
+                                        <SPLIT swimtime="00:01:08.13" distance="100"/>
+                                        <SPLIT swimtime="00:01:42.92" distance="150"/>
+                                        <SPLIT swimtime="00:02:18.55" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="121" place="1" lane="3" heat="1" swimtime="00:01:03.19" points="976" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.81" distance="50"/>
+                                        <SPLIT swimtime="00:01:03.19" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="42" lastname="Friis" firstname="Lotte" gender="F" birthdate="1988-01-01">
+                            <RESULTS>
+                                <RESULT eventid="111" place="3" lane="5" heat="1" swimtime="00:03:59.15" points="947" reactiontime="+76">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.87" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.52" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.70" distance="150"/>
+                                        <SPLIT swimtime="00:01:58.16" distance="200"/>
+                                        <SPLIT swimtime="00:02:28.93" distance="250"/>
+                                        <SPLIT swimtime="00:02:59.32" distance="300"/>
+                                        <SPLIT swimtime="00:03:29.85" distance="350"/>
+                                        <SPLIT swimtime="00:03:59.15" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="115" place="4" lane="5" heat="1" swimtime="00:08:17.04" points="906" reactiontime="+78">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.58" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.89" distance="100"/>
+                                        <SPLIT swimtime="00:01:29.45" distance="150"/>
+                                        <SPLIT swimtime="00:02:00.18" distance="200"/>
+                                        <SPLIT swimtime="00:02:31.11" distance="250"/>
+                                        <SPLIT swimtime="00:03:02.38" distance="300"/>
+                                        <SPLIT swimtime="00:03:33.74" distance="350"/>
+                                        <SPLIT swimtime="00:04:05.06" distance="400"/>
+                                        <SPLIT swimtime="00:04:36.63" distance="450"/>
+                                        <SPLIT swimtime="00:05:08.18" distance="500"/>
+                                        <SPLIT swimtime="00:05:40.08" distance="550"/>
+                                        <SPLIT swimtime="00:06:11.82" distance="600"/>
+                                        <SPLIT swimtime="00:06:43.11" distance="650"/>
+                                        <SPLIT swimtime="00:07:14.77" distance="700"/>
+                                        <SPLIT swimtime="00:07:46.26" distance="750"/>
+                                        <SPLIT swimtime="00:08:17.04" distance="800"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="43" lastname="Govorov" firstname="Andrii" gender="M" birthdate="1992-01-01"/>
+                        <ATHLETE athleteid="44" lastname="Gustafsdottir" firstname="Eyglo" gender="F" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="105" place="6" lane="5" heat="1" swimtime="00:02:06.01" points="864" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.47" distance="50"/>
+                                        <SPLIT swimtime="00:01:01.09" distance="100"/>
+                                        <SPLIT swimtime="00:01:33.73" distance="150"/>
+                                        <SPLIT swimtime="00:02:06.01" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="45" lastname="Guy" firstname="James" gender="M" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="112" place="1" lane="5" heat="1" swimtime="00:03:37.78" points="925" reactiontime="+64">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.08" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.25" distance="100"/>
+                                        <SPLIT swimtime="00:01:19.82" distance="150"/>
+                                        <SPLIT swimtime="00:01:47.60" distance="200"/>
+                                        <SPLIT swimtime="00:02:15.24" distance="250"/>
+                                        <SPLIT swimtime="00:02:43.17" distance="300"/>
+                                        <SPLIT swimtime="00:03:10.78" distance="350"/>
+                                        <SPLIT swimtime="00:03:37.78" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="118" place="3" lane="3" heat="1" swimtime="00:01:42.93" points="899" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.04" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.19" distance="100"/>
+                                        <SPLIT swimtime="00:01:16.67" distance="150"/>
+                                        <SPLIT swimtime="00:01:42.93" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="46" lastname="Gyurta" firstname="Daniel" gender="M" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="108" place="2" lane="3" heat="1" swimtime="00:02:02.36" points="959" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.38" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.50" distance="100"/>
+                                        <SPLIT swimtime="00:01:30.45" distance="150"/>
+                                        <SPLIT swimtime="00:02:02.36" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="122" place="2" lane="3" heat="1" swimtime="00:00:57.11" points="923" reactiontime="+66">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.81" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.11" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="47" lastname="Hentke" firstname="Franziska" gender="F" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="109" place="5" lane="5" heat="1" swimtime="00:00:57.28" points="887" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.76" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.28" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="123" place="2" lane="3" heat="1" swimtime="00:02:03.74" points="929" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.42" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.88" distance="100"/>
+                                        <SPLIT swimtime="00:01:32.21" distance="150"/>
+                                        <SPLIT swimtime="00:02:03.74" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="48" lastname="Herasimenia" firstname="Aliaksandra" gender="F" birthdate="1985-01-01">
+                            <RESULTS>
+                                <RESULT eventid="103" place="4" lane="1" heat="1" swimtime="00:00:52.66" points="908" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.05" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.66" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="125" place="4" lane="5" heat="1" swimtime="00:00:23.98" points="911" reactiontime="+65"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="49" lastname="Hosszu" firstname="Katinka" gender="F" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="101" place="1" lane="3" heat="1" swimtime="00:04:21.21" points="998" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.12" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.56" distance="100"/>
+                                        <SPLIT swimtime="00:01:32.10" distance="150"/>
+                                        <SPLIT swimtime="00:02:04.40" distance="200"/>
+                                        <SPLIT swimtime="00:02:42.18" distance="250"/>
+                                        <SPLIT swimtime="00:03:20.62" distance="300"/>
+                                        <SPLIT swimtime="00:03:51.36" distance="350"/>
+                                        <SPLIT swimtime="00:04:21.21" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="105" place="1" lane="3" heat="1" swimtime="00:01:59.75" points="1007" reactiontime="+60">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.17" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.14" distance="100"/>
+                                        <SPLIT swimtime="00:01:28.86" distance="150"/>
+                                        <SPLIT swimtime="00:01:59.75" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="117" place="2" lane="3" heat="1" swimtime="00:01:52.79" points="957" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.41" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.22" distance="100"/>
+                                        <SPLIT swimtime="00:01:24.11" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.79" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="119" place="4" lane="3" heat="1" swimtime="00:00:57.62" points="880" reactiontime="+58">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.73" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.62" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="127" place="1" lane="3" heat="1" swimtime="00:02:03.66" points="1022" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.52" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.01" distance="100"/>
+                                        <SPLIT swimtime="00:01:34.41" distance="150"/>
+                                        <SPLIT swimtime="00:02:03.66" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="50" lastname="Jakabos" firstname="Zsuzsanna" gender="F" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="101" place="4" lane="5" heat="1" swimtime="00:04:30.67" points="897" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.84" distance="50"/>
+                                        <SPLIT swimtime="00:01:01.50" distance="100"/>
+                                        <SPLIT swimtime="00:01:35.17" distance="150"/>
+                                        <SPLIT swimtime="00:02:08.22" distance="200"/>
+                                        <SPLIT swimtime="00:02:47.75" distance="250"/>
+                                        <SPLIT swimtime="00:03:27.13" distance="300"/>
+                                        <SPLIT swimtime="00:03:59.65" distance="350"/>
+                                        <SPLIT swimtime="00:04:30.67" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="123" place="5" lane="5" heat="1" swimtime="00:02:06.46" points="871" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.58" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.28" distance="100"/>
+                                        <SPLIT swimtime="00:01:32.73" distance="150"/>
+                                        <SPLIT swimtime="00:02:06.46" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="51" lastname="Kapas" firstname="Boglarka" gender="F" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="111" place="6" lane="1" heat="1" swimtime="00:04:04.87" points="882" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.80" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.87" distance="100"/>
+                                        <SPLIT swimtime="00:01:28.19" distance="150"/>
+                                        <SPLIT swimtime="00:01:59.09" distance="200"/>
+                                        <SPLIT swimtime="00:02:29.82" distance="250"/>
+                                        <SPLIT swimtime="00:03:01.35" distance="300"/>
+                                        <SPLIT swimtime="00:03:33.41" distance="350"/>
+                                        <SPLIT swimtime="00:04:04.87" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="115" place="2" lane="1" heat="1" swimtime="00:08:12.23" points="933" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.82" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.81" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.06" distance="150"/>
+                                        <SPLIT swimtime="00:02:02.37" distance="200"/>
+                                        <SPLIT swimtime="00:02:33.57" distance="250"/>
+                                        <SPLIT swimtime="00:03:04.83" distance="300"/>
+                                        <SPLIT swimtime="00:03:35.99" distance="350"/>
+                                        <SPLIT swimtime="00:04:06.95" distance="400"/>
+                                        <SPLIT swimtime="00:04:37.89" distance="450"/>
+                                        <SPLIT swimtime="00:05:08.72" distance="500"/>
+                                        <SPLIT swimtime="00:05:39.40" distance="550"/>
+                                        <SPLIT swimtime="00:06:10.25" distance="600"/>
+                                        <SPLIT swimtime="00:06:40.98" distance="650"/>
+                                        <SPLIT swimtime="00:07:12.13" distance="700"/>
+                                        <SPLIT swimtime="00:07:43.22" distance="750"/>
+                                        <SPLIT swimtime="00:08:12.23" distance="800"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="53" lastname="Kromowidjojo" firstname="Ranomi" gender="F" birthdate="1990-01-01">
+                            <RESULTS>
+                                <RESULT eventid="103" place="3" lane="3" heat="1" swimtime="00:00:52.28" points="928" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.83" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.28" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="125" place="1" lane="3" heat="1" swimtime="00:00:23.24" points="1001" reactiontime="+65"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="54" lastname="Lecluyse" firstname="Fanny" gender="F" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="107" place="3" lane="5" heat="1" swimtime="00:02:19.57" points="896" reactiontime="+75">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:31.96" distance="50"/>
+                                        <SPLIT swimtime="00:01:07.63" distance="100"/>
+                                        <SPLIT swimtime="00:01:43.58" distance="150"/>
+                                        <SPLIT swimtime="00:02:19.57" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="121" place="4" lane="5" heat="1" swimtime="00:01:05.56" points="874" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:30.62" distance="50"/>
+                                        <SPLIT swimtime="00:01:05.56" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="55" lastname="Luthersdottir" firstname="Hilda" gender="F" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="107" place="6" lane="1" heat="1" swimtime="00:02:23.19" points="830" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:32.29" distance="50"/>
+                                        <SPLIT swimtime="00:01:07.92" distance="100"/>
+                                        <SPLIT swimtime="00:01:45.07" distance="150"/>
+                                        <SPLIT swimtime="00:02:23.19" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="121" place="6" lane="1" heat="1" swimtime="00:01:05.92" points="860" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:31.24" distance="50"/>
+                                        <SPLIT swimtime="00:01:05.92" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="56" lastname="Mencarini" firstname="Luca" gender="M" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="106" place="4" lane="5" heat="1" swimtime="00:01:54.42" points="797" reactiontime="+58">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.79" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.51" distance="100"/>
+                                        <SPLIT swimtime="00:01:24.51" distance="150"/>
+                                        <SPLIT swimtime="00:01:54.42" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="57" lastname="Miley" firstname="Hannah" gender="F" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="101" place="6" lane="1" heat="1" swimtime="00:04:31.70" points="886" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.30" distance="50"/>
+                                        <SPLIT swimtime="00:01:02.27" distance="100"/>
+                                        <SPLIT swimtime="00:01:36.89" distance="150"/>
+                                        <SPLIT swimtime="00:02:11.43" distance="200"/>
+                                        <SPLIT swimtime="00:02:49.40" distance="250"/>
+                                        <SPLIT swimtime="00:03:28.55" distance="300"/>
+                                        <SPLIT swimtime="00:04:00.71" distance="350"/>
+                                        <SPLIT swimtime="00:04:31.70" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="117" place="6" lane="1" heat="1" swimtime="00:01:57.08" points="856" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.54" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.21" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.17" distance="150"/>
+                                        <SPLIT swimtime="00:01:57.08" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="127" place="6" lane="1" heat="1" swimtime="00:02:09.91" points="882" reactiontime="+66">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.91" distance="50"/>
+                                        <SPLIT swimtime="00:01:01.71" distance="100"/>
+                                        <SPLIT swimtime="00:01:39.08" distance="150"/>
+                                        <SPLIT swimtime="00:02:09.91" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="58" lastname="Morozov" firstname="Vladimir" gender="M" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="104" place="3" lane="3" heat="1" swimtime="00:00:46.68" points="892" reactiontime="+60">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.04" distance="50"/>
+                                        <SPLIT swimtime="00:00:46.68" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="126" place="2" lane="3" heat="1" swimtime="00:00:21.09" points="891" reactiontime="+56"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="59" lastname="Nielsen" firstname="Mie" gender="F" birthdate="1996-01-01">
+                            <RESULTS>
+                                <RESULT eventid="103" place="6" lane="5" heat="1" swimtime="00:00:53.46" points="868" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.58" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.46" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="119" place="2" lane="5" heat="1" swimtime="00:00:56.20" points="949" reactiontime="+64">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.42" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.20" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="60" lastname="O'Connor" firstname="Siobhan-Marie" gender="F" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="109" place="3" lane="1" heat="1" swimtime="00:00:55.93" points="953" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.17" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.93" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="117" place="3" lane="5" heat="1" swimtime="00:01:53.82" points="931" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.78" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.50" distance="100"/>
+                                        <SPLIT swimtime="00:01:24.51" distance="150"/>
+                                        <SPLIT swimtime="00:01:53.82" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="127" place="2" lane="5" heat="1" swimtime="00:02:05.19" points="985" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.27" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.83" distance="100"/>
+                                        <SPLIT swimtime="00:01:34.80" distance="150"/>
+                                        <SPLIT swimtime="00:02:05.19" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="61" lastname="Orsi" firstname="Marco" gender="M" birthdate="1990-01-01">
+                            <RESULTS>
+                                <RESULT eventid="104" place="4" lane="5" heat="1" swimtime="00:00:46.81" points="884" reactiontime="+58">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.04" distance="50"/>
+                                        <SPLIT swimtime="00:00:46.81" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="126" place="5" lane="5" heat="1" swimtime="00:00:21.17" points="881" reactiontime="+61"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="62" lastname="Ottesen" firstname="Jeanette" gender="F" birthdate="1987-01-01">
+                            <RESULTS>
+                                <RESULT eventid="109" place="1" lane="3" heat="1" swimtime="00:00:55.10" points="997" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.44" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.10" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="125" place="2" lane="1" heat="1" swimtime="00:00:23.49" points="969" reactiontime="+62"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="63" lastname="Paltrinieri" firstname="Gregorio" gender="M" birthdate="1994-01-01">
+                            <RESULTS>
+                                <RESULT eventid="112" place="5" lane="1" heat="1" swimtime="00:03:42.47" points="868" reactiontime="+73">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.86" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.84" distance="100"/>
+                                        <SPLIT swimtime="00:01:21.92" distance="150"/>
+                                        <SPLIT swimtime="00:01:49.86" distance="200"/>
+                                        <SPLIT swimtime="00:02:17.97" distance="250"/>
+                                        <SPLIT swimtime="00:02:46.22" distance="300"/>
+                                        <SPLIT swimtime="00:03:14.48" distance="350"/>
+                                        <SPLIT swimtime="00:03:42.47" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="116" place="2" lane="3" heat="1" swimtime="00:14:20.24" points="965" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.46" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.98" distance="100"/>
+                                        <SPLIT swimtime="00:01:23.72" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.44" distance="200"/>
+                                        <SPLIT swimtime="00:02:21.26" distance="250"/>
+                                        <SPLIT swimtime="00:02:50.21" distance="300"/>
+                                        <SPLIT swimtime="00:03:18.94" distance="350"/>
+                                        <SPLIT swimtime="00:03:47.89" distance="400"/>
+                                        <SPLIT swimtime="00:04:16.62" distance="450"/>
+                                        <SPLIT swimtime="00:04:45.68" distance="500"/>
+                                        <SPLIT swimtime="00:05:14.42" distance="550"/>
+                                        <SPLIT swimtime="00:05:43.24" distance="600"/>
+                                        <SPLIT swimtime="00:06:12.04" distance="650"/>
+                                        <SPLIT swimtime="00:06:40.99" distance="700"/>
+                                        <SPLIT swimtime="00:07:09.65" distance="750"/>
+                                        <SPLIT swimtime="00:07:38.49" distance="800"/>
+                                        <SPLIT swimtime="00:08:07.42" distance="850"/>
+                                        <SPLIT swimtime="00:08:36.41" distance="900"/>
+                                        <SPLIT swimtime="00:09:05.26" distance="950"/>
+                                        <SPLIT swimtime="00:09:34.14" distance="1000"/>
+                                        <SPLIT swimtime="00:10:03.13" distance="1050"/>
+                                        <SPLIT swimtime="00:10:31.70" distance="1100"/>
+                                        <SPLIT swimtime="00:11:00.60" distance="1150"/>
+                                        <SPLIT swimtime="00:11:29.33" distance="1200"/>
+                                        <SPLIT swimtime="00:11:58.17" distance="1250"/>
+                                        <SPLIT swimtime="00:12:27.09" distance="1300"/>
+                                        <SPLIT swimtime="00:12:55.67" distance="1350"/>
+                                        <SPLIT swimtime="00:13:24.23" distance="1400"/>
+                                        <SPLIT swimtime="00:13:52.65" distance="1450"/>
+                                        <SPLIT swimtime="00:14:20.24" distance="1500"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="64" lastname="Quigley" firstname="Lauren" gender="F" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="119" place="5" lane="1" heat="1" swimtime="00:00:57.74" points="875" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.94" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.74" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="65" lastname="Sankovich" firstname="Pavel" gender="M" birthdate="1990-01-01">
+                            <RESULTS>
+                                <RESULT eventid="110" place="3" lane="1" heat="1" swimtime="00:00:51.21" points="848" reactiontime="+70">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.86" distance="50"/>
+                                        <SPLIT swimtime="00:00:51.21" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="120" place="4" lane="5" heat="1" swimtime="00:00:51.40" points="863" reactiontime="+55">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.61" distance="50"/>
+                                        <SPLIT swimtime="00:00:51.40" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="67" lastname="Verraszto" firstname="David" gender="M" birthdate="1988-01-01">
+                            <RESULTS>
+                                <RESULT eventid="102" place="3" lane="3" heat="1" swimtime="00:04:04.63" points="892" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.61" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.32" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.06" distance="150"/>
+                                        <SPLIT swimtime="00:01:57.42" distance="200"/>
+                                        <SPLIT swimtime="00:02:31.50" distance="250"/>
+                                        <SPLIT swimtime="00:03:06.63" distance="300"/>
+                                        <SPLIT swimtime="00:03:36.01" distance="350"/>
+                                        <SPLIT swimtime="00:04:04.63" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="124" place="4" lane="3" heat="1" swimtime="00:01:55.13" points="851" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.50" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.74" distance="100"/>
+                                        <SPLIT swimtime="00:01:25.02" distance="150"/>
+                                        <SPLIT swimtime="00:01:55.13" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="128" place="4" lane="1" heat="1" swimtime="00:01:58.16" points="798" reactiontime="+73">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.35" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.26" distance="100"/>
+                                        <SPLIT swimtime="00:01:29.81" distance="150"/>
+                                        <SPLIT swimtime="00:01:58.16" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="68" lastname="Wallace" firstname="Dan" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="102" place="2" lane="5" heat="1" swimtime="00:04:04.10" points="897" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.94" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.45" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.10" distance="150"/>
+                                        <SPLIT swimtime="00:01:58.85" distance="200"/>
+                                        <SPLIT swimtime="00:02:32.66" distance="250"/>
+                                        <SPLIT swimtime="00:03:07.27" distance="300"/>
+                                        <SPLIT swimtime="00:03:36.04" distance="350"/>
+                                        <SPLIT swimtime="00:04:04.10" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="118" place="5" lane="5" heat="1" swimtime="00:01:44.95" points="848" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.55" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.75" distance="100"/>
+                                        <SPLIT swimtime="00:01:17.48" distance="150"/>
+                                        <SPLIT swimtime="00:01:44.95" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="128" place="3" lane="5" heat="1" swimtime="00:01:55.18" points="862" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.03" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.30" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.35" distance="150"/>
+                                        <SPLIT swimtime="00:01:55.18" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="69" lastname="Willis" firstname="Andrew" gender="M" birthdate="1990-01-01">
+                            <RESULTS>
+                                <RESULT eventid="108" place="3" lane="5" heat="1" swimtime="00:02:03.60" points="930" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.17" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.59" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.26" distance="150"/>
+                                        <SPLIT swimtime="00:02:03.60" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="122" place="6" lane="1" heat="1" swimtime="00:00:58.69" points="850" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.80" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.69" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="70" lastname="Vyatchanin" firstname="Arkady" gender="M" birthdate="1984-01-01">
+                            <RESULTS>
+                                <RESULT eventid="106" place="2" lane="3" heat="1" swimtime="00:01:50.87" points="876" reactiontime="+66">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.65" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.14" distance="100"/>
+                                        <SPLIT swimtime="00:01:21.41" distance="150"/>
+                                        <SPLIT swimtime="00:01:50.87" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="120" place="2" lane="3" heat="1" swimtime="00:00:50.37" points="917" reactiontime="+56">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.36" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.37" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="71" lastname="Dreesens" firstname="Dion" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="104" place="6" lane="1" heat="1" swimtime="00:00:48.40" points="800" reactiontime="+73">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.99" distance="50"/>
+                                        <SPLIT swimtime="00:00:48.40" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="118" place="6" lane="1" heat="1" swimtime="00:01:45.01" points="847" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.46" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.78" distance="100"/>
+                                        <SPLIT swimtime="00:01:17.59" distance="150"/>
+                                        <SPLIT swimtime="00:01:45.01" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="72" lastname="Simmonds" firstname="Elizabeth" gender="F" birthdate="1990-11-30">
+                            <RESULTS>
+                                <RESULT eventid="105" place="5" lane="1" heat="1" swimtime="00:02:02.67" points="936" reactiontime="+58">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.65" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.81" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.33" distance="150"/>
+                                        <SPLIT swimtime="00:02:02.67" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="73" lastname="Benson" firstname="Craig" gender="M" birthdate="1993-11-30">
+                            <RESULTS>
+                                <RESULT eventid="108" place="5" lane="1" heat="1" swimtime="00:02:04.10" points="919" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.46" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.09" distance="100"/>
+                                        <SPLIT swimtime="00:01:32.08" distance="150"/>
+                                        <SPLIT swimtime="00:02:04.10" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="122" place="3" lane="5" heat="1" swimtime="00:00:57.97" points="882" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.29" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.97" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                    </ATHLETES>
+                    <RELAYS>
+                        <RELAY number="1" agemax="-1" agemin="-1" agetotalmax="-1" agetotalmin="-1" gender="F" name="Europe All-Stars">
+                            <RESULTS>
+                                <RESULT eventid="113" place="2" lane="3" heat="1" swimtime="00:03:45.46" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.41" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.71" distance="100"/>
+                                        <SPLIT swimtime="00:01:25.33" distance="150"/>
+                                        <SPLIT swimtime="00:01:59.07" distance="200"/>
+                                        <SPLIT swimtime="00:02:24.59" distance="250"/>
+                                        <SPLIT swimtime="00:02:53.95" distance="300"/>
+                                        <SPLIT swimtime="00:03:18.52" distance="350"/>
+                                        <SPLIT swimtime="00:03:45.46" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="49" reactiontime="+63"/>
+                                        <RELAYPOSITION number="2" athleteid="41" reactiontime="+49"/>
+                                        <RELAYPOSITION number="3" athleteid="62" reactiontime="+27"/>
+                                        <RELAYPOSITION number="4" athleteid="53" reactiontime="+38"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                                <RESULT eventid="129" place="1" lane="3" heat="1" swimtime="00:03:27.61" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.43" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.81" distance="100"/>
+                                        <SPLIT swimtime="00:01:17.26" distance="150"/>
+                                        <SPLIT swimtime="00:01:43.96" distance="200"/>
+                                        <SPLIT swimtime="00:02:08.29" distance="250"/>
+                                        <SPLIT swimtime="00:02:35.18" distance="300"/>
+                                        <SPLIT swimtime="00:03:00.05" distance="350"/>
+                                        <SPLIT swimtime="00:03:27.61" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="48" reactiontime="+67"/>
+                                        <RELAYPOSITION number="2" athleteid="53" reactiontime="+31"/>
+                                        <RELAYPOSITION number="3" athleteid="62" reactiontime="+32"/>
+                                        <RELAYPOSITION number="4" athleteid="60" reactiontime="+27"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                            </RESULTS>
+                        </RELAY>
+                        <RELAY number="1" agemax="-1" agemin="-1" agetotalmax="-1" agetotalmin="-1" gender="M" name="Europe All-Stars">
+                            <RESULTS>
+                                <RESULT eventid="114" place="2" lane="3" heat="1" swimtime="00:03:21.87" points="960" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.65" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.69" distance="100"/>
+                                        <SPLIT swimtime="00:01:17.00" distance="150"/>
+                                        <SPLIT swimtime="00:01:47.07" distance="200"/>
+                                        <SPLIT swimtime="00:02:09.82" distance="250"/>
+                                        <SPLIT swimtime="00:02:36.21" distance="300"/>
+                                        <SPLIT swimtime="00:02:57.42" distance="350"/>
+                                        <SPLIT swimtime="00:03:21.87" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="70" reactiontime="+62"/>
+                                        <RELAYPOSITION number="2" athleteid="46" reactiontime="0"/>
+                                        <RELAYPOSITION number="3" athleteid="40" reactiontime="+41"/>
+                                        <RELAYPOSITION number="4" athleteid="58" reactiontime="+24"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                                <RESULT eventid="130" place="2" lane="3" heat="1" swimtime="00:03:08.32" points="922" reactiontime="+59">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.14" distance="50"/>
+                                        <SPLIT swimtime="00:00:46.45" distance="100"/>
+                                        <SPLIT swimtime="00:01:08.68" distance="150"/>
+                                        <SPLIT swimtime="00:01:33.21" distance="200"/>
+                                        <SPLIT swimtime="00:01:55.73" distance="250"/>
+                                        <SPLIT swimtime="00:02:21.26" distance="300"/>
+                                        <SPLIT swimtime="00:02:43.66" distance="350"/>
+                                        <SPLIT swimtime="00:03:08.32" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="61" reactiontime="+59"/>
+                                        <RELAYPOSITION number="2" athleteid="58" reactiontime="+22"/>
+                                        <RELAYPOSITION number="3" athleteid="71" reactiontime="+42"/>
+                                        <RELAYPOSITION number="4" athleteid="45" reactiontime="+19"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                            </RESULTS>
+                        </RELAY>
+                    </RELAYS>
+                </CLUB>
+                <CLUB name="United States Of America" shortname="National Team" code="USA" nation="USA" type="NATIONALTEAM" sti.printnamelong="United States of America" sti.printnameshort="USA" sti.tvnamelong="United States of America" sti.tvnameshort="USA">
+                    <ATHLETES>
+                        <ATHLETE athleteid="1" lastname="Adams" firstname="Cammile" gender="F" birthdate="1997-11-30">
+                            <RESULTS>
+                                <RESULT eventid="109" place="6" lane="2" heat="1" swimtime="00:00:58.79" points="821" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.69" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.79" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="123" place="1" lane="4" heat="1" swimtime="00:02:03.39" points="937" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.42" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.66" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.46" distance="150"/>
+                                        <SPLIT swimtime="00:02:03.39" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="2" lastname="Adams" firstname="Claire" gender="F" birthdate="1990-11-30">
+                            <RESULTS>
+                                <RESULT eventid="105" place="4" lane="2" heat="1" swimtime="00:02:02.47" points="941" reactiontime="+59">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.64" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.44" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.13" distance="150"/>
+                                        <SPLIT swimtime="00:02:02.47" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="119" place="3" lane="6" heat="1" swimtime="00:00:56.45" points="936" reactiontime="+57">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.67" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.45" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="3" lastname="Adrian" firstname="Nathan" gender="M" birthdate="1988-01-01">
+                            <RESULTS>
+                                <RESULT eventid="104" place="1" lane="4" heat="1" swimtime="00:00:46.57" points="898" reactiontime="+64">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:21.68" distance="50"/>
+                                        <SPLIT swimtime="00:00:46.57" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="126" place="1" lane="4" heat="1" swimtime="00:00:20.95" points="909" reactiontime="+62"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="4" lastname="Bartholomew" firstname="Courtney" gender="F" birthdate="1994-01-01">
+                            <RESULTS>
+                                <RESULT eventid="105" place="2" lane="6" heat="1" swimtime="00:02:01.33" points="968" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.89" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.58" distance="100"/>
+                                        <SPLIT swimtime="00:01:30.58" distance="150"/>
+                                        <SPLIT swimtime="00:02:01.33" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="119" place="1" lane="2" heat="1" swimtime="00:00:55.92" points="963" reactiontime="+59">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.19" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.92" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="5" lastname="Chadwick" firstname="Michael" gender="M" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="104" place="5" lane="6" heat="1" swimtime="00:00:46.95" points="876" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.42" distance="50"/>
+                                        <SPLIT swimtime="00:00:46.95" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="126" place="4" lane="2" heat="1" swimtime="00:00:21.16" points="882" reactiontime="+63"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="6" lastname="Clary" firstname="Tyler" gender="M" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="102" place="4" lane="4" heat="1" swimtime="00:04:07.31" points="863" reactiontime="+61">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.97" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.48" distance="100"/>
+                                        <SPLIT swimtime="00:01:25.77" distance="150"/>
+                                        <SPLIT swimtime="00:01:55.45" distance="200"/>
+                                        <SPLIT swimtime="00:02:30.71" distance="250"/>
+                                        <SPLIT swimtime="00:03:06.98" distance="300"/>
+                                        <SPLIT swimtime="00:03:36.38" distance="350"/>
+                                        <SPLIT swimtime="00:04:07.31" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="106" place="5" lane="4" heat="1" swimtime="00:01:56.70" points="751" reactiontime="+50">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.15" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.00" distance="100"/>
+                                        <SPLIT swimtime="00:01:25.94" distance="150"/>
+                                        <SPLIT swimtime="00:01:56.70" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="124" place="3" lane="2" heat="1" swimtime="00:01:54.74" points="859" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.06" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.93" distance="100"/>
+                                        <SPLIT swimtime="00:01:24.38" distance="150"/>
+                                        <SPLIT swimtime="00:01:54.74" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="7" lastname="Cordes" firstname="Kevin" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="122" place="4" lane="2" heat="1" swimtime="00:00:58.09" points="877" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.19" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.09" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="8" lastname="Dwyer" firstname="Conor" gender="M" birthdate="1989-01-01">
+                            <RESULTS>
+                                <RESULT eventid="112" place="2" lane="6" heat="1" swimtime="00:03:38.10" points="921" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.92" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.25" distance="100"/>
+                                        <SPLIT swimtime="00:01:19.80" distance="150"/>
+                                        <SPLIT swimtime="00:01:47.60" distance="200"/>
+                                        <SPLIT swimtime="00:02:15.37" distance="250"/>
+                                        <SPLIT swimtime="00:02:43.27" distance="300"/>
+                                        <SPLIT swimtime="00:03:11.07" distance="350"/>
+                                        <SPLIT swimtime="00:03:38.10" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="118" place="1" lane="4" heat="1" swimtime="00:01:42.10" points="921" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.84" distance="50"/>
+                                        <SPLIT swimtime="00:00:49.78" distance="100"/>
+                                        <SPLIT swimtime="00:01:15.94" distance="150"/>
+                                        <SPLIT swimtime="00:01:42.10" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="128" place="2" lane="2" heat="1" swimtime="00:01:54.21" points="884" reactiontime="+66">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.25" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.14" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.41" distance="150"/>
+                                        <SPLIT swimtime="00:01:54.21" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="9" lastname="Fink" firstname="Nic" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="108" place="4" lane="6" heat="1" swimtime="00:02:03.62" points="930" reactiontime="+72">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.24" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.75" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.27" distance="150"/>
+                                        <SPLIT swimtime="00:02:03.62" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="10" lastname="Flickinger" firstname="Hali" gender="F" birthdate="1994-01-01">
+                            <RESULTS>
+                                <RESULT eventid="111" place="2" lane="2" heat="1" swimtime="00:03:58.26" points="957" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.47" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.86" distance="100"/>
+                                        <SPLIT swimtime="00:01:26.74" distance="150"/>
+                                        <SPLIT swimtime="00:01:56.98" distance="200"/>
+                                        <SPLIT swimtime="00:02:27.24" distance="250"/>
+                                        <SPLIT swimtime="00:02:57.73" distance="300"/>
+                                        <SPLIT swimtime="00:03:28.39" distance="350"/>
+                                        <SPLIT swimtime="00:03:58.26" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="123" place="3" lane="6" heat="1" swimtime="00:02:04.72" points="908" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.35" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.85" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.95" distance="150"/>
+                                        <SPLIT swimtime="00:02:04.72" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="11" lastname="Franklin" firstname="Missy" gender="F" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="105" place="3" lane="4" heat="1" swimtime="00:02:01.53" points="963" reactiontime="+56">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.62" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.86" distance="100"/>
+                                        <SPLIT swimtime="00:01:29.97" distance="150"/>
+                                        <SPLIT swimtime="00:02:01.53" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="117" place="1" lane="4" heat="1" swimtime="00:01:52.74" points="958" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.54" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.98" distance="100"/>
+                                        <SPLIT swimtime="00:01:23.56" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.74" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="119" place="6" lane="4" heat="1" swimtime="00:00:58.84" points="827" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.67" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.84" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="12" lastname="Geer" firstname="Margo" gender="F" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="103" place="5" lane="6" heat="1" swimtime="00:00:52.93" points="895" reactiontime="+66">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.34" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.93" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="125" place="6" lane="6" heat="1" swimtime="00:00:24.67" points="837" reactiontime="+64"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="13" lastname="Godsoe" firstname="Eugene" gender="M" birthdate="1988-01-01">
+                            <RESULTS>
+                                <RESULT eventid="110" place="5" lane="2" heat="1" swimtime="00:00:51.52" points="833" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.91" distance="50"/>
+                                        <SPLIT swimtime="00:00:51.52" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="120" place="3" lane="2" heat="1" swimtime="00:00:51.08" points="879" reactiontime="+52">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.50" distance="50"/>
+                                        <SPLIT swimtime="00:00:51.08" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="14" lastname="Grevers" firstname="Matt" gender="M" birthdate="1985-01-01">
+                            <RESULTS>
+                                <RESULT eventid="106" place="1" lane="6" heat="1" swimtime="00:01:48.97" points="923" reactiontime="+61">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.54" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.82" distance="100"/>
+                                        <SPLIT swimtime="00:01:22.53" distance="150"/>
+                                        <SPLIT swimtime="00:01:48.97" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="120" place="1" lane="4" heat="1" swimtime="00:00:48.92" points="1001" reactiontime="+56">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.56" distance="50"/>
+                                        <SPLIT swimtime="00:00:48.92" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="15" lastname="Grothe" firstname="Zane" gender="M" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="112" place="4" lane="2" heat="1" swimtime="00:03:39.70" points="901" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.57" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.53" distance="100"/>
+                                        <SPLIT swimtime="00:01:21.21" distance="150"/>
+                                        <SPLIT swimtime="00:01:49.18" distance="200"/>
+                                        <SPLIT swimtime="00:02:16.90" distance="250"/>
+                                        <SPLIT swimtime="00:02:44.61" distance="300"/>
+                                        <SPLIT swimtime="00:03:12.58" distance="350"/>
+                                        <SPLIT swimtime="00:03:39.70" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="118" place="4" lane="2" heat="1" swimtime="00:01:44.48" points="860" reactiontime="+65">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.12" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.49" distance="100"/>
+                                        <SPLIT swimtime="00:01:17.65" distance="150"/>
+                                        <SPLIT swimtime="00:01:44.48" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="16" lastname="Hardy" firstname="Jessica" gender="F" birthdate="1987-01-01">
+                            <RESULTS>
+                                <RESULT eventid="121" place="3" lane="2" heat="1" swimtime="00:01:05.47" points="878" reactiontime="+64">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:30.63" distance="50"/>
+                                        <SPLIT swimtime="00:01:05.47" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="17" lastname="Henry" firstname="Sarah" gender="F" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="101" place="3" lane="6" heat="1" swimtime="00:04:27.63" points="927" reactiontime="+78">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.44" distance="50"/>
+                                        <SPLIT swimtime="00:01:01.80" distance="100"/>
+                                        <SPLIT swimtime="00:01:36.56" distance="150"/>
+                                        <SPLIT swimtime="00:02:10.32" distance="200"/>
+                                        <SPLIT swimtime="00:02:48.83" distance="250"/>
+                                        <SPLIT swimtime="00:03:27.48" distance="300"/>
+                                        <SPLIT swimtime="00:03:57.66" distance="350"/>
+                                        <SPLIT swimtime="00:04:27.63" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="111" place="5" lane="6" heat="1" swimtime="00:04:02.17" points="912" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.51" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.87" distance="100"/>
+                                        <SPLIT swimtime="00:01:29.58" distance="150"/>
+                                        <SPLIT swimtime="00:02:00.26" distance="200"/>
+                                        <SPLIT swimtime="00:02:30.94" distance="250"/>
+                                        <SPLIT swimtime="00:03:01.69" distance="300"/>
+                                        <SPLIT swimtime="00:03:32.18" distance="350"/>
+                                        <SPLIT swimtime="00:04:02.17" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="115" place="5" lane="6" heat="1" swimtime="00:08:18.37" points="899" reactiontime="+75">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.27" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.40" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.76" distance="150"/>
+                                        <SPLIT swimtime="00:02:03.00" distance="200"/>
+                                        <SPLIT swimtime="00:02:34.11" distance="250"/>
+                                        <SPLIT swimtime="00:03:05.41" distance="300"/>
+                                        <SPLIT swimtime="00:03:36.78" distance="350"/>
+                                        <SPLIT swimtime="00:04:08.30" distance="400"/>
+                                        <SPLIT swimtime="00:04:39.82" distance="450"/>
+                                        <SPLIT swimtime="00:05:11.31" distance="500"/>
+                                        <SPLIT swimtime="00:05:42.75" distance="550"/>
+                                        <SPLIT swimtime="00:06:14.22" distance="600"/>
+                                        <SPLIT swimtime="00:06:46.05" distance="650"/>
+                                        <SPLIT swimtime="00:07:17.73" distance="700"/>
+                                        <SPLIT swimtime="00:07:48.75" distance="750"/>
+                                        <SPLIT swimtime="00:08:18.37" distance="800"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="18" lastname="Jaeger" firstname="Connor" gender="M" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="112" place="3" lane="4" heat="1" swimtime="00:03:38.36" points="918" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.21" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.85" distance="100"/>
+                                        <SPLIT swimtime="00:01:20.47" distance="150"/>
+                                        <SPLIT swimtime="00:01:48.41" distance="200"/>
+                                        <SPLIT swimtime="00:02:15.74" distance="250"/>
+                                        <SPLIT swimtime="00:02:43.56" distance="300"/>
+                                        <SPLIT swimtime="00:03:11.25" distance="350"/>
+                                        <SPLIT swimtime="00:03:38.36" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="116" place="1" lane="4" heat="1" swimtime="00:14:19.29" points="968" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.22" distance="50"/>
+                                        <SPLIT swimtime="00:00:54.82" distance="100"/>
+                                        <SPLIT swimtime="00:01:23.54" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.12" distance="200"/>
+                                        <SPLIT swimtime="00:02:21.09" distance="250"/>
+                                        <SPLIT swimtime="00:02:49.94" distance="300"/>
+                                        <SPLIT swimtime="00:03:18.79" distance="350"/>
+                                        <SPLIT swimtime="00:03:47.60" distance="400"/>
+                                        <SPLIT swimtime="00:04:16.46" distance="450"/>
+                                        <SPLIT swimtime="00:04:45.35" distance="500"/>
+                                        <SPLIT swimtime="00:05:14.31" distance="550"/>
+                                        <SPLIT swimtime="00:05:43.23" distance="600"/>
+                                        <SPLIT swimtime="00:06:12.16" distance="650"/>
+                                        <SPLIT swimtime="00:06:41.25" distance="700"/>
+                                        <SPLIT swimtime="00:07:10.25" distance="750"/>
+                                        <SPLIT swimtime="00:07:39.17" distance="800"/>
+                                        <SPLIT swimtime="00:08:08.12" distance="850"/>
+                                        <SPLIT swimtime="00:08:37.00" distance="900"/>
+                                        <SPLIT swimtime="00:09:05.69" distance="950"/>
+                                        <SPLIT swimtime="00:09:34.52" distance="1000"/>
+                                        <SPLIT swimtime="00:10:03.02" distance="1050"/>
+                                        <SPLIT swimtime="00:10:31.61" distance="1100"/>
+                                        <SPLIT swimtime="00:11:00.29" distance="1150"/>
+                                        <SPLIT swimtime="00:11:29.10" distance="1200"/>
+                                        <SPLIT swimtime="00:11:57.91" distance="1250"/>
+                                        <SPLIT swimtime="00:12:26.80" distance="1300"/>
+                                        <SPLIT swimtime="00:12:55.70" distance="1350"/>
+                                        <SPLIT swimtime="00:13:24.45" distance="1400"/>
+                                        <SPLIT swimtime="00:13:52.78" distance="1450"/>
+                                        <SPLIT swimtime="00:14:19.29" distance="1500"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="19" lastname="Lawrence" firstname="Micah" gender="F" birthdate="1990-01-01">
+                            <RESULTS>
+                                <RESULT eventid="107" place="4" lane="4" heat="1" swimtime="00:02:19.98" points="888" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:31.71" distance="50"/>
+                                        <SPLIT swimtime="00:01:06.85" distance="100"/>
+                                        <SPLIT swimtime="00:01:42.87" distance="150"/>
+                                        <SPLIT swimtime="00:02:19.98" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="20" lastname="Leverenz" firstname="Caitlin" gender="F" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="101" place="2" lane="2" heat="1" swimtime="00:04:26.74" points="937" reactiontime="+70">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.37" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.13" distance="100"/>
+                                        <SPLIT swimtime="00:01:34.55" distance="150"/>
+                                        <SPLIT swimtime="00:02:08.15" distance="200"/>
+                                        <SPLIT swimtime="00:02:45.19" distance="250"/>
+                                        <SPLIT swimtime="00:03:23.49" distance="300"/>
+                                        <SPLIT swimtime="00:03:55.55" distance="350"/>
+                                        <SPLIT swimtime="00:04:26.74" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="127" place="4" lane="2" heat="1" swimtime="00:02:06.65" points="952" reactiontime="+69">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.96" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.19" distance="100"/>
+                                        <SPLIT swimtime="00:01:36.12" distance="150"/>
+                                        <SPLIT swimtime="00:02:06.65" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="21" lastname="Lochte" firstname="Ryan" gender="M" birthdate="1984-01-01">
+                            <RESULTS>
+                                <RESULT eventid="102" place="1" lane="2" heat="1" swimtime="00:04:02.78" points="912" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.92" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.89" distance="100"/>
+                                        <SPLIT swimtime="00:01:23.91" distance="150"/>
+                                        <SPLIT swimtime="00:01:53.53" distance="200"/>
+                                        <SPLIT swimtime="00:02:27.45" distance="250"/>
+                                        <SPLIT swimtime="00:03:03.45" distance="300"/>
+                                        <SPLIT swimtime="00:03:33.37" distance="350"/>
+                                        <SPLIT swimtime="00:04:02.78" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="106" place="3" lane="2" heat="1" swimtime="00:01:52.58" points="837" reactiontime="+60">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.92" distance="50"/>
+                                        <SPLIT swimtime="00:00:53.92" distance="100"/>
+                                        <SPLIT swimtime="00:01:22.83" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.58" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="118" place="2" lane="6" heat="1" swimtime="00:01:42.53" points="910" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.97" distance="50"/>
+                                        <SPLIT swimtime="00:00:50.20" distance="100"/>
+                                        <SPLIT swimtime="00:01:16.28" distance="150"/>
+                                        <SPLIT swimtime="00:01:42.53" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="128" place="-1" lane="4" heat="1" swimtime="00:01:52.80" status="DSQ" comment="Disqualified" reactiontime="+68">
+                                    <SPLITS/>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="22" lastname="Mann" firstname="Becca" gender="F" birthdate="1997-01-01">
+                            <RESULTS>
+                                <RESULT eventid="101" place="5" lane="4" heat="1" swimtime="00:04:31.14" points="892" reactiontime="+79">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.05" distance="50"/>
+                                        <SPLIT swimtime="00:01:01.57" distance="100"/>
+                                        <SPLIT swimtime="00:01:35.60" distance="150"/>
+                                        <SPLIT swimtime="00:02:08.87" distance="200"/>
+                                        <SPLIT swimtime="00:02:48.96" distance="250"/>
+                                        <SPLIT swimtime="00:03:29.18" distance="300"/>
+                                        <SPLIT swimtime="00:04:00.85" distance="350"/>
+                                        <SPLIT swimtime="00:04:31.14" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="115" place="3" lane="2" heat="1" swimtime="00:08:12.43" points="932" reactiontime="+78">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.16" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.81" distance="100"/>
+                                        <SPLIT swimtime="00:01:30.92" distance="150"/>
+                                        <SPLIT swimtime="00:02:02.06" distance="200"/>
+                                        <SPLIT swimtime="00:02:33.11" distance="250"/>
+                                        <SPLIT swimtime="00:03:04.18" distance="300"/>
+                                        <SPLIT swimtime="00:03:35.25" distance="350"/>
+                                        <SPLIT swimtime="00:04:06.02" distance="400"/>
+                                        <SPLIT swimtime="00:04:36.81" distance="450"/>
+                                        <SPLIT swimtime="00:05:07.66" distance="500"/>
+                                        <SPLIT swimtime="00:05:38.38" distance="550"/>
+                                        <SPLIT swimtime="00:06:09.40" distance="600"/>
+                                        <SPLIT swimtime="00:06:40.55" distance="650"/>
+                                        <SPLIT swimtime="00:07:11.61" distance="700"/>
+                                        <SPLIT swimtime="00:07:42.49" distance="750"/>
+                                        <SPLIT swimtime="00:08:12.43" distance="800"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="23" lastname="Manuel" firstname="Simone" gender="F" birthdate="1996-01-01">
+                            <RESULTS>
+                                <RESULT eventid="103" place="1" lane="4" heat="1" swimtime="00:00:51.69" points="961" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.00" distance="50"/>
+                                        <SPLIT swimtime="00:00:51.69" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="125" place="5" lane="4" heat="1" swimtime="00:00:24.07" points="901" reactiontime="+61"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="24" lastname="Margalis" firstname="Melanie" gender="F" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="107" place="1" lane="2" heat="1" swimtime="00:02:18.35" points="920" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:32.01" distance="50"/>
+                                        <SPLIT swimtime="00:01:07.31" distance="100"/>
+                                        <SPLIT swimtime="00:01:42.56" distance="150"/>
+                                        <SPLIT swimtime="00:02:18.35" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="117" place="4" lane="2" heat="1" swimtime="00:01:54.35" points="918" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.40" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.30" distance="100"/>
+                                        <SPLIT swimtime="00:01:25.56" distance="150"/>
+                                        <SPLIT swimtime="00:01:54.35" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="127" place="3" lane="4" heat="1" swimtime="00:02:06.34" points="959" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.05" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.41" distance="100"/>
+                                        <SPLIT swimtime="00:01:36.57" distance="150"/>
+                                        <SPLIT swimtime="00:02:06.34" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="25" lastname="McBroom" firstname="Michael" gender="M" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="116" place="3" lane="2" heat="1" swimtime="00:14:38.92" points="904" reactiontime="+73">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.21" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.35" distance="100"/>
+                                        <SPLIT swimtime="00:01:24.04" distance="150"/>
+                                        <SPLIT swimtime="00:01:52.91" distance="200"/>
+                                        <SPLIT swimtime="00:02:21.81" distance="250"/>
+                                        <SPLIT swimtime="00:02:50.76" distance="300"/>
+                                        <SPLIT swimtime="00:03:19.77" distance="350"/>
+                                        <SPLIT swimtime="00:03:48.77" distance="400"/>
+                                        <SPLIT swimtime="00:04:17.95" distance="450"/>
+                                        <SPLIT swimtime="00:04:46.81" distance="500"/>
+                                        <SPLIT swimtime="00:05:15.67" distance="550"/>
+                                        <SPLIT swimtime="00:05:44.86" distance="600"/>
+                                        <SPLIT swimtime="00:06:14.17" distance="650"/>
+                                        <SPLIT swimtime="00:06:43.65" distance="700"/>
+                                        <SPLIT swimtime="00:07:13.21" distance="750"/>
+                                        <SPLIT swimtime="00:07:43.04" distance="800"/>
+                                        <SPLIT swimtime="00:08:12.76" distance="850"/>
+                                        <SPLIT swimtime="00:08:42.30" distance="900"/>
+                                        <SPLIT swimtime="00:09:12.14" distance="950"/>
+                                        <SPLIT swimtime="00:09:41.59" distance="1000"/>
+                                        <SPLIT swimtime="00:10:11.02" distance="1050"/>
+                                        <SPLIT swimtime="00:10:40.71" distance="1100"/>
+                                        <SPLIT swimtime="00:11:10.46" distance="1150"/>
+                                        <SPLIT swimtime="00:11:40.52" distance="1200"/>
+                                        <SPLIT swimtime="00:12:10.26" distance="1250"/>
+                                        <SPLIT swimtime="00:12:40.32" distance="1300"/>
+                                        <SPLIT swimtime="00:13:10.46" distance="1350"/>
+                                        <SPLIT swimtime="00:13:40.38" distance="1400"/>
+                                        <SPLIT swimtime="00:14:10.25" distance="1450"/>
+                                        <SPLIT swimtime="00:14:38.92" distance="1500"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="26" lastname="Meili" firstname="Katie" gender="F" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="121" place="2" lane="4" heat="1" swimtime="00:01:03.20" points="976" reactiontime="+57">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:29.74" distance="50"/>
+                                        <SPLIT swimtime="00:01:03.20" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="127" place="5" lane="6" heat="1" swimtime="00:02:09.06" points="899" reactiontime="+60">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.28" distance="50"/>
+                                        <SPLIT swimtime="00:01:00.83" distance="100"/>
+                                        <SPLIT swimtime="00:01:37.11" distance="150"/>
+                                        <SPLIT swimtime="00:02:09.06" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="27" lastname="Miller" firstname="Cody" gender="M" birthdate="1992-01-01">
+                            <RESULTS>
+                                <RESULT eventid="108" place="1" lane="4" heat="1" swimtime="00:02:02.33" points="959" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.59" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.56" distance="100"/>
+                                        <SPLIT swimtime="00:01:30.00" distance="150"/>
+                                        <SPLIT swimtime="00:02:02.33" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="122" place="1" lane="4" heat="1" swimtime="00:00:56.43" points="957" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:26.40" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.43" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="28" lastname="Neal" firstname="Lia" gender="F" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="103" place="2" lane="2" heat="1" swimtime="00:00:52.08" points="939" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.96" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.08" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="125" place="3" lane="2" heat="1" swimtime="00:00:23.95" points="914" reactiontime="+66"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="29" lastname="Prenot" firstname="Josh" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="108" place="6" lane="2" heat="1" swimtime="00:02:04.22" points="916" reactiontime="+67">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.40" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.58" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.67" distance="150"/>
+                                        <SPLIT swimtime="00:02:04.22" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="128" place="1" lane="6" heat="1" swimtime="00:01:53.09" points="910" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.52" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.87" distance="100"/>
+                                        <SPLIT swimtime="00:01:24.98" distance="150"/>
+                                        <SPLIT swimtime="00:01:53.09" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="30" lastname="Schneider" firstname="Josh" gender="M" birthdate="1988-01-01">
+                            <RESULTS>
+                                <RESULT eventid="104" place="2" lane="2" heat="1" swimtime="00:00:46.66" points="893" reactiontime="+61">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:21.91" distance="50"/>
+                                        <SPLIT swimtime="00:00:46.66" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="126" place="3" lane="6" heat="1" swimtime="00:00:21.10" points="890" reactiontime="+58"/>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="31" lastname="Shields" firstname="Tom" gender="M" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="110" place="1" lane="4" heat="1" swimtime="00:00:48.63" points="990" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.56" distance="50"/>
+                                        <SPLIT swimtime="00:00:48.63" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="124" place="1" lane="4" heat="1" swimtime="00:01:49.05" points="1001" reactiontime="+71">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.33" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.78" distance="100"/>
+                                        <SPLIT swimtime="00:01:21.06" distance="150"/>
+                                        <SPLIT swimtime="00:01:49.05" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="32" lastname="Smith" firstname="Leah" gender="F" birthdate="1995-01-01">
+                            <RESULTS>
+                                <RESULT eventid="111" place="4" lane="4" heat="1" swimtime="00:03:59.24" points="945" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.67" distance="50"/>
+                                        <SPLIT swimtime="00:00:57.12" distance="100"/>
+                                        <SPLIT swimtime="00:01:27.11" distance="150"/>
+                                        <SPLIT swimtime="00:01:57.45" distance="200"/>
+                                        <SPLIT swimtime="00:02:27.79" distance="250"/>
+                                        <SPLIT swimtime="00:02:58.34" distance="300"/>
+                                        <SPLIT swimtime="00:03:29.06" distance="350"/>
+                                        <SPLIT swimtime="00:03:59.24" distance="400"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="115" place="1" lane="4" heat="1" swimtime="00:08:10.03" points="946" reactiontime="+77">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.95" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.73" distance="100"/>
+                                        <SPLIT swimtime="00:01:30.76" distance="150"/>
+                                        <SPLIT swimtime="00:02:01.84" distance="200"/>
+                                        <SPLIT swimtime="00:02:32.82" distance="250"/>
+                                        <SPLIT swimtime="00:03:03.73" distance="300"/>
+                                        <SPLIT swimtime="00:03:34.58" distance="350"/>
+                                        <SPLIT swimtime="00:04:05.23" distance="400"/>
+                                        <SPLIT swimtime="00:04:35.76" distance="450"/>
+                                        <SPLIT swimtime="00:05:06.42" distance="500"/>
+                                        <SPLIT swimtime="00:05:37.24" distance="550"/>
+                                        <SPLIT swimtime="00:06:08.05" distance="600"/>
+                                        <SPLIT swimtime="00:06:38.78" distance="650"/>
+                                        <SPLIT swimtime="00:07:09.59" distance="700"/>
+                                        <SPLIT swimtime="00:07:40.26" distance="750"/>
+                                        <SPLIT swimtime="00:08:10.03" distance="800"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="117" place="5" lane="6" heat="1" swimtime="00:01:55.33" points="895" reactiontime="+74">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.34" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.52" distance="100"/>
+                                        <SPLIT swimtime="00:01:26.04" distance="150"/>
+                                        <SPLIT swimtime="00:01:55.33" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="33" lastname="Sogar" firstname="Laura" gender="F" birthdate="1991-01-01">
+                            <RESULTS>
+                                <RESULT eventid="107" place="5" lane="6" heat="1" swimtime="00:02:20.34" points="881" reactiontime="+70">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:31.40" distance="50"/>
+                                        <SPLIT swimtime="00:01:06.18" distance="100"/>
+                                        <SPLIT swimtime="00:01:42.33" distance="150"/>
+                                        <SPLIT swimtime="00:02:20.34" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="121" place="5" lane="6" heat="1" swimtime="00:01:05.77" points="866" reactiontime="+70">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:30.98" distance="50"/>
+                                        <SPLIT swimtime="00:01:05.77" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="34" lastname="Stewart" firstname="Kendyl" gender="F" birthdate="1994-01-01">
+                            <RESULTS>
+                                <RESULT eventid="109" place="4" lane="6" heat="1" swimtime="00:00:56.67" points="916" reactiontime="+73">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.98" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.67" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="35" lastname="Wilson" firstname="Andrew" gender="M" birthdate="1993-01-01">
+                            <RESULTS>
+                                <RESULT eventid="122" place="5" lane="6" heat="1" swimtime="00:00:58.46" points="860" reactiontime="+63">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.59" distance="50"/>
+                                        <SPLIT swimtime="00:00:58.46" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                        <ATHLETE athleteid="36" lastname="Worrell" firstname="Kelsi" gender="F" birthdate="1994-01-01">
+                            <RESULTS>
+                                <RESULT eventid="109" place="2" lane="4" heat="1" swimtime="00:00:55.42" points="980" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:25.95" distance="50"/>
+                                        <SPLIT swimtime="00:00:55.42" distance="100"/>
+                                    </SPLITS>
+                                </RESULT>
+                                <RESULT eventid="123" place="4" lane="2" heat="1" swimtime="00:02:04.78" points="906" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:28.18" distance="50"/>
+                                        <SPLIT swimtime="00:00:59.98" distance="100"/>
+                                        <SPLIT swimtime="00:01:31.95" distance="150"/>
+                                        <SPLIT swimtime="00:02:04.78" distance="200"/>
+                                    </SPLITS>
+                                </RESULT>
+                            </RESULTS>
+                        </ATHLETE>
+                    </ATHLETES>
+                    <RELAYS>
+                        <RELAY number="1" agemax="-1" agemin="-1" agetotalmax="-1" agetotalmin="-1" gender="F" name="United States of America">
+                            <RESULTS>
+                                <RESULT eventid="113" place="1" lane="4" heat="1" swimtime="00:03:45.20" reactiontime="+60">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:27.40" distance="50"/>
+                                        <SPLIT swimtime="00:00:56.08" distance="100"/>
+                                        <SPLIT swimtime="00:01:25.50" distance="150"/>
+                                        <SPLIT swimtime="00:01:58.96" distance="200"/>
+                                        <SPLIT swimtime="00:02:24.22" distance="250"/>
+                                        <SPLIT swimtime="00:02:53.97" distance="300"/>
+                                        <SPLIT swimtime="00:03:18.81" distance="350"/>
+                                        <SPLIT swimtime="00:03:45.20" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="4" reactiontime="+60"/>
+                                        <RELAYPOSITION number="2" athleteid="26" reactiontime="+38"/>
+                                        <RELAYPOSITION number="3" athleteid="36" reactiontime="0"/>
+                                        <RELAYPOSITION number="4" athleteid="23" reactiontime="+23"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                                <RESULT eventid="129" place="2" lane="4" heat="1" swimtime="00:03:29.05" reactiontime="+68">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:24.79" distance="50"/>
+                                        <SPLIT swimtime="00:00:52.01" distance="100"/>
+                                        <SPLIT swimtime="00:01:17.43" distance="150"/>
+                                        <SPLIT swimtime="00:01:44.79" distance="200"/>
+                                        <SPLIT swimtime="00:02:09.68" distance="250"/>
+                                        <SPLIT swimtime="00:02:37.30" distance="300"/>
+                                        <SPLIT swimtime="00:03:02.21" distance="350"/>
+                                        <SPLIT swimtime="00:03:29.05" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="28" reactiontime="+68"/>
+                                        <RELAYPOSITION number="2" athleteid="11" reactiontime="+29"/>
+                                        <RELAYPOSITION number="3" athleteid="12" reactiontime="+23"/>
+                                        <RELAYPOSITION number="4" athleteid="23" reactiontime="+25"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                            </RESULTS>
+                        </RELAY>
+                        <RELAY number="1" agemax="-1" agemin="-1" agetotalmax="-1" agetotalmin="-1" gender="M" name="United States of America">
+                            <RESULTS>
+                                <RESULT eventid="114" place="1" lane="4" heat="1" swimtime="00:03:20.91" points="974" reactiontime="+60">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:23.85" distance="50"/>
+                                        <SPLIT swimtime="00:00:49.25" distance="100"/>
+                                        <SPLIT swimtime="00:01:16.25" distance="150"/>
+                                        <SPLIT swimtime="00:01:47.28" distance="200"/>
+                                        <SPLIT swimtime="00:02:09.47" distance="250"/>
+                                        <SPLIT swimtime="00:02:35.35" distance="300"/>
+                                        <SPLIT swimtime="00:02:56.73" distance="350"/>
+                                        <SPLIT swimtime="00:03:20.91" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="14" reactiontime="+60"/>
+                                        <RELAYPOSITION number="2" athleteid="7" reactiontime="+29"/>
+                                        <RELAYPOSITION number="3" athleteid="31" reactiontime="+35"/>
+                                        <RELAYPOSITION number="4" athleteid="3" reactiontime="+28"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                                <RESULT eventid="130" place="1" lane="4" heat="1" swimtime="00:03:05.42" points="966" reactiontime="+62">
+                                    <SPLITS>
+                                        <SPLIT swimtime="00:00:22.35" distance="50"/>
+                                        <SPLIT swimtime="00:00:47.07" distance="100"/>
+                                        <SPLIT swimtime="00:01:08.57" distance="150"/>
+                                        <SPLIT swimtime="00:01:32.94" distance="200"/>
+                                        <SPLIT swimtime="00:01:55.03" distance="250"/>
+                                        <SPLIT swimtime="00:02:19.52" distance="300"/>
+                                        <SPLIT swimtime="00:02:41.62" distance="350"/>
+                                        <SPLIT swimtime="00:03:05.42" distance="400"/>
+                                    </SPLITS>
+                                    <RELAYPOSITIONS>
+                                        <RELAYPOSITION number="1" athleteid="30" reactiontime="+62"/>
+                                        <RELAYPOSITION number="2" athleteid="14" reactiontime="+25"/>
+                                        <RELAYPOSITION number="3" athleteid="5" reactiontime="+38"/>
+                                        <RELAYPOSITION number="4" athleteid="3" reactiontime="+26"/>
+                                    </RELAYPOSITIONS>
+                                </RESULT>
+                            </RESULTS>
+                        </RELAY>
+                    </RELAYS>
+                </CLUB>
+            </CLUBS>
+        </MEET>
+    </MEETS>
+</LENEX>

@@ -29,7 +29,7 @@ class FileOlympics2016(object):
 
         """
         # Initialize key variables
-        self._results= []
+        self._results = []
 
         # Start handling the workbook
         xl_workbook = xlrd.open_workbook(filename)
@@ -81,18 +81,28 @@ class FileOlympics2016(object):
             paricipant['event'] = row[0]
             paricipant['round'] = row[1]
             paricipant['stroke'] = row[2]
-            paricipant['event_id'] = row[3]
-            paricipant['distance'] = row[4]
+            paricipant['event_id'] = str(int(float(row[3])))
+            paricipant['distance'] = str(int(float(row[4])))
             paricipant['gender'] = row[5]
-            paricipant['rank'] = row[6]
+            paricipant['rank'] = str(int(float(row[6])))
             paricipant['heat'] = row[7]
-            paricipant['lane'] = row[8]
+
+            try:
+                paricipant['lane'] = str(int(float(row[8])))
+            except:
+                paricipant['lane'] = row[8]
+
             (paricipant['firstname'],
              paricipant['lastname']) = general.olympic_name(row[9])
-            paricipant['birthyear'] = row[10]
+
+            try:
+                paricipant['birthyear'] = str(int(float(row[10])))
+            except:
+                paricipant['birthyear'] = row[10]
+
             paricipant['nation'] = row[11]
             paricipant['swimtime'] = row[12]
-            paricipant['time'] = row[13]
+            paricipant['time'] = float(row[13])
             self._results.append(paricipant)
 
         self._profiles = profiles
@@ -325,7 +335,7 @@ class FileFina(object):
                     'This file {} is not supported.'.format(filename))
                 log.log2die(1000, log_message)
             else:
-                if node.attrib['version'] != '3.0':
+                if node.attrib['version'] not in ['3.0', '2.0']:
                     log_message = (
                         'This version of file {} is not supported.'
                         ''.format(filename))
@@ -347,6 +357,25 @@ class FileFina(object):
             data = [node.attrib]
             break
         return data
+
+    def metric(self):
+        """Get meet information.
+
+        Args:
+            None
+
+        Returns:
+            result: True if this is a metric meet
+
+        """
+        # Get data
+        data = self.meet()[0]
+        course = data['course']
+        if course[-1].upper() == 'Y':
+            result = False
+        else:
+            result = True
+        return result
 
     def sessions(self):
         """Get session information.
@@ -407,6 +436,12 @@ class FileFina(object):
                         '[@eventid="{}"]/SWIMSTYLE'.format(event_id)):
                     for key, value in swimstyle.attrib.items():
                         item[key] = value.strip()
+
+                # Modify distance to metric equivalent
+                if self.metric() is False:
+                    item['distance'] = str(float(item['distance']) * 0.9144)
+
+                # Update data
                 data.append(item)
 
         return data

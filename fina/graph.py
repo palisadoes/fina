@@ -136,23 +136,26 @@ class Data(object):
         # Initialize key variables
         filename = self._filename
         athletes = {}
+        delimiter = '|'
         events = defaultdict(lambda: defaultdict(
             lambda: defaultdict(lambda: defaultdict())))
 
         # Read CSV file
         with open(filename) as csvfile:
-            f_handle = csv.reader(csvfile, delimiter=',')
+            f_handle = csv.reader(csvfile, delimiter=delimiter)
             for row in f_handle:
                 (_, _, _, _, _, _time, _, superkey) = _process_row(
                     row, fastest=self._fastest)
+
+                # Get the fastest time for each athlete (minimum duration)
                 if superkey in athletes:
-                    athletes[superkey] = max(_time, athletes[superkey])
+                    athletes[superkey] = min(_time, athletes[superkey])
                 else:
                     athletes[superkey] = _time
 
         # Read CSV file again
         with open(filename) as csvfile:
-            f_handle = csv.reader(csvfile, delimiter=',')
+            f_handle = csv.reader(csvfile, delimiter=delimiter)
             for row in f_handle:
                 (_, _, gender, stroke,
                  distance, _time, data, superkey) = _process_row(
@@ -257,10 +260,6 @@ class Graph(object):
         x_values = self._database.speed(stroke, distance, _gender)
         y_values = self._database.bmi(stroke, distance, _gender)
 
-        print(x_values)
-        print('\n')
-        print(y_values)
-        print('\n')
         print(len(x_values))
 
         '''
@@ -309,10 +308,6 @@ class Graph(object):
         x_values = self._database.kgspeed(stroke, distance, _gender)
         y_values = self._database.bmi(stroke, distance, _gender)
 
-        print(x_values)
-        print('\n')
-        print(y_values)
-        print('\n')
         print(len(x_values))
 
         '''

@@ -10,6 +10,7 @@ import sys
 import os
 import argparse
 import csv
+import re
 from pprint import pprint
 from collections import defaultdict
 
@@ -94,31 +95,44 @@ def _fina(fina_directory, profiles):
     """
     # Initialize key variables
     alldata = []
+    data_directories = []
+    regex = re.compile(r'^.*?(\/\d{4})$')
 
-    # Get a list of files in the meet directory
-    files = os.listdir(fina_directory)
-    filenames = ['{}{}{}'.format(
-        fina_directory, os.sep, nextfile) for nextfile in files]
+    # Recursively get filenames under directory
+    for root, subdirectories, _ in os.walk(fina_directory):
+        for subdirectory in subdirectories:
+            path = '{}{}{}'.format(root, os.sep, subdirectory)
+            found = regex.match(path)
+            if bool(found) is True:
+                data_directories.append(path)
 
-    for _filename in sorted(filenames):
-        # Get rid of excess os.sep separators
-        pathitems = _filename.split(os.sep)
-        filename = os.sep.join(pathitems)
+    for data_directory in data_directories:
+        # Get a list of files in the meet directory
+        files = os.listdir(data_directory)
+        filenames = ['{}{}{}'.format(
+            data_directory, os.sep, nextfile) for nextfile in files]
 
-        # Skip obvious
-        if os.path.isfile(filename) is False:
-            continue
-        if filename.lower().endswith('.xml') is False:
-            continue
+        for _filename in sorted(filenames):
+            # Get rid of excess os.sep separators
+            pathitems = _filename.split(os.sep)
+            filename = os.sep.join(pathitems)
 
-        # Get event data
-        data = results.FileFina(filename, profiles)
+            # Skip obvious
+            if os.path.isfile(filename) is False:
+                continue
+            if filename.lower().endswith('.xml') is False:
+                continue
 
-        # pprint(data.athletes())
-        # pprint(data.results_csv(131))
-        meet_results = data.allresults_csv(stage=None)
-        for item in meet_results:
-            alldata.append(item)
+            # Print progress
+            print('Processing file: {}'.format(filename))
+
+            # Get event data
+            data = results.FileFina(filename, profiles)
+
+            # Get XML filenames
+            meet_results = data.allresults_csv(stage=None)
+            for item in meet_results:
+                alldata.append(item)
 
     return alldata
 
@@ -152,6 +166,9 @@ def _olympic(olympic_directory, profiles):
             continue
         if filename.lower().endswith('.xlsx') is False:
             continue
+
+        # Print progress
+        print('Processing file: {}'.format(filename))
 
         # Get event data
         data = results.FileOlympics2016(filename, profiles)
@@ -211,13 +228,13 @@ def main():
     alldata.extend(finadata)
     alldata.extend(olympicdata)
 
-    #pprint(alldata)
-    print('\n', len(alldata))
-
     # Create output file
     with open(database_file, 'w') as f_handle:
-        writer = csv.writer(f_handle)
+        writer = csv.writer(f_handle, delimiter='|')
         writer.writerows(alldata)
+
+    # Print status
+    print('{} swimmer event results created'.format(len(alldata)))
 
 
 if __name__ == '__main__':

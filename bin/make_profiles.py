@@ -288,6 +288,10 @@ def main():
         help='Name of directory containing Rio2016 athlete profiles.',
         type=str, required=True)
     parser.add_argument(
+        '-e', '--european_directory',
+        help='Name of directory containing Baku 2015 athlete profiles.',
+        type=str, required=True)
+    parser.add_argument(
         '-p', '--profile_directory',
         help='Name of directory in which combined profiles will be stored.',
         type=str, required=True)
@@ -295,10 +299,14 @@ def main():
     fina_directory = args.fina_directory
     olympic_directory = args.olympic_directory
     profile_directory = args.profile_directory
+    european_directory = args.european_directory
 
     # Get profiles
     profiles.extend(_fina_html(fina_directory))
+
+    # These two events use the same Omega athlete profile system
     profiles.extend(_rio_xml(olympic_directory))
+    profiles.extend(_rio_xml(european_directory))
     uniques = _dedup(profiles)
 
     data = yaml.dump({'data': uniques}, default_flow_style=False)
