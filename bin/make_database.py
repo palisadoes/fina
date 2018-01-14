@@ -11,8 +11,10 @@ import os
 import argparse
 import csv
 import re
-from pprint import pprint
+from copy import deepcopy
 from collections import defaultdict
+import pathos.multiprocessing as multiprocessing
+from pprint import pprint
 
 # pip3 imports
 import yaml
@@ -82,12 +84,12 @@ def _read_profiles(profile_directory):
     return profiles
 
 
-def _fina(fina_directory, profiles):
+def _lenex(lenex_directory, _profiles):
     """Process Fina result files.
 
     Args:
-        fina_directory: Name of directory containing data
-        profiles: Dict of swimmer profiles for height / weight lookup
+        lenex_directory: Name of directory containing data
+        _profiles: Dict of swimmer profiles for height / weight lookup
 
     Returns:
         alldata: List of list of data
@@ -97,9 +99,15 @@ def _fina(fina_directory, profiles):
     alldata = []
     data_directories = []
     regex = re.compile(r'^.*?(\/\d{4})$')
+    filenames = []
+    arguments = []
+
+    # Create a list of profiles that can be pickled. _profiles is attached to
+    # the function _read_profiles
+    profiles = deepcopy(_profiles)
 
     # Recursively get filenames under directory
-    for root, subdirectories, _ in os.walk(fina_directory):
+    for root, subdirectories, _ in os.walk(lenex_directory):
         for subdirectory in subdirectories:
             path = '{}{}{}'.format(root, os.sep, subdirectory)
             found = regex.match(path)
@@ -123,18 +131,46 @@ def _fina(fina_directory, profiles):
             if filename.lower().endswith('.xml') is False:
                 continue
 
-            # Print progress
-            print('Processing file: {}'.format(filename))
+            # Create a list of valid filenames
+            filenames.append(filename)
 
-            # Get event data
-            data = results.FileFina(filename, profiles)
+    # Create sub processes argument list
+    for filename in filenames:
+        arguments.append((filename, profiles))
 
-            # Get XML filenames
-            meet_results = data.allresults_csv(stage=None)
-            for item in meet_results:
-                alldata.append(item)
+    # Create subprocesses to do the job
+    processes = multiprocessing.cpu_count() - 1
+    with multiprocessing.Pool(processes=processes) as pool:
+        all_results = pool.starmap(_lenex_sub_process, arguments)
+
+    # Get XML filenames
+    for meet_results in all_results:
+        for item in meet_results:
+            alldata.append(item)
 
     return alldata
+
+
+def _lenex_sub_process(filename, profiles):
+    """Process Fina result files.
+
+    Args:
+        lenex_directory: Name of directory containing data
+        profiles: Dict of swimmer profiles for height / weight lookup
+
+    Returns:
+        alldata: List of list of data
+
+    """
+    # Print progress
+    print('Processing file: {}'.format(filename))
+
+    # Get event data
+    data = results.FileLenex(filename, profiles)
+
+    # Get XML filenames
+    meet_results = data.allresults_csv(stage=None)
+    return meet_results
 
 
 def _olympic(olympic_directory, profiles):
@@ -194,8 +230,8 @@ def main():
     # Get filename
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '-f', '--fina_directory',
-        help='Name of directory with FINA XML files.',
+        '-l', '--lenex_directory',
+        help='Name of directory with LENEX XML files.',
         type=str, required=True)
     parser.add_argument(
         '-o', '--olympic_directory',
@@ -210,7 +246,7 @@ def main():
         help='Name of database file.',
         type=str, required=True)
     args = parser.parse_args()
-    fina_directory = args.fina_directory
+    lenex_directory = args.lenex_directory
     profile_directory = args.profile_directory
     database_file = args.database_file
     olympic_directory = args.olympic_directory
@@ -219,7 +255,7 @@ def main():
     profiles = _read_profiles(profile_directory)
 
     # Process Fina data
-    finadata = _fina(fina_directory, profiles)
+    finadata = _lenex(lenex_directory, profiles)
 
     # Process Olympic data
     olympicdata = _olympic(olympic_directory, profiles)

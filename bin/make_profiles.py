@@ -72,9 +72,6 @@ def _fina_html(directory):
 
     """
     # Initialize key variables
-    months = [
-        'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul',
-        'aug', 'sep', 'oct', 'nov', 'dec']
     profiles = []
 
     # Get a list of files in the directory
@@ -90,6 +87,9 @@ def _fina_html(directory):
         # Skip obvious
         if os.path.isfile(filename) is False:
             continue
+
+        # Print status
+        print('Processing file: {}'.format(filename))
 
         # Initialize profile
         profile = {}
@@ -134,7 +134,7 @@ def _fina_html(directory):
     return profiles
 
 
-def _rio_xml(directory):
+def _listing_xml(directory):
     """Function to create list of athlete data from rio PDF file XML.
 
     Args:
@@ -147,6 +147,10 @@ def _rio_xml(directory):
     # Initialize key variables
     profiles = []
     regex_date = re.compile(r'^.*?>([0-9]+ [A-Z]+ [0-9]+)</text>$')
+    regex_height = re.compile(r'^.*?>(\d{1}\.\d{2} / \d{1}\'\d{1}.*?)</text>$')
+    regex_weight = re.compile(r'^.*?>(\d{2,3} / \d{2,3})</text>$')
+    regex_offset = re.compile(
+        r'^<text .*? left="([0-9]+)" .*?<b>Name</b></text>$')
 
     # Get a list of files in the directory
     files = os.listdir(directory)
@@ -164,6 +168,19 @@ def _rio_xml(directory):
         if filename.lower().endswith('.xml') is False:
             continue
 
+        # Print status
+        print('Processing file: {}'.format(filename))
+
+        # Read file to get the offset where the names will be found. We use
+        # the table headings to get this value
+        with open(filename, 'r') as reader:
+            profile = {}
+            for line in reader:
+                found = regex_offset.match(line)
+                if bool(found) is True:
+                    offset = found.group(1)
+                    break
+
         # Read file
         with open(filename, 'r') as reader:
             profile = {}
@@ -171,6 +188,14 @@ def _rio_xml(directory):
                 # Skip headers
                 if '<b>' in line:
                     continue
+
+                # Get name
+                if ' left="{}" '.format(offset) in line:
+                    profile = {}
+                    text = _get_text(line)
+                    found = general.olympic_name(text)
+                    if bool(found) is True:
+                        (profile['firstname'], profile['lastname']) = found
 
                 # Check date. The position of this column varies so
                 # we have to use a different methodology
@@ -184,22 +209,16 @@ def _rio_xml(directory):
                     value = '-'.join([year, month, day])
                     profile['birthdate'] = value
 
-                # Get name
-                if ' left="395" ' in line:
-                    profile = {}
-                    text = _get_text(line)
-                    found = general.olympic_name(text)
-                    if bool(found) is True:
-                        (profile['firstname'], profile['lastname']) = found
-
                 # height:
-                elif ' left="655" ' in line:
+                found = regex_height.match(line)
+                if bool(found) is True:
                     text = _get_text(line)
                     value = float(text.split()[0]) * 100
                     profile['height'] = value
 
                 # weight
-                elif ' left="727" ' in line:
+                found = regex_weight.match(line)
+                if bool(found) is True:
                     text = _get_text(line)
                     _value = float(text.split()[0])
                     profile['weight'] = _value
@@ -284,12 +303,8 @@ def main():
         help='Name of directory containing FINA athlete profiles.',
         type=str, required=True)
     parser.add_argument(
-        '-o', '--olympic_directory',
+        '-l', '--listing_directory',
         help='Name of directory containing Rio2016 athlete profiles.',
-        type=str, required=True)
-    parser.add_argument(
-        '-e', '--european_directory',
-        help='Name of directory containing Baku 2015 athlete profiles.',
         type=str, required=True)
     parser.add_argument(
         '-p', '--profile_directory',
@@ -297,21 +312,22 @@ def main():
         type=str, required=True)
     args = parser.parse_args()
     fina_directory = args.fina_directory
-    olympic_directory = args.olympic_directory
+    listing_directory = args.listing_directory
     profile_directory = args.profile_directory
-    european_directory = args.european_directory
 
     # Get profiles
-    profiles.extend(_fina_html(fina_directory))
+    profiles.extend(_listing_xml(listing_directory))
 
-    # These two events use the same Omega athlete profile system
-    profiles.extend(_rio_xml(olympic_directory))
-    profiles.extend(_rio_xml(european_directory))
+    # Get more profiles
+    profiles.extend(_fina_html(fina_directory))
     uniques = _dedup(profiles)
 
     data = yaml.dump({'data': uniques}, default_flow_style=False)
     with open('{}/athletes.yaml'.format(profile_directory), 'w') as writer:
         writer.write(data)
+
+    # Describe success
+    print('Athlete profiles processed: {}'.format(len(uniques)))
 
 
 if __name__ == '__main__':

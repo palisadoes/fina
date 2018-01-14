@@ -309,7 +309,7 @@ class FileOlympics2016(object):
         return data
 
 
-class FileFina(object):
+class FileLenex(object):
     """Process XML data from http://www.omegatiming.com."""
 
     def __init__(self, filename, profiles, with_na=False):
