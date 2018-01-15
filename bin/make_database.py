@@ -11,7 +11,7 @@ import os
 import argparse
 import csv
 import re
-from copy import deepcopy
+import time
 from collections import defaultdict
 import pathos.multiprocessing as multiprocessing
 from pprint import pprint
@@ -84,7 +84,7 @@ def _read_profiles(profile_directory):
     return profiles
 
 
-def _lenex(lenex_directory, _profiles):
+def _lenex(lenex_directory, profiles):
     """Process Fina result files.
 
     Args:
@@ -99,12 +99,8 @@ def _lenex(lenex_directory, _profiles):
     alldata = []
     data_directories = []
     regex = re.compile(r'^.*?(\/\d{4})$')
-    filenames = []
+    all_filenames = []
     arguments = []
-
-    # Create a list of profiles that can be pickled. _profiles is attached to
-    # the function _read_profiles
-    profiles = deepcopy(_profiles)
 
     # Recursively get filenames under directory
     for root, subdirectories, _ in os.walk(lenex_directory):
@@ -132,11 +128,11 @@ def _lenex(lenex_directory, _profiles):
                 continue
 
             # Create a list of valid filenames
-            filenames.append(filename)
+            all_filenames.append(filename)
 
     # Create sub processes argument list
-    for filename in filenames:
-        arguments.append((filename, profiles))
+    for next_filename in all_filenames:
+        arguments.append((next_filename, profiles))
 
     # Create subprocesses to do the job
     processes = multiprocessing.cpu_count() - 1
@@ -226,6 +222,7 @@ def main():
     alldata = []
     finadata = []
     olympicdata = []
+    ts_start = int(time.time())
 
     # Get filename
     parser = argparse.ArgumentParser()
@@ -270,7 +267,8 @@ def main():
         writer.writerows(alldata)
 
     # Print status
-    print('{} swimmer event results created'.format(len(alldata)))
+    print('Swimmer event results created {}'.format(len(alldata)))
+    print('Duration: {}'.format(int(time.time() - ts_start)))
 
 
 if __name__ == '__main__':

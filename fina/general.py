@@ -4,11 +4,11 @@
 import re
 
 
-def olympic_name(name):
+def olympic_name(_name):
     """Method to instantiate the class.
 
     Args:
-        name: Full name of person
+        _name: Full name of person
 
     Returns:
         result: Tuple of (firstname, lastname)
@@ -16,7 +16,10 @@ def olympic_name(name):
     """
     # Initialize key variables
     result = None
-    
+
+    # Strip nonalpha numeric characters from name
+    name = fix_name(_name)
+
     # regex_name = re.compile(r'^([A-Z\-]+)\s+(.*?)$')
     regex_name = re.compile(r'^([A-Z\-\']+)$')
 
@@ -39,4 +42,27 @@ def olympic_name(name):
             break
 
     # Return
+    return result
+
+
+def fix_name(_name):
+    """Remove all non alphanumeric characters from name.
+
+    Args:
+        _name: Full name of person
+
+    Returns:
+        result: Stripped name
+
+    """
+    # List of characters we don't want to lose
+    exceptlist = ' -'
+
+    # Process
+    regex = re.compile(r'[^\w{}]'.format(exceptlist))
+
+    # Get rid of excess spaces, strip spaces, strip nonalphanumeric
+    words = _name.split()
+    name = ' '.join(words)
+    result = regex.sub('', name)
     return result

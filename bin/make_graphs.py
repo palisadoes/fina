@@ -45,7 +45,7 @@ def main():
     database_file = args.database_file
 
     distance = 200
-    gender = 'f'
+    gender = 'm'
     stroke = 'free'
     # Create database in memory
     plot = graph.Graph(database_file)

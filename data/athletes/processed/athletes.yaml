@@ -34,6 +34,11 @@ data:
   height: 169.0
   lastname: ACHACH
   weight: 60.0
+- birthdate: '1993-02-06'
+  firstname: Alyson
+  height: 175.0
+  lastname: ACKMAN
+  weight: 67.0
 - birthdate: '1989-02-07'
   firstname: Yumi
   height: 160.0
@@ -64,6 +69,11 @@ data:
   height: 178.0
   lastname: ADAMS
   weight: 65.0
+- birthdate: '1997-05-01'
+  firstname: Omar
+  height: 173.0
+  lastname: ADAMS
+  weight: 61.0
 - birthdate: '1988-12-07'
   firstname: Nathan
   height: 198.0
@@ -84,6 +94,11 @@ data:
   height: 201.0
   lastname: AGNEL
   weight: 80.0
+- birthdate: '1985-01-12'
+  firstname: Matias
+  height: 191.0
+  lastname: AGUILERA
+  weight: 85.0
 - birthdate: '1990-06-14'
   firstname: Jeinkler
   height: 163.0
@@ -135,7 +150,7 @@ data:
   lastname: ALBEDWAWI
   weight: 53.0
 - birthdate: '1991-10-22'
-  firstname: Markel*
+  firstname: Markel
   height: 187.0
   lastname: ALBERDI SAROBE
   weight: 76.0
@@ -159,6 +174,11 @@ data:
   height: 180.0
   lastname: ALKHALDI
   weight: 60.0
+- birthdate: '1993-02-09'
+  firstname: Coleman
+  height: 190.0
+  lastname: ALLEN
+  weight: 85.0
 - birthdate: '1992-03-21'
   firstname: Sophie
   height: 170.0
@@ -176,9 +196,14 @@ data:
   weight: 60.0
 - birthdate: '1997-03-16'
   firstname: Brandonn
-  height: 186.0
+  height: 184.0
   lastname: ALMEIDA
-  weight: 73.0
+  weight: 72.0
+- birthdate: '1984-10-19'
+  firstname: Kaio
+  height: 177.0
+  lastname: ALMEIDA
+  weight: 76.0
 - birthdate: '1999-09-14'
   firstname: Kertu Ly
   height: 179.0
@@ -199,6 +224,11 @@ data:
   height: 174.0
   lastname: ALTAMIR
   weight: 69.0
+- birthdate: '1989-10-10'
+  firstname: Maria
+  height: 180.0
+  lastname: ALVAREZ
+  weight: 76.0
 - birthdate: '1995-03-21'
   firstname: Maria Elli Lela
   height: 165.0
@@ -335,7 +365,7 @@ data:
   lastname: ANTONOVA
   weight: 58.0
 - birthdate: '1994-10-25'
-  firstname: Tomomi*
+  firstname: Tomomi
   height: 164.0
   lastname: AOKI
   weight: 55.0
@@ -364,6 +394,16 @@ data:
   height: 169.0
   lastname: ARAOUZOU
   weight: 55.0
+- birthdate: '1996-06-15'
+  firstname: Esteban
+  height: 176.0
+  lastname: ARAYA
+  weight: 75.0
+- birthdate: '1994-03-11'
+  firstname: Isabella
+  height: 168.0
+  lastname: ARCILA
+  weight: 64.0
 - birthdate: '1994-03-11'
   firstname: Isabella
   height: 168.0
@@ -454,18 +494,13 @@ data:
   height: 173.0
   lastname: ATKINSON
   weight: 71.0
-- birthdate: '1988-12-11'
-  firstname: "Alia\u25B2"
-  height: 172.0
-  lastname: ATKINSON
-  weight: 69.0
 - birthdate: '1997-08-16'
   firstname: Charlie
   height: 192.0
   lastname: ATTWOOD
   weight: 82.0
 - birthdate: '1992-05-30'
-  firstname: Stephanie*
+  firstname: Stephanie
   height: 172.0
   lastname: AU
   weight: 56.0
@@ -486,9 +521,9 @@ data:
   weight: 66.0
 - birthdate: '1994-11-14'
   firstname: Jordan
-  height: 171.0
+  height: 191.0
   lastname: AUGIER
-  weight: 53.0
+  weight: 83.0
 - birthdate: '1992-06-16'
   firstname: Dionisio
   height: 153.0
@@ -564,6 +599,11 @@ data:
   height: 173.0
   lastname: BACK
   weight: 61.0
+- birthdate: '1992-04-21'
+  firstname: Jeremy
+  height: 182.0
+  lastname: BAGSHAW
+  weight: 78.0
 - birthdate: '2000-03-08'
   firstname: Katie
   height: 170.0
@@ -634,21 +674,31 @@ data:
   height: 167.0
   lastname: BANDEY
   weight: 79.0
-- birthdate: '1998-09-15'
-  firstname: (khader Ghetrich)
-  height: 184.0
-  lastname: BAQLAH
-  weight: 80.0
 - birthdate: '1995-10-27'
   firstname: Talita
   height: 172.0
   lastname: BAQLAH
   weight: 62.0
+- birthdate: '1998-09-15'
+  firstname: khader Ghetrich
+  height: 184.0
+  lastname: BAQLAH
+  weight: 80.0
+- birthdate: '1987-01-21'
+  firstname: Marcos
+  height: 175.0
+  lastname: BARALE
+  weight: 80.0
 - birthdate: '1987-09-13'
   firstname: Katarzyna
   height: 184.0
   lastname: BARANOWSKA
   weight: 72.0
+- birthdate: '1992-04-03'
+  firstname: Virginia
+  height: 174.0
+  lastname: BARDACH
+  weight: 57.0
 - birthdate: '1992-04-03'
   firstname: Virginia
   height: 174.0
@@ -679,6 +729,11 @@ data:
   height: 185.0
   lastname: BARRENA LORONO
   weight: 74.0
+- birthdate: '1995-11-18'
+  firstname: Armando
+  height: 187.0
+  lastname: BARRERA
+  weight: 80.0
 - birthdate: '1994-08-29'
   firstname: Katia
   height: 166.0
@@ -729,6 +784,11 @@ data:
   height: 191.0
   lastname: BAUMANN
   weight: 74.0
+- birthdate: '1995-07-21'
+  firstname: Tabitha
+  height: 167.0
+  lastname: BAUMANN
+  weight: 60.0
 - birthdate: '1991-08-24'
   firstname: Simona
   height: 176.0
@@ -815,10 +875,15 @@ data:
   lastname: BENSON
   weight: 80.0
 - birthdate: '1996-01-03'
-  firstname: Gunnar*
+  firstname: Gunnar
   height: 196.0
   lastname: BENTZ
   weight: 83.0
+- birthdate: '1996-01-03'
+  firstname: Joseph
+  height: 195.0
+  lastname: BENTZ
+  weight: 81.0
 - birthdate: '1988-08-13'
   firstname: Romain
   height: 177.0
@@ -849,6 +914,11 @@ data:
   height: 193.0
   lastname: BERNEK
   weight: 83.0
+- birthdate: '1994-02-14'
+  firstname: Andrea
+  height: 180.0
+  lastname: BERRINO
+  weight: 70.0
 - birthdate: '1997-09-21'
   firstname: Theo
   height: 177.0
@@ -909,6 +979,11 @@ data:
   height: 201.0
   lastname: BIJAC
   weight: 85.0
+- birthdate: '1995-07-12'
+  firstname: Carolina
+  height: 173.0
+  lastname: BILICH
+  weight: 62.0
 - birthdate: '1993-11-11'
   firstname: Simonas
   height: 198.0
@@ -944,6 +1019,11 @@ data:
   height: 161.0
   lastname: BLACK
   weight: 53.0
+- birthdate: '1971-11-19'
+  firstname: Lisa
+  height: 170.0
+  lastname: BLACKBURN
+  weight: 54.0
 - birthdate: '1996-10-21'
   firstname: Alicia
   height: 165.0
@@ -971,11 +1051,6 @@ data:
   weight: 82.0
 - birthdate: '1994-05-14'
   firstname: Pernille
-  height: 171.0
-  lastname: BLUME
-  weight: 60.0
-- birthdate: '1994-05-14'
-  firstname: "Pernille\u25B2"
   height: 171.0
   lastname: BLUME
   weight: 60.0
@@ -1024,6 +1099,11 @@ data:
   height: 157.0
   lastname: BOLLADOTTIR
   weight: 58.0
+- birthdate: '1989-08-22'
+  firstname: Bobby
+  height: 182.0
+  lastname: BOLLIER
+  weight: 83.0
 - birthdate: '1991-04-05'
   firstname: Flora
   height: 180.0
@@ -1054,6 +1134,11 @@ data:
   height: 180.0
   lastname: BOON
   weight: 66.0
+- birthdate: '1996-03-23'
+  firstname: Danielle
+  height: 161.0
+  lastname: BOOTHE
+  weight: 63.0
 - birthdate: '1996-04-20'
   firstname: Luisa
   height: 166.0
@@ -1075,7 +1160,7 @@ data:
   lastname: BORISAVLJEVIC
   weight: 77.0
 - birthdate: '1993-07-17'
-  firstname: Dylan*
+  firstname: Dylan
   height: 178.0
   lastname: BOSCH
   weight: 75.0
@@ -1095,7 +1180,7 @@ data:
   lastname: BOUDIA
   weight: 72.0
 - birthdate: '1992-05-27'
-  firstname: Lorys*
+  firstname: Lorys
   height: 186.0
   lastname: BOURELLY
   weight: 76.0
@@ -1190,7 +1275,7 @@ data:
   lastname: BRIANSKII
   weight: 82.0
 - birthdate: '1996-03-04'
-  firstname: Sarah*
+  firstname: Sarah
   height: 177.0
   lastname: BRO
   weight: 64.0
@@ -1304,8 +1389,13 @@ data:
   height: 185.0
   lastname: BURNELL
   weight: 72.0
+- birthdate: '1996-10-08'
+  firstname: Guido
+  height: 186.0
+  lastname: BUSCAGLIA
+  weight: 80.0
 - birthdate: '1995-01-18'
-  firstname: Theo*
+  firstname: Theo
   height: 190.0
   lastname: BUSSIERE
   weight: 90.0
@@ -1316,9 +1406,9 @@ data:
   weight: 75.0
 - birthdate: '1994-10-02'
   firstname: Lara
-  height: 172.0
+  height: 173.0
   lastname: BUTLER
-  weight: 60.0
+  weight: 63.0
 - birthdate: '1989-04-23'
   firstname: Kimberly
   height: 187.0
@@ -1341,9 +1431,9 @@ data:
   weight: 47.0
 - birthdate: '1993-04-22'
   firstname: Lani
-  height: 170.0
+  height: 166.0
   lastname: CABRERA
-  weight: 66.0
+  weight: 65.0
 - birthdate: '1997-10-10'
   firstname: Maxime
   height: 185.0
@@ -1399,6 +1489,16 @@ data:
   height: 186.0
   lastname: CAMPBELL
   weight: 74.0
+- birthdate: '1994-08-18'
+  firstname: Luis
+  height: 192.0
+  lastname: CAMPOS
+  weight: 87.0
+- birthdate: '1992-11-26'
+  firstname: Jessica
+  height: 160.0
+  lastname: CAMPOSANO
+  weight: 56.0
 - birthdate: '2000-01-20'
   firstname: Marta
   height: 174.0
@@ -1499,15 +1599,25 @@ data:
   height: 173.0
   lastname: CATTANEO
   weight: 54.0
+- birthdate: '1996-12-08'
+  firstname: Jessica
+  height: 165.0
+  lastname: CATTANEO
+  weight: 60.0
 - birthdate: '1988-08-12'
   firstname: Damien
   height: 181.0
   lastname: CATTIN VIDAL
   weight: 69.0
 - birthdate: '1991-08-01'
-  firstname: Jessica*
+  firstname: Jessica
   height: 164.0
   lastname: CAVALHEIRO
+  weight: 60.0
+- birthdate: '1995-01-12'
+  firstname: Macarena
+  height: 173.0
+  lastname: CEBALLOS
   weight: 60.0
 - birthdate: '1993-12-24'
   firstname: Andrea
@@ -1519,6 +1629,11 @@ data:
   height: 172.0
   lastname: CEPRKALO
   weight: 74.0
+- birthdate: '1994-03-29'
+  firstname: David
+  height: 185.0
+  lastname: CESPEDES
+  weight: 78.0
 - birthdate: '1998-06-25'
   firstname: Kyle
   height: 193.0
@@ -1559,6 +1674,11 @@ data:
   height: 170.0
   lastname: CHARBONNIER
   weight: 62.0
+- birthdate: '1995-01-01'
+  firstname: Miguel
+  height: 180.0
+  lastname: CHAVEZ
+  weight: 71.0
 - birthdate: '1990-11-10'
   firstname: Geoffrey
   height: 185.0
@@ -1594,6 +1714,11 @@ data:
   height: 153.0
   lastname: CHEONG
   weight: 46.0
+- birthdate: '1997-12-24'
+  firstname: Oreoluwa
+  height: 150.0
+  lastname: CHEREBIN
+  weight: 54.0
 - birthdate: '1999-12-09'
   firstname: Olesia
   height: 171.0
@@ -1624,6 +1749,11 @@ data:
   height: 177.0
   lastname: CHETCUTI
   weight: 72.0
+- birthdate: '1990-08-09'
+  firstname: Zack
+  height: 183.0
+  lastname: CHETRAT
+  weight: 77.0
 - birthdate: '1997-10-30'
   firstname: Yau Ming
   height: 170.0
@@ -1735,7 +1865,7 @@ data:
   lastname: CIELO
   weight: 88.0
 - birthdate: '1994-11-18'
-  firstname: Mathilde*
+  firstname: Mathilde
   height: 166.0
   lastname: CINI
   weight: 62.0
@@ -1799,6 +1929,11 @@ data:
   height: 186.0
   lastname: COLEMAN
   weight: 74.0
+- birthdate: '1987-09-07'
+  firstname: Carolina
+  height: 170.0
+  lastname: COLORADO
+  weight: 62.0
 - birthdate: '1999-09-26'
   firstname: Emilia
   height: 163.0
@@ -1810,9 +1945,14 @@ data:
   lastname: COLUPAEV
   weight: 86.0
 - birthdate: '1997-06-13'
-  firstname: Jhennifer*
+  firstname: Jhennifer
   height: 162.0
   lastname: CONCEICAO
+  weight: 52.0
+- birthdate: '1997-06-13'
+  firstname: ''
+  height: 162.0
+  lastname: CONCEICAO JHENNIFER A
   weight: 52.0
 - birthdate: '1995-01-17'
   firstname: Santo
@@ -1820,7 +1960,7 @@ data:
   lastname: CONDORELLI
   weight: 88.0
 - birthdate: '1994-09-26'
-  firstname: Jack*
+  firstname: Jack
   height: 194.0
   lastname: CONGER
   weight: 79.0
@@ -1865,7 +2005,7 @@ data:
   lastname: COSTA SCHMID
   weight: 68.0
 - birthdate: '1992-02-17'
-  firstname: Alin*
+  firstname: Alin
   height: 200.99999999999997
   lastname: COSTE
   weight: 95.0
@@ -1874,6 +2014,16 @@ data:
   height: 162.0
   lastname: COUCH
   weight: 58.0
+- birthdate: '1982-08-23'
+  firstname: Natalie
+  height: 172.0
+  lastname: COUGHLIN
+  weight: 65.0
+- birthdate: '1994-02-13'
+  firstname: Christopher
+  height: 183.0
+  lastname: COURTIS
+  weight: 73.0
 - birthdate: '1997-05-26'
   firstname: Alexandre
   height: 185.0
@@ -1894,6 +2044,11 @@ data:
   height: 163.0
   lastname: COWIE
   weight: 58.0
+- birthdate: '1989-01-10'
+  firstname: Brad
+  height: 180.0
+  lastname: CRAIG
+  weight: 88.0
 - birthdate: '1987-07-21'
   firstname: Kami
   height: 180.0
@@ -1959,28 +2114,13 @@ data:
   height: 193.0
   lastname: CZERNIAK
   weight: 78.0
-- birthdate: '1995-04-28'
-  firstname: Andrea
-  height: 194.0
-  lastname: D'ARRIGO
-  weight: 85.0
-- birthdate: '1997-05-05'
-  firstname: Nicolas
-  height: 175.0
-  lastname: D'ORIANO
-  weight: 68.0
-- birthdate: '1990-12-29'
-  firstname: Tommaso
-  height: 190.0
-  lastname: D'ORSOGNA
-  weight: 82.0
 - birthdate: '1988-01-07'
   firstname: Duane
   height: 180.0
   lastname: DA ROCHA MARCE
   weight: 59.0
 - birthdate: '1993-07-15'
-  firstname: Soren*
+  firstname: Soren
   height: 193.0
   lastname: DAHL
   weight: 86.0
@@ -1994,6 +2134,11 @@ data:
   height: 187.0
   lastname: DAL
   weight: 70.0
+- birthdate: '1995-04-22'
+  firstname: Gia
+  height: 167.0
+  lastname: DALESANDRO
+  weight: 56.0
 - birthdate: '1994-05-21'
   firstname: Thomas
   height: 177.0
@@ -2020,10 +2165,15 @@ data:
   lastname: DANIEL
   weight: 68.0
 - birthdate: '1993-12-08'
-  firstname: Mack*
+  firstname: Mack
   height: 185.0
   lastname: DARRAGH
   weight: 79.0
+- birthdate: '1995-04-28'
+  firstname: Andrea
+  height: 194.0
+  lastname: DARRIGO
+  weight: 85.0
 - birthdate: '2002-09-12'
   firstname: Ana Iulia
   height: 183.0
@@ -2039,6 +2189,21 @@ data:
   height: 188.0
   lastname: DAVIES
   weight: 82.0
+- birthdate: '1994-10-28'
+  firstname: Estela
+  height: 170.0
+  lastname: DAVIS
+  weight: 62.0
+- birthdate: '1990-06-18'
+  firstname: Mateo
+  height: 178.0
+  lastname: DE ANGULO
+  weight: 78.0
+- birthdate: '1996-06-05'
+  firstname: Mckenna
+  height: 184.0
+  lastname: DE BEVER
+  weight: 62.0
 - birthdate: '1990-10-01'
   firstname: Samuel
   height: 182.0
@@ -2049,11 +2214,21 @@ data:
   height: 175.0
   lastname: DE DEUS
   weight: 70.0
+- birthdate: '1994-08-09'
+  firstname: Miguel
+  height: 185.0
+  lastname: DE LARA
+  weight: 75.0
 - birthdate: '1990-01-06'
   firstname: Joao
   height: 193.0
   lastname: DE LUCCA
-  weight: 95.0
+  weight: 96.0
+- birthdate: '1996-09-13'
+  firstname: Natalia
+  height: 167.0
+  lastname: DE LUCCAS
+  weight: 64.0
 - birthdate: '1991-08-07'
   firstname: Martina
   height: 175.0
@@ -2075,7 +2250,7 @@ data:
   lastname: DEAKIN
   weight: 65.0
 - birthdate: '1994-02-21'
-  firstname: Fanny*
+  firstname: Fanny
   height: 170.0
   lastname: DEBERGHES
   weight: 65.0
@@ -2109,16 +2284,16 @@ data:
   height: 190.0
   lastname: DEKONINCK
   weight: 86.0
-- birthdate: '1991-01-28'
-  firstname: Dieter*
-  height: 190.0
-  lastname: DEKONINCK
-  weight: 85.0
 - birthdate: '1990-03-01'
   firstname: Marco
   height: 190.0
   lastname: DEL LUNGO
   weight: 97.0
+- birthdate: '1992-09-20'
+  firstname: Juan
+  height: 176.0
+  lastname: DEL PINO
+  weight: 69.0
 - birthdate: '1985-02-08'
   firstname: Evangelos
   height: 189.0
@@ -2137,7 +2312,7 @@ data:
 - birthdate: '1987-01-08'
   firstname: Francesco
   height: 169.0
-  lastname: DELL'UOMO
+  lastname: DELLUOMO
   weight: 60.0
 - birthdate: '1997-03-23'
   firstname: Blaz
@@ -2154,6 +2329,11 @@ data:
   height: 183.0
   lastname: DERBYSHIRE
   weight: 65.0
+- birthdate: '1996-10-28'
+  firstname: James
+  height: 182.0
+  lastname: DERGOUSOFF
+  weight: 71.0
 - birthdate: '1994-08-07'
   firstname: Jeremy
   height: 189.0
@@ -2165,7 +2345,7 @@ data:
   lastname: DETTI
   weight: 79.0
 - birthdate: '1990-07-28'
-  firstname: Alex*
+  firstname: Alex
   height: 185.0
   lastname: DI GIORGIO
   weight: 75.0
@@ -2189,6 +2369,16 @@ data:
   height: 180.0
   lastname: DIAMANTOPOULOU
   weight: 74.0
+- birthdate: '1989-05-16'
+  firstname: Daiene
+  height: 159.0
+  lastname: DIAS
+  weight: 55.0
+- birthdate: '1995-07-19'
+  firstname: Belen
+  height: 169.0
+  lastname: DIAZ
+  weight: 62.0
 - birthdate: '1993-06-03'
   firstname: Christian
   height: 185.0
@@ -2244,16 +2434,21 @@ data:
   height: 173.0
   lastname: DONG
   weight: 62.0
-- birthdate: '1998-10-31'
-  firstname: Jie*
-  height: 170.0
-  lastname: DONG
-  weight: 62.0
+- birthdate: '1997-05-05'
+  firstname: Nicolas
+  height: 175.0
+  lastname: DORIANO
+  weight: 68.0
 - birthdate: '1991-07-02'
   firstname: Frantz
   height: 170.0
   lastname: DORSAINVIL
   weight: 59.0
+- birthdate: '1990-12-29'
+  firstname: Tommaso
+  height: 190.0
+  lastname: DORSOGNA
+  weight: 82.0
 - birthdate: '1997-04-08'
   firstname: Idan
   height: 178.0
@@ -2404,11 +2599,6 @@ data:
   height: 180.0
   lastname: ELMSLIE
   weight: 69.0
-- birthdate: '1994-06-19'
-  firstname: Brittany*
-  height: 180.0
-  lastname: ELMSLIE
-  weight: 69.0
 - birthdate: '1990-10-30'
   firstname: Esteban
   height: 177.0
@@ -2490,7 +2680,7 @@ data:
   lastname: FABIAN
   weight: 53.0
 - birthdate: '1992-10-02'
-  firstname: Margaux*
+  firstname: Margaux
   height: 173.0
   lastname: FABRE
   weight: 58.0
@@ -2559,13 +2749,13 @@ data:
   height: 164.0
   lastname: FEDOROVA
   weight: 57.0
+- birthdate: '1991-10-12'
+  firstname: Ryan
+  height: 192.0
+  lastname: FEELEY
+  weight: 91.0
 - birthdate: '1989-09-26'
   firstname: James
-  height: 196.0
-  lastname: FEIGEN
-  weight: 97.0
-- birthdate: '1989-09-26'
-  firstname: James*
   height: 196.0
   lastname: FEIGEN
   weight: 97.0
@@ -2644,6 +2834,11 @@ data:
   height: 167.0
   lastname: FILS RABETSARA
   weight: 59.0
+- birthdate: '1994-03-26'
+  firstname: Mauricio
+  height: 180.0
+  lastname: FIOL
+  weight: 80.0
 - birthdate: '1984-06-05'
   firstname: Deni
   height: 191.0
@@ -2661,9 +2856,9 @@ data:
   weight: 57.0
 - birthdate: '1990-10-08'
   firstname: Julian
-  height: 184.0
+  height: 185.0
   lastname: FLETCHER
-  weight: 79.0
+  weight: 77.0
 - birthdate: '1994-07-07'
   firstname: Hali
   height: 166.0
@@ -2754,6 +2949,16 @@ data:
   height: 185.0
   lastname: "FRAN\xC7A"
   weight: 95.0
+- birthdate: '1987-05-14'
+  firstname: Felipe
+  height: 186.0
+  lastname: "FRAN\xC7A DA SILVA"
+  weight: 98.0
+- birthdate: '1989-08-28'
+  firstname: Brett
+  height: 188.0
+  lastname: FRASER
+  weight: 84.0
 - birthdate: '1991-10-09'
   firstname: Thomas
   height: 194.0
@@ -2794,6 +2999,11 @@ data:
   height: 190.0
   lastname: FROLOV
   weight: 76.0
+- birthdate: '1990-06-13'
+  firstname: Rodrigo
+  height: 177.0
+  lastname: FRUTOS
+  weight: 74.0
 - birthdate: '1999-02-12'
   firstname: Natalia
   height: 178.0
@@ -2814,6 +3024,11 @@ data:
   height: 176.0
   lastname: FUJIMORI
   weight: 72.0
+- birthdate: '1992-11-22'
+  firstname: Richard
+  height: 178.0
+  lastname: FUNK
+  weight: 70.0
 - birthdate: '1998-11-21'
   firstname: Colleen
   height: 176.0
@@ -2840,7 +3055,7 @@ data:
   lastname: GALLANTREE
   weight: 61.0
 - birthdate: '1997-05-24'
-  firstname: Fatima*
+  firstname: Fatima
   height: 180.0
   lastname: GALLARDO CARAPETO
   weight: 60.0
@@ -2851,9 +3066,9 @@ data:
   weight: 95.0
 - birthdate: '1997-01-17'
   firstname: Elisbet
-  height: 163.0
+  height: 166.0
   lastname: GAMEZ
-  weight: 52.0
+  weight: 58.0
 - birthdate: '2003-07-22'
   firstname: Ching Hwee
   height: 160.0
@@ -2959,6 +3174,11 @@ data:
   height: 183.0
   lastname: GENIDOUNIAS
   weight: 87.0
+- birthdate: '1998-01-02'
+  firstname: Onika
+  height: 173.0
+  lastname: GEORGE
+  weight: 68.0
 - birthdate: '1999-01-06'
   firstname: Dominika
   height: 170.0
@@ -3004,11 +3224,6 @@ data:
   height: 192.0
   lastname: GILOT
   weight: 87.0
-- birthdate: '1984-04-27'
-  firstname: Fabien*
-  height: 192.0
-  lastname: GILOT
-  weight: 87.0
 - birthdate: '1987-12-24'
   firstname: Alex
   height: 186.0
@@ -3020,7 +3235,7 @@ data:
   lastname: GIOVANNINI
   weight: 56.0
 - birthdate: '1994-12-12'
-  firstname: Noemi*
+  firstname: Noemi
   height: 174.0
   lastname: GIRARDET
   weight: 61.0
@@ -3109,13 +3324,28 @@ data:
   height: 178.0
   lastname: GOMEZ NORIEGA JD
   weight: 78.0
+- birthdate: '1998-07-19'
+  firstname: Gabrielle
+  height: 165.0
+  lastname: GONCALVES
+  weight: 58.0
 - birthdate: '1999-01-05'
   firstname: Matheus
   height: 183.0
   lastname: GONCHE
   weight: 77.0
+- birthdate: '1995-06-26'
+  firstname: Esther
+  height: 170.0
+  lastname: GONZALEZ
+  weight: 70.0
+- birthdate: '1990-04-25'
+  firstname: Maria
+  height: 175.0
+  lastname: GONZALEZ
+  weight: 64.0
 - birthdate: '1995-04-09'
-  firstname: Marta*
+  firstname: Marta
   height: 181.0
   lastname: GONZALEZ CRIVILLERS
   weight: 73.0
@@ -3160,7 +3390,7 @@ data:
   lastname: GOSIENIECKI
   weight: 78.0
 - birthdate: '1996-08-19'
-  firstname: Kennedy*
+  firstname: Kennedy
   height: 173.0
   lastname: GOSS
   weight: 74.0
@@ -3194,11 +3424,6 @@ data:
   height: 190.0
   lastname: GOVOROV
   weight: 89.0
-- birthdate: '1992-04-10'
-  firstname: "Andrii\u25B2"
-  height: 195.0
-  lastname: GOVOROV
-  weight: 82.0
 - birthdate: '1990-03-26'
   firstname: Federico
   height: 193.0
@@ -3230,7 +3455,7 @@ data:
   lastname: GRASSI
   weight: 82.0
 - birthdate: '1996-02-16'
-  firstname: Benjamin*
+  firstname: Benjamin
   height: 185.0
   lastname: GRATZ
   weight: 76.0
@@ -3259,6 +3484,11 @@ data:
   height: 203.0
   lastname: GREVERS
   weight: 113.0
+- birthdate: '1995-05-04'
+  firstname: Carter
+  height: 182.0
+  lastname: GRIFFIN
+  weight: 79.0
 - birthdate: '1997-06-09'
   firstname: Paulius
   height: 181.0
@@ -3275,7 +3505,7 @@ data:
   lastname: GRIMBERG
   weight: 78.0
 - birthdate: '1993-01-28'
-  firstname: Vanessa*
+  firstname: Vanessa
   height: 176.0
   lastname: GRIMBERG
   weight: 63.0
@@ -3284,6 +3514,11 @@ data:
   height: 184.0
   lastname: GRONBLOM
   weight: 77.0
+- birthdate: '1996-07-03'
+  firstname: Jordy
+  height: 180.0
+  lastname: GROTERS
+  weight: 80.0
 - birthdate: '1995-05-25'
   firstname: Madeline
   height: 179.0
@@ -3293,7 +3528,7 @@ data:
   firstname: Valerie
   height: 172.0
   lastname: GRUEST
-  weight: 63.0
+  weight: 68.1
 - birthdate: '1998-10-02'
   firstname: Robin Michael
   height: 197.0
@@ -3369,6 +3604,16 @@ data:
   height: 178.0
   lastname: GUTIERREZ
   weight: 79.0
+- birthdate: '1998-12-26'
+  firstname: Gustavo Giovanni
+  height: 181.0
+  lastname: GUTIERREZ
+  weight: 74.0
+- birthdate: '1995-02-23'
+  firstname: Long Yuan
+  height: 191.0
+  lastname: GUTIERREZ
+  weight: 85.0
 - birthdate: '1995-02-23'
   firstname: Long
   height: 190.0
@@ -3384,8 +3629,13 @@ data:
   height: 188.0
   lastname: GUY
   weight: 84.0
+- birthdate: '1996-12-19'
+  firstname: Natasha
+  height: 176.0
+  lastname: GVAKHARIA
+  weight: 66.0
 - birthdate: '1993-08-06'
-  firstname: Bence*
+  firstname: Bence
   height: 190.0
   lastname: GYARFAS
   weight: 96.0
@@ -3425,7 +3675,7 @@ data:
   lastname: HABTE
   weight: 81.0
 - birthdate: '1997-12-11'
-  firstname: Cloe*
+  firstname: Cloe
   height: 171.0
   lastname: HACHE
   weight: 62.0
@@ -3475,7 +3725,7 @@ data:
   lastname: HANNIS
   weight: 70.0
 - birthdate: '1995-09-28'
-  firstname: Jacob*
+  firstname: Jacob
   height: 182.0
   lastname: HANSFORD
   weight: 77.0
@@ -3499,6 +3749,11 @@ data:
   height: 183.0
   lastname: HARDY
   weight: 71.0
+- birthdate: '1999-04-17'
+  firstname: Courtney
+  height: 167.0
+  lastname: HARNISH
+  weight: 63.0
 - birthdate: '1993-04-19'
   firstname: Giordan
   height: 185.0
@@ -3555,7 +3810,7 @@ data:
   lastname: HE
   weight: 62.0
 - birthdate: '1993-02-18'
-  firstname: Jianbin*
+  firstname: Jianbin
   height: 188.0
   lastname: HE
   weight: 83.0
@@ -3624,6 +3879,11 @@ data:
   height: 174.0
   lastname: HERASIMENIA
   weight: 58.0
+- birthdate: '1997-08-29'
+  firstname: Agustin
+  height: 172.0
+  lastname: HERNANDEZ
+  weight: 65.0
 - birthdate: '1987-08-12'
   firstname: Rene
   height: 175.0
@@ -3725,6 +3985,11 @@ data:
   lastname: HOCH
   weight: 76.0
 - birthdate: '1986-09-27'
+  firstname: Benjamin
+  height: 195.0
+  lastname: HOCKIN
+  weight: 95.0
+- birthdate: '1986-09-27'
   firstname: ''
   height: 195.0
   lastname: HOCKIN BRUSQUETTI
@@ -3740,7 +4005,7 @@ data:
   lastname: HODUR
   weight: 84.0
 - birthdate: '1999-02-10'
-  firstname: Balazs*
+  firstname: Balazs
   height: 185.0
   lastname: HOLLO
   weight: 76.0
@@ -3750,7 +4015,7 @@ data:
   lastname: HOLM
   weight: 69.0
 - birthdate: '1996-01-09'
-  firstname: Peter*
+  firstname: Peter
   height: 196.0
   lastname: HOLODA
   weight: 90.0
@@ -3796,11 +4061,6 @@ data:
   weight: 101.0
 - birthdate: '1989-05-03'
   firstname: Katinka
-  height: 175.0
-  lastname: HOSSZU
-  weight: 68.0
-- birthdate: '1989-05-03'
-  firstname: "Katinka\u25B2"
   height: 172.0
   lastname: HOSSZU
   weight: 62.0
@@ -3844,6 +4104,11 @@ data:
   height: 166.0
   lastname: HUETE CARRASCO
   weight: 62.0
+- birthdate: '1996-06-28'
+  firstname: Gerardo
+  height: 176.0
+  lastname: HUIDOBRO
+  weight: 72.0
 - birthdate: '1988-03-04'
   firstname: Simon
   height: 176.0
@@ -4034,11 +4299,6 @@ data:
   height: 192.0
   lastname: IZOTOV
   weight: 90.0
-- birthdate: '1991-10-02'
-  firstname: Danila*
-  height: 192.0
-  lastname: IZOTOV
-  weight: 90.0
 - birthdate: '1998-01-01'
   firstname: Giovanni
   height: 178.0
@@ -4089,6 +4349,11 @@ data:
   height: 176.0
   lastname: JANSSEN
   weight: 70.0
+- birthdate: '1993-02-04'
+  firstname: Kiera
+  height: 172.0
+  lastname: JANZEN
+  weight: 56.0
 - birthdate: '1991-10-22'
   firstname: Barbara
   height: 174.0
@@ -4099,6 +4364,11 @@ data:
   height: 178.0
   lastname: JARUSEVICIUTE
   weight: 62.0
+- birthdate: '1998-05-24'
+  firstname: Natalia
+  height: 171.0
+  lastname: JASPEADO
+  weight: 64.0
 - birthdate: '1997-08-10'
   firstname: Wiktor Gabriel
   height: 188.0
@@ -4115,7 +4385,7 @@ data:
   lastname: JENSEN
   weight: 59.0
 - birthdate: '2000-01-03'
-  firstname: Julie Kepp*
+  firstname: Julie Kepp
   height: 177.0
   lastname: JENSEN
   weight: 65.0
@@ -4149,6 +4419,11 @@ data:
   height: 158.0
   lastname: "JIM\xC9NEZ"
   weight: 48.0
+- birthdate: '2000-05-11'
+  firstname: Izzy
+  height: 183.0
+  lastname: JOACHIM
+  weight: 66.0
 - birthdate: '1990-12-10'
   firstname: Pal
   height: 183.0
@@ -4169,6 +4444,11 @@ data:
   height: 176.0
   lastname: JOHANSSON
   weight: 72.0
+- birthdate: '1987-04-20'
+  firstname: ''
+  height: 190.0
+  lastname: JOHNSON BJ
+  weight: 86.0
 - birthdate: '1989-11-16'
   firstname: Abby
   height: 166.0
@@ -4230,7 +4510,7 @@ data:
   lastname: JUNKRAJANG
   weight: 57.0
 - birthdate: '1995-12-14'
-  firstname: Calvyn*
+  firstname: Calvyn
   height: 195.0
   lastname: JUSTUS
   weight: 70.0
@@ -4304,6 +4584,11 @@ data:
   height: 163.0
   lastname: KANG
   weight: 51.0
+- birthdate: '1990-01-25'
+  firstname: Lucas
+  height: 190.0
+  lastname: KANIESKI
+  weight: 80.0
 - birthdate: '1993-04-22'
   firstname: Boglarka
   height: 168.0
@@ -4350,7 +4635,7 @@ data:
   lastname: "KAS\xD3"
   weight: 71.0
 - birthdate: '1992-03-30'
-  firstname: Christos*
+  firstname: Christos
   height: 188.0
   lastname: KATRANTZIS
   weight: 78.0
@@ -4399,6 +4684,11 @@ data:
   height: 186.0
   lastname: KENDERESI
   weight: 75.0
+- birthdate: '1987-12-22'
+  firstname: Madison
+  height: 182.0
+  lastname: KENNEDY
+  weight: 68.0
 - birthdate: '1997-05-22'
   firstname: Henry
   height: 176.0
@@ -4545,7 +4835,7 @@ data:
   lastname: KLENZ
   weight: 89.0
 - birthdate: '1994-11-12'
-  firstname: Kacper*
+  firstname: Kacper
   height: 182.0
   lastname: KLICH
   weight: 78.0
@@ -4574,13 +4864,18 @@ data:
   height: 170.0
   lastname: KLONOWSKA
   weight: 63.0
+- birthdate: '1987-03-15'
+  firstname: Michael
+  height: 190.0
+  lastname: KLUEH
+  weight: 81.0
 - birthdate: '1993-01-27'
   firstname: Ayman
   height: 178.0
   lastname: KLZIE
   weight: 76.0
 - birthdate: '1993-02-24'
-  firstname: Andrea*
+  firstname: Andrea
   height: 175.0
   lastname: KNEPPERS
   weight: 67.0
@@ -4594,11 +4889,6 @@ data:
   height: 180.0
   lastname: KOBASE
   weight: 80.0
-- birthdate: '1987-07-31'
-  firstname: Kenji*
-  height: 180.0
-  lastname: KOBASE
-  weight: 80.0
 - birthdate: '1988-06-29'
   firstname: Yuto
   height: 176.0
@@ -4606,11 +4896,6 @@ data:
   weight: 77.0
 - birthdate: '1993-11-25'
   firstname: Yuki
-  height: 183.0
-  lastname: KOBORI
-  weight: 77.0
-- birthdate: '1993-11-25'
-  firstname: Yuki*
   height: 183.0
   lastname: KOBORI
   weight: 77.0
@@ -4630,7 +4915,7 @@ data:
   lastname: KOCIJAN
   weight: 59.0
 - birthdate: '1987-07-19'
-  firstname: Junya*
+  firstname: Junya
   height: 181.0
   lastname: KOGA
   weight: 74.0
@@ -4834,11 +5119,11 @@ data:
   height: 180.0
   lastname: KROMOWIDJOJO
   weight: 72.0
-- birthdate: '1990-08-20'
-  firstname: "Ranomi\u25B2"
-  height: 179.0
-  lastname: KROMOWIDJOJO
-  weight: 69.0
+- birthdate: '1989-08-11'
+  firstname: Karl
+  height: 197.0
+  lastname: KRUG
+  weight: 95.0
 - birthdate: '1998-04-02'
   firstname: Jakub Antoni
   height: 188.0
@@ -4861,11 +5146,6 @@ data:
   weight: 74.0
 - birthdate: '1999-08-26'
   firstname: Leonie
-  height: 173.0
-  lastname: KULLMANN
-  weight: 50.0
-- birthdate: '1999-08-26'
-  firstname: Leonie*
   height: 175.0
   lastname: KULLMANN
   weight: 62.0
@@ -5024,6 +5304,11 @@ data:
   height: 183.0
   lastname: LAZARE
   weight: 75.0
+- birthdate: '1994-08-17'
+  firstname: Annie
+  height: 172.0
+  lastname: LAZOR
+  weight: 65.0
 - birthdate: '1992-04-12'
   firstname: Chad
   height: 190.0
@@ -5034,11 +5319,6 @@ data:
   height: 190.0
   lastname: LE CLOS
   weight: 83.0
-- birthdate: '1992-04-12'
-  firstname: "Chad\u25B2"
-  height: 182.0
-  lastname: LE CLOS
-  weight: 75.0
 - birthdate: '1996-08-06'
   firstname: Clarice
   height: 162.0
@@ -5064,6 +5344,11 @@ data:
   height: 173.0
   lastname: LEE
   weight: 63.0
+- birthdate: '1994-11-21'
+  firstname: Sean
+  height: 193.0
+  lastname: LEHANE
+  weight: 90.0
 - birthdate: '2000-10-25'
   firstname: Zsofia
   height: 168.0
@@ -5076,11 +5361,6 @@ data:
   weight: 86.0
 - birthdate: '1991-01-01'
   firstname: Luca
-  height: 191.0
-  lastname: LEONARDI
-  weight: 78.0
-- birthdate: '1991-01-01'
-  firstname: Luca*
   height: 191.0
   lastname: LEONARDI
   weight: 78.0
@@ -5099,13 +5379,13 @@ data:
   height: 185.0
   lastname: LEUTHARD
   weight: 80.0
+- birthdate: '1991-02-26'
+  firstname: Caitlin
+  height: 172.0
+  lastname: LEVERENZ
+  weight: 72.0
 - birthdate: '2002-03-03'
   firstname: Bingjie
-  height: 170.0
-  lastname: LI
-  weight: 55.0
-- birthdate: '2002-03-03'
-  firstname: "Bingjie\u25B2"
   height: 170.0
   lastname: LI
   weight: 55.0
@@ -5160,7 +5440,7 @@ data:
   lastname: LIN
   weight: 55.0
 - birthdate: '1992-12-24'
-  firstname: Yongqing*
+  firstname: Yongqing
   height: 190.0
   lastname: LIN
   weight: 85.0
@@ -5175,7 +5455,7 @@ data:
   lastname: LINCOLN-SMITH
   weight: 82.0
 - birthdate: '1994-06-13'
-  firstname: Ida*
+  firstname: Ida
   height: 167.0
   lastname: LINDBORG
   weight: 60.0
@@ -5210,7 +5490,7 @@ data:
   lastname: LIU
   weight: 68.0
 - birthdate: '1995-01-02'
-  firstname: Zhaochen*
+  firstname: Zhaochen
   height: 188.0
   lastname: LIU
   weight: 70.0
@@ -5259,6 +5539,11 @@ data:
   height: 179.0
   lastname: LOEVBERG
   weight: 64.0
+- birthdate: '1992-06-25'
+  firstname: Oleksandr
+  height: 195.0
+  lastname: LOGINOV
+  weight: 95.0
 - birthdate: '1997-08-13'
   firstname: Zhiayi
   height: 152.0
@@ -5300,7 +5585,7 @@ data:
   lastname: LU
   weight: 65.0
 - birthdate: '1996-09-13'
-  firstname: Natalia*
+  firstname: Natalia
   height: 167.0
   lastname: LUCCAS
   weight: 63.0
@@ -5319,6 +5604,11 @@ data:
   height: 167.0
   lastname: LUMIO
   weight: 66.0
+- birthdate: '1991-04-26'
+  firstname: Diana
+  height: 163.0
+  lastname: LUNA
+  weight: 58.0
 - birthdate: '1999-11-03'
   firstname: Marina
   height: 165.0
@@ -5354,6 +5644,11 @@ data:
   height: 189.0
   lastname: MACEDO
   weight: 85.0
+- birthdate: '1997-01-01'
+  firstname: Allyson
+  height: 178.0
+  lastname: MACIAS
+  weight: 67.0
 - birthdate: '1994-03-03'
   firstname: Brittany
   height: 168.0
@@ -5365,7 +5660,7 @@ data:
   lastname: MACNEIL
   weight: 56.0
 - birthdate: '1992-09-15'
-  firstname: Daniel*
+  firstname: Daniel
   height: 185.0
   lastname: MACOVEI
   weight: 71.0
@@ -5389,11 +5684,11 @@ data:
   height: 197.0
   lastname: MAGNUSSEN
   weight: 95.0
-- birthdate: '1991-04-11'
-  firstname: James*
-  height: 197.0
-  lastname: MAGNUSSEN
-  weight: 95.0
+- birthdate: '1992-10-10'
+  firstname: Carlos
+  height: 174.0
+  lastname: MAHECHA
+  weight: 74.0
 - birthdate: '1999-03-13'
   firstname: Pauline
   height: 184.0
@@ -5424,11 +5719,11 @@ data:
   height: 173.0
   lastname: MAINVILLE
   weight: 65.0
-- birthdate: '1992-03-20'
-  firstname: Sandrine*
-  height: 173.0
-  lastname: MAINVILLE
-  weight: 66.0
+- birthdate: '1988-11-16'
+  firstname: Nelson
+  height: 176.0
+  lastname: MAITLAND
+  weight: 72.0
 - birthdate: '1992-09-22'
   firstname: Kacper
   height: 190.0
@@ -5455,7 +5750,7 @@ data:
   lastname: MALDONADO
   weight: 74.0
 - birthdate: '1984-03-21'
-  firstname: Gregory*
+  firstname: Gregory
   height: 196.0
   lastname: MALLET
   weight: 84.0
@@ -5555,7 +5850,7 @@ data:
   lastname: MARGALIS
   weight: 65.0
 - birthdate: '1995-04-26'
-  firstname: Deividas*
+  firstname: Deividas
   height: 187.0
   lastname: MARGEVICIUS
   weight: 80.0
@@ -5570,7 +5865,7 @@ data:
   lastname: MARINO
   weight: 55.0
 - birthdate: '1985-03-10'
-  firstname: Ida*
+  firstname: Ida
   height: 170.0
   lastname: MARKO-VARGA
   weight: 65.0
@@ -5595,17 +5890,27 @@ data:
   lastname: MARTI FERNANDEZ
   weight: 50.0
 - birthdate: '1993-09-25'
-  firstname: Victor*
+  firstname: Victor
   height: 187.0
   lastname: MARTIN MARTIN
   weight: 82.0
+- birthdate: '1997-06-03'
+  firstname: Jose
+  height: 180.0
+  lastname: MARTINEZ
+  weight: 70.0
+- birthdate: '1995-12-11'
+  firstname: Luis
+  height: 182.0
+  lastname: MARTINEZ
+  weight: 69.0
 - birthdate: '1995-12-11'
   firstname: Luis
   height: 182.0
   lastname: MARTINEZ MENDEZ
   weight: 74.0
 - birthdate: '1993-08-22'
-  firstname: Aitor*
+  firstname: Aitor
   height: 183.0
   lastname: MARTINEZ RODRIGUEZ
   weight: 78.0
@@ -5614,8 +5919,13 @@ data:
   height: 180.0
   lastname: MARTINS
   weight: 73.0
+- birthdate: '1993-02-16'
+  firstname: Larissa
+  height: 169.0
+  lastname: MARTINS
+  weight: 57.0
 - birthdate: '1999-10-07'
-  firstname: Richard*
+  firstname: Richard
   height: 185.0
   lastname: MARTON
   weight: 76.0
@@ -5635,7 +5945,7 @@ data:
   lastname: MASCOLL-GOMES
   weight: 63.0
 - birthdate: '1993-03-26'
-  firstname: Chiara*
+  firstname: Chiara
   height: 171.0
   lastname: MASINI LUCCETTI
   weight: 63.0
@@ -5666,11 +5976,6 @@ data:
   weight: 82.0
 - birthdate: '1984-06-23'
   firstname: Takeshi
-  height: 184.0
-  lastname: MATSUDA
-  weight: 84.0
-- birthdate: '1984-06-23'
-  firstname: Takeshi*
   height: 184.0
   lastname: MATSUDA
   weight: 84.0
@@ -5789,11 +6094,6 @@ data:
   height: 169.0
   lastname: MEDEIROS
   weight: 60.0
-- birthdate: '1991-05-24'
-  firstname: "Etiene\u25B2"
-  height: 169.0
-  lastname: MEDEIROS
-  weight: 60.0
 - birthdate: '2000-01-25'
   firstname: Mila
   height: 169.0
@@ -5816,9 +6116,9 @@ data:
   weight: 95.0
 - birthdate: '1991-04-16'
   firstname: Katie
-  height: 171.0
+  height: 170.0
   lastname: MEILI
-  weight: 61.0
+  weight: 59.0
 - birthdate: '1997-03-19'
   firstname: Ruta
   height: 176.0
@@ -5829,6 +6129,11 @@ data:
   height: 194.0
   lastname: MELADINIS
   weight: 90.0
+- birthdate: '1990-01-02'
+  firstname: Martin
+  height: 183.0
+  lastname: MELCONIAN
+  weight: 77.0
 - birthdate: '1990-01-02'
   firstname: ''
   height: 183.0
@@ -5844,16 +6149,26 @@ data:
   height: 192.0
   lastname: MELLOULI
   weight: 84.0
+- birthdate: '1996-05-09'
+  firstname: Luiz
+  height: 174.0
+  lastname: MELO
+  weight: 69.0
 - birthdate: '1997-07-07'
   firstname: Miguel
-  height: 160.0
+  height: 176.0
   lastname: MENA
-  weight: 60.0
+  weight: 68.0
 - birthdate: '1989-01-17'
   firstname: Kata
   height: 179.0
   lastname: MENCZINGER
   weight: 69.0
+- birthdate: '1993-09-07'
+  firstname: Arthur
+  height: 181.0
+  lastname: MENDES
+  weight: 77.0
 - birthdate: '1999-12-13'
   firstname: Martina
   height: 172.0
@@ -5900,7 +6215,7 @@ data:
   lastname: MEYER
   weight: 76.0
 - birthdate: '1987-07-11'
-  firstname: William*
+  firstname: William
   height: 192.0
   lastname: MEYNARD
   weight: 85.0
@@ -5913,7 +6228,7 @@ data:
   firstname: Marie Laura
   height: 163.0
   lastname: MEZA
-  weight: 58.0
+  weight: 56.0
 - birthdate: '1990-10-18'
   firstname: Dmytro
   height: 165.0
@@ -5938,6 +6253,11 @@ data:
   firstname: Clement
   height: 188.0
   lastname: MIGNON
+  weight: 82.0
+- birthdate: '1991-08-05'
+  firstname: Facundo
+  height: 185.0
+  lastname: MIGUELENA
   weight: 82.0
 - birthdate: '1999-03-09'
   firstname: Viktoryia
@@ -5984,11 +6304,21 @@ data:
   height: 181.0
   lastname: MILLER
   weight: 79.0
+- birthdate: '1989-03-21'
+  firstname: Katherine
+  height: 175.0
+  lastname: MILLS
+  weight: 70.0
 - birthdate: '1994-04-29'
   firstname: Stephen
   height: 186.0
   lastname: MILNE
   weight: 76.0
+- birthdate: '1995-07-24'
+  firstname: Stefan
+  height: 188.0
+  lastname: MILOSEVIC
+  weight: 80.0
 - birthdate: '1991-07-18'
   firstname: Viktor
   height: 174.0
@@ -6024,6 +6354,11 @@ data:
   height: 168.0
   lastname: MITSUI
   weight: 56.0
+- birthdate: '1993-10-13'
+  firstname: Kaori
+  height: 165.0
+  lastname: MIYAHARA
+  weight: 56.0
 - birthdate: '1994-09-03'
   firstname: Yasuko
   height: 164.0
@@ -6040,7 +6375,7 @@ data:
   lastname: MKHITARYAN
   weight: 92.0
 - birthdate: '1999-07-19'
-  firstname: Sachi*
+  firstname: Sachi
   height: 166.0
   lastname: MOCHIDA
   weight: 57.0
@@ -6074,6 +6409,16 @@ data:
   height: 175.0
   lastname: MOLNAR
   weight: 65.0
+- birthdate: '1997-10-06'
+  firstname: Jean Pierre
+  height: 181.0
+  lastname: MONTEAGUDO
+  weight: 68.0
+- birthdate: '1991-02-25'
+  firstname: Andres Felipe
+  height: 179.0
+  lastname: MONTOYA
+  weight: 77.0
 - birthdate: '1998-01-10'
   firstname: Andrew
   height: 182.0
@@ -6084,6 +6429,11 @@ data:
   height: 185.0
   lastname: MORA
   weight: 72.0
+- birthdate: '1987-12-17'
+  firstname: Gisela
+  height: 183.0
+  lastname: MORALES
+  weight: 66.0
 - birthdate: '1994-08-22'
   firstname: "Sebasti\xE1n"
   height: 171.0
@@ -6180,7 +6530,7 @@ data:
   lastname: MUJA
   weight: 75.0
 - birthdate: '1998-06-18'
-  firstname: Daria*
+  firstname: Daria
   height: 172.0
   lastname: MULLAKAEVA
   weight: 61.0
@@ -6203,6 +6553,11 @@ data:
   firstname: Andrea
   height: 184.0
   lastname: MUREZ
+  weight: 77.0
+- birthdate: '1991-09-07'
+  firstname: Jorge
+  height: 186.0
+  lastname: MURILLO
   weight: 77.0
 - birthdate: '1991-09-07'
   firstname: ''
@@ -6329,13 +6684,8 @@ data:
   height: 178.0
   lastname: NEAL
   weight: 74.0
-- birthdate: '1995-02-13'
-  firstname: Lia*
-  height: 178.0
-  lastname: NEAL
-  weight: 74.0
 - birthdate: '1995-08-01'
-  firstname: Leah*
+  firstname: Leah
   height: 173.0
   lastname: NEALE
   weight: 77.0
@@ -6430,7 +6780,7 @@ data:
   lastname: NICOL
   weight: 61.0
 - birthdate: '1991-04-11'
-  firstname: Anders Lie*
+  firstname: Anders Lie
   height: 186.0
   lastname: NIELSEN
   weight: 74.0
@@ -6499,11 +6849,6 @@ data:
   height: 177.0
   lastname: NTOUNTOUNAKI
   weight: 66.0
-- birthdate: '1995-11-29'
-  firstname: Siobhan-Marie
-  height: 173.0
-  lastname: O'CONNOR
-  weight: 64.0
 - birthdate: '1986-03-09'
   firstname: Paulo
   height: 190.0
@@ -6519,6 +6864,11 @@ data:
   height: 177.0
   lastname: OCAMPO
   weight: 80.0
+- birthdate: '1995-11-29'
+  firstname: Siobhan-Marie
+  height: 173.0
+  lastname: OCONNOR
+  weight: 64.0
 - birthdate: '1999-02-25'
   firstname: Zeynep
   height: 168.0
@@ -6564,6 +6914,11 @@ data:
   height: 160.0
   lastname: OLSEN
   weight: 58.0
+- birthdate: '1995-07-19'
+  firstname: Julio
+  height: 177.0
+  lastname: OLVERA
+  weight: 80.0
 - birthdate: '1993-11-19'
   firstname: Tze Liang
   height: 170.0
@@ -6594,11 +6949,6 @@ data:
   height: 189.0
   lastname: ORSI
   weight: 89.0
-- birthdate: '1990-12-11'
-  firstname: Marco*
-  height: 189.0
-  lastname: ORSI
-  weight: 89.0
 - birthdate: '1988-01-27'
   firstname: "V\xEDctor"
   height: 172.0
@@ -6610,14 +6960,14 @@ data:
   lastname: ORTIZ
   weight: 67.0
 - birthdate: '1991-02-19'
-  firstname: OZ.*
+  firstname: ''
   height: 189.0
-  lastname: ORTIZ CANAVATE
+  lastname: ORTIZ CANAVATE OZ
   weight: 89.0
 - birthdate: '1993-02-15'
-  firstname: OZ.*
+  firstname: ''
   height: 194.0
-  lastname: ORTIZ CANAVATE
+  lastname: ORTIZ CANAVATE OZ
   weight: 88.0
 - birthdate: '1994-11-23'
   firstname: Dmytro
@@ -6656,7 +7006,7 @@ data:
   weight: 63.0
 - birthdate: '1997-10-04'
   firstname: Emily
-  height: 170.0
+  height: 152.0
   lastname: OVERHOLT
   weight: 60.0
 - birthdate: '1998-08-18'
@@ -6689,6 +7039,11 @@ data:
   height: 194.0
   lastname: PACKARD
   weight: 86.0
+- birthdate: '1993-11-08'
+  firstname: Alec
+  height: 179.0
+  lastname: PAGE
+  weight: 73.0
 - birthdate: '1998-08-05'
   firstname: Daniil
   height: 189.0
@@ -6764,11 +7119,6 @@ data:
   height: 184.0
   lastname: PARK
   weight: 74.0
-- birthdate: '1989-09-27'
-  firstname: "Taehwan\u25B2"
-  height: 184.0
-  lastname: PARK
-  weight: 74.0
 - birthdate: '2000-04-29'
   firstname: Yerin
   height: 175.0
@@ -6789,6 +7139,11 @@ data:
   height: 170.0
   lastname: PASTRANA
   weight: 55.0
+- birthdate: '1995-09-21'
+  firstname: Trudian
+  height: 162.0
+  lastname: PATRICK
+  weight: 57.0
 - birthdate: '1988-11-04'
   firstname: Aleksandra
   height: 169.0
@@ -6814,6 +7169,11 @@ data:
   height: 177.0
   lastname: PAYNE
   weight: 66.0
+- birthdate: '1989-09-22'
+  firstname: Esteban
+  height: 176.0
+  lastname: PAZ
+  weight: 71.0
 - birthdate: '1994-12-28'
   firstname: Adam
   height: 191.0
@@ -6860,7 +7220,7 @@ data:
   lastname: PERALTA GALLEGO
   weight: 60.0
 - birthdate: '1993-12-07'
-  firstname: Andre*
+  firstname: Andre
   height: 185.0
   lastname: PEREIRA
   weight: 84.0
@@ -6884,11 +7244,21 @@ data:
   height: 177.0
   lastname: PEREPELYTSIA
   weight: 70.0
+- birthdate: '1980-08-10'
+  firstname: Juan Martin
+  height: 190.0
+  lastname: PEREYRA
+  weight: 85.0
 - birthdate: '1976-03-18'
   firstname: Amaurys
   height: 194.0
   lastname: PEREZ
   weight: 98.0
+- birthdate: '1991-09-10'
+  firstname: Arturo
+  height: 185.0
+  lastname: PEREZ
+  weight: 85.0
 - birthdate: '1997-08-22'
   firstname: Jimena
   height: 169.0
@@ -6909,6 +7279,11 @@ data:
   height: 184.0
   lastname: PERNER
   weight: 72.0
+- birthdate: '1992-09-24'
+  firstname: Florencia
+  height: 174.0
+  lastname: PEROTTI
+  weight: 62.0
 - birthdate: '1988-09-15'
   firstname: Mariangela
   height: 173.0
@@ -6965,7 +7340,7 @@ data:
   lastname: PEZONE
   weight: 58.0
 - birthdate: '1994-04-22'
-  firstname: Aglaia*
+  firstname: Aglaia
   height: 175.0
   lastname: PEZZATO
   weight: 60.0
@@ -7001,7 +7376,7 @@ data:
   weight: 68.0
 - birthdate: '1997-05-21'
   firstname: Sydney
-  height: 168.0
+  height: 160.0
   lastname: PICKREM
   weight: 57.0
 - birthdate: '1997-12-10'
@@ -7015,7 +7390,7 @@ data:
   lastname: PIECHOTA
   weight: 66.0
 - birthdate: '1995-11-15'
-  firstname: Blake*
+  firstname: Blake
   height: 188.0
   lastname: PIERONI
   weight: 86.0
@@ -7030,7 +7405,7 @@ data:
   lastname: PIJETLOVIC
   weight: 105.0
 - birthdate: '1992-10-11'
-  firstname: Emilia*
+  firstname: Emilia
   height: 173.0
   lastname: PIKKARAINEN
   weight: 56.0
@@ -7060,7 +7435,7 @@ data:
   lastname: PINOTES
   weight: 85.0
 - birthdate: '1997-02-15'
-  firstname: Tjasa*
+  firstname: Tjasa
   height: 175.0
   lastname: PINTAR
   weight: 65.0
@@ -7074,6 +7449,11 @@ data:
   height: 176.0
   lastname: PINTO
   weight: 68.0
+- birthdate: '1989-06-17'
+  firstname: Omar
+  height: 184.0
+  lastname: PINZON
+  weight: 82.0
 - birthdate: '1989-06-17'
   firstname: Omar Andres
   height: 184.0
@@ -7158,7 +7538,7 @@ data:
   firstname: Allyson
   height: 165.0
   lastname: PONSON
-  weight: 60.0
+  weight: 61.0
 - birthdate: '1992-10-13'
   firstname: Lauriane
   height: 168.0
@@ -7175,7 +7555,7 @@ data:
   lastname: POORT
   weight: 85.0
 - birthdate: '1994-12-27'
-  firstname: Aleksandr*
+  firstname: Aleksandr
   height: 185.0
   lastname: POPKOV
   weight: 80.0
@@ -7241,11 +7621,6 @@ data:
   weight: 74.0
 - birthdate: '1995-12-29'
   firstname: Kirill
-  height: 193.0
-  lastname: PRIGODA
-  weight: 87.0
-- birthdate: '1995-12-29'
-  firstname: "Kirill\u25B2"
   height: 193.0
   lastname: PRIGODA
   weight: 87.0
@@ -7320,7 +7695,7 @@ data:
   lastname: PUCAREVIC
   weight: 80.0
 - birthdate: '1994-04-01'
-  firstname: Albert*
+  firstname: Albert
   height: 184.0
   lastname: PUIG GARRICH
   weight: 78.0
@@ -7335,7 +7710,7 @@ data:
   lastname: PULAI
   weight: 89.0
 - birthdate: '1995-08-05'
-  firstname: Vince*
+  firstname: Vince
   height: 204.99999999999997
   lastname: PULAI
   weight: 89.0
@@ -7404,6 +7779,11 @@ data:
   height: 195.0
   lastname: QUINTERO
   weight: 90.0
+- birthdate: '1995-10-13'
+  firstname: Felipe
+  height: 190.0
+  lastname: QUIROZ
+  weight: 88.0
 - birthdate: '1990-11-02'
   firstname: Kane
   height: 181.0
@@ -7489,6 +7869,11 @@ data:
   height: 166.0
   lastname: RAUTEMBERG
   weight: 67.0
+- birthdate: '1996-04-28'
+  firstname: Esnaider
+  height: 179.0
+  lastname: REALES
+  weight: 78.0
 - birthdate: '1985-02-07'
   firstname: Christian
   height: 188.0
@@ -7504,6 +7889,11 @@ data:
   height: 160.0
   lastname: REID
   weight: 57.0
+- birthdate: '1995-11-23'
+  firstname: Luke
+  height: 191.0
+  lastname: REILLY
+  weight: 86.0
 - birthdate: '1989-11-05'
   firstname: "Zs\xF3fia"
   height: 164.0
@@ -7515,7 +7905,7 @@ data:
   lastname: REMENYI
   weight: 73.0
 - birthdate: '1998-03-08'
-  firstname: Armin Laszlo*
+  firstname: Armin Laszlo
   height: 189.0
   lastname: REMENYI
   weight: 81.0
@@ -7523,7 +7913,7 @@ data:
   firstname: Ines
   height: 167.0
   lastname: REMERSARO
-  weight: 55.0
+  weight: 54.0
 - birthdate: '1998-07-26'
   firstname: Cla
   height: 182.0
@@ -7539,16 +7929,16 @@ data:
   height: 184.0
   lastname: RENWICK
   weight: 80.0
-- birthdate: '1988-07-21'
-  firstname: Robbie*
-  height: 184.0
-  lastname: RENWICK
-  weight: 80.0
 - birthdate: '1983-11-28'
   firstname: Yurema
   height: 168.0
   lastname: REQUENA
   weight: 52.0
+- birthdate: '1997-03-06'
+  firstname: Ana Sofia
+  height: 169.0
+  lastname: REVILAK
+  weight: 62.0
 - birthdate: '1989-11-03'
   firstname: Irakli
   height: 178.0
@@ -7582,6 +7972,11 @@ data:
 - birthdate: '1994-09-06'
   firstname: Lisa
   height: 167.0
+  lastname: RICHAUD
+  weight: 60.0
+- birthdate: '1996-04-28'
+  firstname: Maria
+  height: 171.0
   lastname: RICHAUD
   weight: 60.0
 - birthdate: '1993-03-02'
@@ -7619,11 +8014,11 @@ data:
   height: 194.0
   lastname: ROBERTS
   weight: 90.0
-- birthdate: '1991-04-11'
-  firstname: James*
-  height: 194.0
+- birthdate: '2000-04-21'
+  firstname: Samantha
+  height: 171.0
   lastname: ROBERTS
-  weight: 90.0
+  weight: 55.0
 - birthdate: '1997-06-24'
   firstname: Wesley
   height: 178.0
@@ -7654,6 +8049,16 @@ data:
   height: 185.0
   lastname: RODRIGUES
   weight: 85.0
+- birthdate: '1994-09-13'
+  firstname: Byanca
+  height: 172.0
+  lastname: RODRIGUEZ
+  weight: 68.0
+- birthdate: '1996-04-19'
+  firstname: Lautaro
+  height: 186.0
+  lastname: RODRIGUEZ
+  weight: 80.0
 - birthdate: '1994-12-05'
   firstname: Luisa
   height: 174.0
@@ -7674,6 +8079,11 @@ data:
   height: 178.0
   lastname: ROGOWSKA
   weight: 68.0
+- birthdate: '1995-10-25'
+  firstname: Breanna
+  height: 180.0
+  lastname: ROMAN
+  weight: 72.0
 - birthdate: '1999-12-21'
   firstname: Magdalena Paula
   height: 180.0
@@ -7681,11 +8091,6 @@ data:
   weight: 62.0
 - birthdate: '1996-08-07'
   firstname: Mykhailo
-  height: 187.0
-  lastname: ROMANCHUK
-  weight: 76.0
-- birthdate: '1996-08-07'
-  firstname: "Mykhailo\u25B2"
   height: 187.0
   lastname: ROMANCHUK
   weight: 76.0
@@ -7715,7 +8120,7 @@ data:
   lastname: ROMERO BARRIOS
   weight: 68.0
 - birthdate: '1998-07-19'
-  firstname: Gabrielle*
+  firstname: Gabrielle
   height: 165.0
   lastname: RONCATTO
   weight: 60.0
@@ -7765,7 +8170,7 @@ data:
   lastname: ROZAS LOPEZ
   weight: 79.0
 - birthdate: '2000-05-28'
-  firstname: Taylor Madison*
+  firstname: Taylor Madison
   height: 183.0
   lastname: RUCK
   weight: 60.0
@@ -7780,7 +8185,7 @@ data:
   lastname: RUIZ BRAVO
   weight: 59.0
 - birthdate: '1996-03-07'
-  firstname: Cierra*
+  firstname: Cierra
   height: 194.0
   lastname: RUNGE
   weight: 84.0
@@ -7789,6 +8194,11 @@ data:
   height: 167.0
   lastname: RUZMETOVA
   weight: 50.0
+- birthdate: '1995-10-01'
+  firstname: Gillian
+  height: 175.0
+  lastname: RYAN
+  weight: 79.0
 - birthdate: '1992-08-13'
   firstname: Sean
   height: 191.0
@@ -7905,9 +8315,9 @@ data:
   lastname: SAMILIDIS
   weight: 91.0
 - birthdate: '1999-01-10'
-  firstname: MARTI.
+  firstname: ''
   height: 168.0
-  lastname: SAN NICOLAS
+  lastname: SAN NICOLAS MARTI
   weight: 60.0
 - birthdate: '1983-10-27'
   firstname: Rodolfo
@@ -7945,10 +8355,15 @@ data:
   lastname: SANTAMANS
   weight: 61.0
 - birthdate: '1996-04-02'
-  firstname: Matheus*
-  height: 191.0
+  firstname: Matheus
+  height: 189.0
   lastname: SANTANA
-  weight: 90.0
+  weight: 88.0
+- birthdate: '1996-11-04'
+  firstname: Gabriela
+  height: 165.0
+  lastname: SANTIS
+  weight: 56.0
 - birthdate: '1992-03-23'
   firstname: Alexis
   height: 185.0
@@ -7960,12 +8375,17 @@ data:
   lastname: SANTOS
   weight: 83.0
 - birthdate: '1996-05-04'
-  firstname: Gabriel*
+  firstname: Gabriel
   height: 184.0
   lastname: SANTOS
   weight: 83.0
+- birthdate: '1980-02-14'
+  firstname: Nicholas
+  height: 191.0
+  lastname: SANTOS
+  weight: 88.0
 - birthdate: '1989-05-30'
-  firstname: Michele*
+  firstname: Michele
   height: 188.0
   lastname: SANTUCCI
   weight: 82.0
@@ -8044,8 +8464,13 @@ data:
   height: 185.0
   lastname: SCHMIDT
   weight: 76.0
+- birthdate: '1998-05-06'
+  firstname: Sierra
+  height: 167.0
+  lastname: SCHMIDT
+  weight: 63.0
 - birthdate: '1993-05-29'
-  firstname: Paulina*
+  firstname: Paulina
   height: 175.0
   lastname: SCHMIEDEL
   weight: 61.0
@@ -8054,11 +8479,11 @@ data:
   height: 186.0
   lastname: SCHMITT
   weight: 74.0
-- birthdate: '1990-06-07'
-  firstname: Allison*
-  height: 186.0
-  lastname: SCHMITT
-  weight: 74.0
+- birthdate: '1988-01-11'
+  firstname: Josh
+  height: 193.0
+  lastname: SCHNEIDER
+  weight: 99.0
 - birthdate: '1980-07-03'
   firstname: Roland
   height: 191.0
@@ -8110,7 +8535,7 @@ data:
   lastname: SCHWAIGER
   weight: 56.0
 - birthdate: '1997-02-16'
-  firstname: Ben*
+  firstname: Ben
   height: 192.0
   lastname: SCHWIETERT
   weight: 83.0
@@ -8144,18 +8569,13 @@ data:
   height: 180.0
   lastname: SEEBOHM
   weight: 70.0
-- birthdate: '1992-06-05'
-  firstname: "Emily\u25B2"
-  height: 180.0
-  lastname: SEEBOHM
-  weight: 70.0
 - birthdate: '2000-04-01'
   firstname: Barbora
   height: 175.0
   lastname: SEEMANOVA
   weight: 56.0
 - birthdate: '2001-06-17'
-  firstname: Janja*
+  firstname: Janja
   height: 177.0
   lastname: SEGEL
   weight: 60.0
@@ -8183,7 +8603,7 @@ data:
   firstname: Erika
   height: 170.0
   lastname: SELTENREICH-HODGSON
-  weight: 65.0
+  weight: 59.0
 - birthdate: '2002-05-28'
   firstname: Darya
   height: 170.0
@@ -8195,7 +8615,7 @@ data:
   lastname: SENDYK
   weight: 76.0
 - birthdate: '1984-12-13'
-  firstname: Hanna-Maria*
+  firstname: Hanna-Maria
   height: 174.0
   lastname: SEPPALA
   weight: 60.0
@@ -8214,11 +8634,6 @@ data:
   height: 174.0
   lastname: SETO
   weight: 75.0
-- birthdate: '1994-05-24'
-  firstname: "Daiya\u25B2"
-  height: 174.0
-  lastname: SETO
-  weight: 73.0
 - birthdate: '1986-05-27'
   firstname: Sara
   height: 175.0
@@ -8294,11 +8709,6 @@ data:
   height: 192.0
   lastname: SHIELDS
   weight: 87.0
-- birthdate: '1991-07-11'
-  firstname: "Tom\u25B2"
-  height: 192.0
-  lastname: SHIELDS
-  weight: 87.0
 - birthdate: '1997-07-08'
   firstname: Zohar
   height: 178.0
@@ -8316,11 +8726,6 @@ data:
   weight: 50.0
 - birthdate: '1991-11-26'
   firstname: Shinri
-  height: 188.0
-  lastname: SHIOURA
-  weight: 90.0
-- birthdate: '1991-11-26'
-  firstname: "Shinri\u25B2"
   height: 188.0
   lastname: SHIOURA
   weight: 90.0
@@ -8370,7 +8775,7 @@ data:
   lastname: SIDLAUSKAS
   weight: 77.0
 - birthdate: '1990-06-09'
-  firstname: Keren*
+  firstname: Keren
   height: 180.0
   lastname: SIEBNER
   weight: 68.0
@@ -8408,7 +8813,7 @@ data:
   firstname: Thiago
   height: 184.0
   lastname: SIMON
-  weight: 93.0
+  weight: 92.0
 - birthdate: '1996-09-29'
   firstname: Jacqueline
   height: 165.0
@@ -8459,11 +8864,6 @@ data:
   height: 182.0
   lastname: SJOSTROM
   weight: 75.0
-- birthdate: '1993-08-17'
-  firstname: "Sarah\u25B2"
-  height: 182.0
-  lastname: SJOSTROM
-  weight: 75.0
 - birthdate: '1986-10-04'
   firstname: Simon
   height: 192.0
@@ -8475,7 +8875,7 @@ data:
   lastname: "SJ\xD6STR\xD6M"
   weight: 76.0
 - birthdate: '1993-06-22'
-  firstname: Daniel*
+  firstname: Daniel
   height: 180.0
   lastname: SKAANING
   weight: 79.0
@@ -8494,21 +8894,36 @@ data:
   height: 180.0
   lastname: SKVORTSOV
   weight: 78.0
+- birthdate: '1998-05-25'
+  firstname: Meghan
+  height: 167.0
+  lastname: SMALL
+  weight: 59.0
+- birthdate: '1996-01-04'
+  firstname: Clara
+  height: 175.0
+  lastname: SMIDDY
+  weight: 82.0
 - birthdate: '1993-02-03'
   firstname: Anabelle
   height: 168.0
   lastname: SMITH
   weight: 55.0
 - birthdate: '1995-04-17'
-  firstname: Clark*
+  firstname: Clark
   height: 206.0
   lastname: SMITH
   weight: 89.0
 - birthdate: '1991-05-28'
-  firstname: Daniel*
+  firstname: Daniel
   height: 190.0
   lastname: SMITH
   weight: 83.0
+- birthdate: '1991-11-28'
+  firstname: Giles
+  height: 180.0
+  lastname: SMITH
+  weight: 81.0
 - birthdate: '1994-02-01'
   firstname: Kierra
   height: 150.0
@@ -8521,7 +8936,7 @@ data:
   weight: 67.0
 - birthdate: '1994-10-12'
   firstname: Olivia
-  height: 188.0
+  height: 187.0
   lastname: SMOLIGA
   weight: 74.0
 - birthdate: '1985-06-03'
@@ -8556,9 +8971,9 @@ data:
   weight: 59.0
 - birthdate: '1998-11-13'
   firstname: Alex
-  height: 170.0
+  height: 181.0
   lastname: SOBERS
-  weight: 66.0
+  weight: 72.0
 - birthdate: '1994-05-26'
   firstname: Jessica
   height: 158.0
@@ -8594,6 +9009,11 @@ data:
   height: 168.0
   lastname: SOLOMOU
   weight: 52.0
+- birthdate: '1998-08-20'
+  firstname: Andy
+  height: 180.0
+  lastname: SONG AN
+  weight: 65.0
 - birthdate: '1996-04-24'
   firstname: Jannah
   height: 168.0
@@ -8619,6 +9039,11 @@ data:
   height: 188.0
   lastname: SOUTHERN
   weight: 82.0
+- birthdate: '1994-01-24'
+  firstname: Pamela
+  height: 173.0
+  lastname: SOUZA
+  weight: 60.0
 - birthdate: '2000-05-19'
   firstname: Mariama Djoulde
   height: 165.0
@@ -8719,6 +9144,16 @@ data:
   height: 172.0
   lastname: STEPHENS
   weight: 61.0
+- birthdate: '1996-03-27'
+  firstname: Kylie
+  height: 180.0
+  lastname: STEWART
+  weight: 77.0
+- birthdate: '1994-07-13'
+  firstname: Ty
+  height: 187.0
+  lastname: STEWART
+  weight: 86.0
 - birthdate: '2000-09-11'
   firstname: Yuliya
   height: 165.0
@@ -8739,11 +9174,6 @@ data:
   height: 186.0
   lastname: STOLK
   weight: 85.0
-- birthdate: '1996-06-28'
-  firstname: Kyle*
-  height: 186.0
-  lastname: STOLK
-  weight: 84.0
 - birthdate: '1988-07-14'
   firstname: Jeremy
   height: 190.0
@@ -8794,11 +9224,6 @@ data:
   height: 196.0
   lastname: SUKHORUKOV
   weight: 93.0
-- birthdate: '1988-02-22'
-  firstname: Alexander*
-  height: 196.0
-  lastname: SUKHORUKOV
-  weight: 93.0
 - birthdate: '1990-06-30'
   firstname: Sandro
   height: 200.0
@@ -8810,7 +9235,7 @@ data:
   lastname: SUMAJSTORCIC
   weight: 58.0
 - birthdate: '1998-11-01'
-  firstname: Meichen*
+  firstname: Meichen
   height: 175.0
   lastname: SUN
   weight: 63.0
@@ -8864,8 +9289,13 @@ data:
   height: 178.0
   lastname: SYDORENKO
   weight: 55.0
+- birthdate: '2000-01-20'
+  firstname: Nikolas
+  height: 173.0
+  lastname: SYLVESTER
+  weight: 68.0
 - birthdate: '1996-01-02'
-  firstname: Norbert*
+  firstname: Norbert
   height: 181.0
   lastname: SZABO
   weight: 79.0
@@ -8874,11 +9304,6 @@ data:
   height: 168.0
   lastname: SZE
   weight: 66.0
-- birthdate: '1988-03-05'
-  firstname: Hang Yu*
-  height: 168.0
-  lastname: SZE
-  weight: 63.0
 - birthdate: '1996-11-19'
   firstname: Liliana
   height: 175.0
@@ -8944,6 +9369,11 @@ data:
   height: 168.0
   lastname: TALANOVA
   weight: 56.0
+- birthdate: '2000-08-29'
+  firstname: Paula
+  height: 165.0
+  lastname: TAMASHIRO
+  weight: 57.0
 - birthdate: '1999-08-08'
   firstname: Or
   height: 180.0
@@ -8959,13 +9389,8 @@ data:
   height: 176.0
   lastname: TANG
   weight: 65.0
-- birthdate: '1993-01-08'
-  firstname: Yi*
-  height: 177.0
-  lastname: TANG
-  weight: 70.0
 - birthdate: '1999-04-26'
-  firstname: Yuting*
+  firstname: Yuting
   height: 178.0
   lastname: TANG
   weight: 67.0
@@ -8976,9 +9401,9 @@ data:
   weight: 76.0
 - birthdate: '1995-04-25'
   firstname: Felipe
-  height: 176.0
+  height: 170.0
   lastname: TAPIA
-  weight: 70.0
+  weight: 72.0
 - birthdate: '1995-08-01'
   firstname: Grigory
   height: 191.0
@@ -9065,6 +9490,11 @@ data:
   lastname: THIJS
   weight: 71.0
 - birthdate: '1986-03-06'
+  firstname: Nicholas
+  height: 185.0
+  lastname: THOMAN
+  weight: 81.0
+- birthdate: '1986-03-06'
   firstname: Nick
   height: 185.0
   lastname: THOMAN
@@ -9080,10 +9510,10 @@ data:
   lastname: THOMAS
   weight: 59.0
 - birthdate: '1997-08-25'
-  firstname: Markus*
+  firstname: Markus
   height: 195.0
   lastname: THORMEYER
-  weight: 84.0
+  weight: 82.0
 - birthdate: '1996-02-10'
   firstname: Brianna
   height: 175.0
@@ -9189,6 +9619,11 @@ data:
   height: 175.0
   lastname: TOPILINA
   weight: 56.0
+- birthdate: '1991-06-09'
+  firstname: Daniel
+  height: 174.0
+  lastname: TORRES
+  weight: 72.0
 - birthdate: '1990-03-29'
   firstname: Dalia
   height: 174.0
@@ -9205,9 +9640,9 @@ data:
   lastname: TOUMARKIN
   weight: 90.0
 - birthdate: '1992-02-15'
-  firstname: ZHURAVL.
+  firstname: ''
   height: 191.0
-  lastname: TOUMARKIN
+  lastname: TOUMARKIN ZHURAVL
   weight: 90.0
 - birthdate: '1996-01-24'
   firstname: Oumar
@@ -9224,6 +9659,11 @@ data:
   height: 174.0
   lastname: TOUSSAINT
   weight: 72.0
+- birthdate: '1984-08-28'
+  firstname: Darian
+  height: 193.0
+  lastname: TOWNSEND
+  weight: 88.0
 - birthdate: '1988-02-08'
   firstname: Norbert
   height: 190.0
@@ -9234,11 +9674,21 @@ data:
   height: 180.0
   lastname: TRAP
   weight: 71.0
+- birthdate: '1993-07-19'
+  firstname: Beatriz
+  height: 174.0
+  lastname: TRAVALON
+  weight: 54.0
 - birthdate: '1991-08-15'
   firstname: Benjamin
   height: 173.0
   lastname: TREFFERS
   weight: 74.0
+- birthdate: '1990-05-01'
+  firstname: Aixa
+  height: 176.0
+  lastname: TRIAY
+  weight: 65.0
 - birthdate: '1999-07-13'
   firstname: Michaela
   height: 161.0
@@ -9249,6 +9699,11 @@ data:
   height: 173.0
   lastname: TROMBETTI
   weight: 67.0
+- birthdate: '1990-03-24'
+  firstname: Ezequiel
+  height: 180.0
+  lastname: TRUJILLO
+  weight: 80.0
 - birthdate: '1982-04-23'
   firstname: Kostas
   height: 185.0
@@ -9339,6 +9794,11 @@ data:
   height: 172.0
   lastname: URBANCZYK
   weight: 64.0
+- birthdate: '1999-08-18'
+  firstname: Estefania
+  height: 167.0
+  lastname: URZUA
+  weight: 60.0
 - birthdate: '1998-08-29'
   firstname: Daria K
   height: 183.0
@@ -9389,11 +9849,21 @@ data:
   height: 202.0
   lastname: VAMOS
   weight: 103.0
+- birthdate: '1993-03-30'
+  firstname: Tera
+  height: 182.0
+  lastname: VAN BEILEN
+  weight: 71.0
 - birthdate: '1989-01-23'
   firstname: Martina
   height: 166.0
   lastname: VAN BERKEL
   weight: 54.0
+- birthdate: '1996-05-24'
+  firstname: Daniella
+  height: 165.0
+  lastname: VAN DEN BERG
+  weight: 62.0
 - birthdate: '1999-06-10'
   firstname: Eline
   height: 163.0
@@ -9405,7 +9875,7 @@ data:
   lastname: VAN DER BURGH
   weight: 85.0
 - birthdate: '1992-05-20'
-  firstname: Maud*
+  firstname: Maud
   height: 178.0
   lastname: VAN DER MEER
   weight: 68.0
@@ -9425,7 +9895,7 @@ data:
   lastname: VAN LOOCK
   weight: 44.0
 - birthdate: '1993-08-16'
-  firstname: Evan*
+  firstname: Evan
   height: 204.99999999999997
   lastname: VAN MOERKERKE
   weight: 110.0
@@ -9464,6 +9934,16 @@ data:
   height: 183.0
   lastname: VARGA
   weight: 67.0
+- birthdate: '1995-01-23'
+  firstname: Felipe
+  height: 176.0
+  lastname: VARGAS
+  weight: 60.0
+- birthdate: '1997-11-21'
+  firstname: Ricardo
+  height: 179.0
+  lastname: VARGAS
+  weight: 80.0
 - birthdate: '1997-11-21'
   firstname: Ricardo
   height: 180.0
@@ -9484,6 +9964,11 @@ data:
   height: 190.0
   lastname: VAZAIOS
   weight: 85.0
+- birthdate: '1998-11-02'
+  firstname: Luis
+  height: 178.0
+  lastname: VEGA
+  weight: 66.0
 - birthdate: '1998-11-02'
   firstname: Luis Emigdio
   height: 179.0
@@ -9509,13 +9994,18 @@ data:
   height: 187.0
   lastname: VERGANI
   weight: 75.0
+- birthdate: '1995-04-04'
+  firstname: Lazaro
+  height: 176.0
+  lastname: VERGARA
+  weight: 66.0
 - birthdate: '1988-01-22'
   firstname: Joeri
   height: 181.0
   lastname: VERLINDEN
   weight: 75.0
 - birthdate: '1996-04-21'
-  firstname: Esmee*
+  firstname: Esmee
   height: 179.0
   lastname: VERMEULEN
   weight: 64.0
@@ -9524,16 +10014,16 @@ data:
   height: 166.0
   lastname: VERONA
   weight: 53.0
+- birthdate: '1997-02-02'
+  firstname: Bruna
+  height: 171.0
+  lastname: VERONEZ
+  weight: 56.0
 - birthdate: '1988-08-22'
   firstname: David
   height: 180.0
   lastname: VERRASZTO
   weight: 76.0
-- birthdate: '1988-08-22'
-  firstname: "David\u25B2"
-  height: 181.0
-  lastname: VERRASZTO
-  weight: 74.0
 - birthdate: '1989-07-17'
   firstname: Evelyn
   height: 173.0
@@ -9549,6 +10039,11 @@ data:
   height: 172.0
   lastname: VERZOTTO
   weight: 65.0
+- birthdate: '1992-03-27'
+  firstname: Luiza
+  height: 165.0
+  lastname: VIEIRA
+  weight: 58.0
 - birthdate: '1996-09-06'
   firstname: Adam
   height: 188.0
@@ -9700,7 +10195,7 @@ data:
   lastname: WANG
   weight: 56.0
 - birthdate: '1993-08-25'
-  firstname: Shijia*
+  firstname: Shijia
   height: 174.0
   lastname: WANG
   weight: 63.0
@@ -9764,11 +10259,11 @@ data:
   height: 188.0
   lastname: WEIR
   weight: 77.0
-- birthdate: '1986-03-11'
-  firstname: Amanda*
-  height: 188.0
-  lastname: WEIR
-  weight: 77.0
+- birthdate: '1991-05-23'
+  firstname: Michael
+  height: 190.0
+  lastname: WEISS
+  weight: 83.0
 - birthdate: '1996-12-03'
   firstname: Abbey
   height: 178.0
@@ -9785,15 +10280,20 @@ data:
   lastname: WENK
   weight: 63.0
 - birthdate: '1993-01-30'
-  firstname: Pawel*
+  firstname: Pawel
   height: 191.0
   lastname: WERNER
   weight: 82.0
 - birthdate: '1995-03-13'
-  firstname: Magnus*
+  firstname: Magnus
   height: 194.0
   lastname: WESTERMANN
   weight: 94.0
+- birthdate: '1996-01-23'
+  firstname: Evan
+  height: 178.0
+  lastname: WHITE
+  weight: 70.0
 - birthdate: '1998-07-08'
   firstname: Teodor
   height: 192.0
@@ -9831,9 +10331,14 @@ data:
   weight: 53.0
 - birthdate: '1991-01-02'
   firstname: Michelle
-  height: 170.0
+  height: 173.0
   lastname: WILLIAMS
-  weight: 61.0
+  weight: 67.0
+- birthdate: '1994-10-20'
+  firstname: Max
+  height: 187.0
+  lastname: WILLIAMSON
+  weight: 81.0
 - birthdate: '1990-12-03'
   firstname: Andrew
   height: 189.0
@@ -9860,7 +10365,7 @@ data:
   lastname: WOJDAK
   weight: 84.0
 - birthdate: '1992-08-15'
-  firstname: Philipp*
+  firstname: Philipp
   height: 196.0
   lastname: WOLF
   weight: 96.0
@@ -9889,6 +10394,11 @@ data:
   height: 165.0
   lastname: WOOD
   weight: 60.0
+- birthdate: '1994-05-04'
+  firstname: Russell
+  height: 186.0
+  lastname: WOOD
+  weight: 77.0
 - birthdate: '1998-07-05'
   firstname: Bradley
   height: 181.0
@@ -9896,7 +10406,7 @@ data:
   weight: 75.0
 - birthdate: '1994-07-15'
   firstname: Kelsi
-  height: 181.0
+  height: 180.0
   lastname: WORRELL
   weight: 74.0
 - birthdate: '1986-08-31'
@@ -9921,9 +10431,9 @@ data:
   weight: 72.0
 - birthdate: '1996-01-16'
   firstname: Timothy
-  height: 187.0
+  height: 188.0
   lastname: WYNTER
-  weight: 77.0
+  weight: 64.0
 - birthdate: '1991-04-20'
   firstname: Filip
   height: 183.0
@@ -9934,11 +10444,6 @@ data:
   height: 187.0
   lastname: XU
   weight: 79.0
-- birthdate: '1995-08-19'
-  firstname: "Jiayu\u25B2"
-  height: 184.0
-  lastname: XU
-  weight: 74.0
 - birthdate: '1994-09-11'
   firstname: Akihiro
   height: 175.0
@@ -9946,11 +10451,6 @@ data:
   weight: 69.0
 - birthdate: '1990-01-20'
   firstname: Misaki
-  height: 165.0
-  lastname: YAMAGUCHI
-  weight: 60.0
-- birthdate: '1990-01-20'
-  firstname: Misaki*
   height: 165.0
   lastname: YAMAGUCHI
   weight: 60.0
@@ -10140,7 +10640,7 @@ data:
   lastname: ZINNECKER
   weight: 44.0
 - birthdate: '1993-02-22'
-  firstname: Carlotta*
+  firstname: Carlotta
   height: 183.0
   lastname: ZOFKOVA
   weight: 74.0

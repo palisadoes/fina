@@ -10,6 +10,7 @@ import sys
 import os
 import re
 import argparse
+import time
 from pprint import pprint
 from collections import defaultdict
 
@@ -61,7 +62,7 @@ def _month_number(month):
     return result
 
 
-def _fina_html(directory):
+def _final_athtlete_profiles_html(directory):
     """Function to create list of athlete data from fina.org profiles.
 
     Args:
@@ -77,7 +78,7 @@ def _fina_html(directory):
     # Get a list of files in the directory
     files = os.listdir(directory)
     filenames = ['{}{}{}'.format(
-        directory, os.sep, nextfile) for nextfile in files]
+        directory.rstrip(os.sep), os.sep, nextfile) for nextfile in files]
 
     for _filename in sorted(filenames):
         # Get rid of excess os.sep separators
@@ -123,7 +124,8 @@ def _fina_html(directory):
         for div in ['first-name', 'last-name']:
             elements = soup.find_all('div', {'class': div})
             for element in elements:
-                profile[div.replace('-', '')] = element.get_text().strip()
+                profile[div.replace('-', '')] = general.fix_name(
+                    element.get_text())
 
         # We have all the data we have the right
         # most relevant value
@@ -147,15 +149,18 @@ def _listing_xml(directory):
     # Initialize key variables
     profiles = []
     regex_date = re.compile(r'^.*?>([0-9]+ [A-Z]+ [0-9]+)</text>$')
-    regex_height = re.compile(r'^.*?>(\d{1}\.\d{2} / \d{1}\'\d{1}.*?)</text>$')
-    regex_weight = re.compile(r'^.*?>(\d{2,3} / \d{2,3})</text>$')
+    regex_height = re.compile(r'^.*?>(\d{1}\.\d{2}) / \d{1}\'\d{1}.*?</text>$')
+    regex_weight = re.compile(r'^.*?>(\d{2,3}) / \d{2,3}</text>$')
     regex_offset = re.compile(
         r'^<text .*? left="([0-9]+)" .*?<b>Name</b></text>$')
+    regex_combined = re.compile(
+        r'^.*?>([0-9]+ [A-Z]+ [0-9]+)\s+(\d{1}\.\d{2})/\d{1}\'\d{1}.*?\s+'
+        '(\d{2}\.\d{1})\/.*?</text>$')
 
     # Get a list of files in the directory
     files = os.listdir(directory)
     filenames = ['{}{}{}'.format(
-        directory, os.sep, nextfile) for nextfile in files]
+        directory.rstrip(os.sep), os.sep, nextfile) for nextfile in files]
 
     for _filename in sorted(filenames):
         # Get rid of excess os.sep separators
@@ -201,27 +206,29 @@ def _listing_xml(directory):
                 # we have to use a different methodology
                 found = regex_date.match(line)
                 if bool(found) is True:
-                    text = _get_text(line)
-                    values = text.split()
-                    day = values[0].zfill(2)
-                    month = _month_number(values[1])
-                    year = values[2]
-                    value = '-'.join([year, month, day])
-                    profile['birthdate'] = value
+                    profile['birthdate'] = _xml_birthdate(found.group(1))
 
                 # height:
                 found = regex_height.match(line)
                 if bool(found) is True:
-                    text = _get_text(line)
-                    value = float(text.split()[0]) * 100
-                    profile['height'] = value
+                    profile['height'] = float(found.group(1)) * 100
 
                 # weight
                 found = regex_weight.match(line)
                 if bool(found) is True:
-                    text = _get_text(line)
-                    _value = float(text.split()[0])
-                    profile['weight'] = _value
+                    profile['weight'] = float(found.group(1))
+
+                    # We have all the data we have the right
+                    # most relevant value
+                    if len(profile.keys()) == 5:
+                        profiles.append(profile)
+
+                # Some files have weight, height and birthdate on the same line
+                found = regex_combined.match(line)
+                if bool(found) is True:
+                    profile['birthdate'] = _xml_birthdate(found.group(1))
+                    profile['height'] = float(found.group(2)) * 100
+                    profile['weight'] = float(found.group(3))
 
                     # We have all the data we have the right
                     # most relevant value
@@ -230,6 +237,24 @@ def _listing_xml(directory):
 
     data = _dedup(profiles)
     return data
+
+
+def _xml_birthdate(text):
+    """Convert birthdate to standard format.
+
+    Args:
+        text: Text to extract height from
+
+    Returns:
+        result: YYYY-MM-DD format
+
+    """
+    values = text.split()
+    day = values[0].zfill(2)
+    month = _month_number(values[1])
+    year = values[2]
+    result = '-'.join([year, month, day])
+    return result
 
 
 def _dedup(profiles):
@@ -295,6 +320,7 @@ def main():
     """
     # Initialize key variables
     profiles = []
+    ts_start = int(time.time())
 
     # Get CLI arguments
     parser = argparse.ArgumentParser()
@@ -319,7 +345,7 @@ def main():
     profiles.extend(_listing_xml(listing_directory))
 
     # Get more profiles
-    profiles.extend(_fina_html(fina_directory))
+    profiles.extend(_final_athtlete_profiles_html(fina_directory))
     uniques = _dedup(profiles)
 
     data = yaml.dump({'data': uniques}, default_flow_style=False)
@@ -328,6 +354,7 @@ def main():
 
     # Describe success
     print('Athlete profiles processed: {}'.format(len(uniques)))
+    print('Duration: {}'.format(int(time.time() - ts_start)))
 
 
 if __name__ == '__main__':
