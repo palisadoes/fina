@@ -45,7 +45,7 @@ def main():
     database_file = args.database_file
 
     distance = 200
-    gender = None
+    gender = 'b'
     stroke = 'free'
     course = 'lcm'
 
