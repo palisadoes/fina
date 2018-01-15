@@ -106,7 +106,7 @@ class Data(object):
                 if stroke in self._events[superkey]:
                     if distance in self._events[superkey][stroke]:
                         # Get value for any gender
-                        for gender_key, value in sorted(
+                        for gender_key in sorted(
                                 self._events[
                                     superkey][stroke][distance].keys()):
                             value = self._events[superkey][

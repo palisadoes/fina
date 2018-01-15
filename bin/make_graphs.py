@@ -18,7 +18,7 @@ if _BIN_DIRECTORY.endswith('/fina/bin') is True:
     sys.path.append(_ROOT_DIRECTORY)
 else:
     print(
-        'This script is not installed in the "fina/bin" directory. '
+        'This script is not installed in the "fin400a/bin" directory. '
         'Please fix.')
     sys.exit(2)
 
@@ -45,7 +45,7 @@ def main():
     database_file = args.database_file
 
     distance = 200
-    gender = 'f'
+    gender = 'F'
     stroke = 'medley'
     course = 'lcm'
 
