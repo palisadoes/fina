@@ -4,6 +4,7 @@
 import csv
 import hashlib
 from collections import defaultdict
+import numpy as np
 from pprint import pprint
 
 # pip3 imports
@@ -296,6 +297,21 @@ class Graph(object):
             edgecolors=self._colors_gender[_gender],
             label=self._title_gender[_gender].replace('\'s', ''))
 
+        # Get the X axis min max to be used in chart for scaling
+        x_autoscale_min, _ = plt.xlim()
+
+        # Horizontal line at maximum speed y value
+        speed_max = max(x_values)
+        bmi_of_max_speed = y_values[x_values.index(speed_max)]
+        plt.axhline(
+            y=bmi_of_max_speed,
+            linestyle='dashed',
+            linewidth=1, color='#CCCCCC')
+        plt.text(
+            x_autoscale_min,
+            bmi_of_max_speed,
+            '  BMI - Max Speed: {0:.3f}'.format(bmi_of_max_speed))
+
         # Create plot title
         plt.title(title)
 
@@ -326,6 +342,7 @@ class Graph(object):
         # Get values to plot
         x_values = self._database.kgspeed(stroke, distance, _gender)
         y_values = self._database.bmi(stroke, distance, _gender)
+        speeds = self._database.speed(stroke, distance, _gender)
 
         print(len(x_values))
 
@@ -349,6 +366,41 @@ class Graph(object):
 
         # Create plot legend based on plot label
         plt.legend()
+
+        # Create linear trendline (linear fitting)
+        function = np.poly1d(np.polyfit(x_values, y_values, 1))
+        plt.plot(
+            x_values, function(x_values),
+            color=self._colors_gender[_gender],
+            linestyle='solid',
+            linewidth=1,
+            antialiased=False)
+
+        # Get the X axis min max to be used in chart for scaling
+        x_autoscale_min, _ = plt.xlim()
+
+        # Horizontal line at minimum y value
+        x_max = max(x_values)
+        bmi_of_max_efficiency = y_values[x_values.index(x_max)]
+        plt.axhline(
+            y=bmi_of_max_efficiency,
+            linestyle='dashed',
+            linewidth=1, color='#CCCCCC')
+        plt.text(
+            x_autoscale_min,
+            bmi_of_max_efficiency,
+            '  BMI - Max Efficiency: {0:.3f}'.format(bmi_of_max_efficiency))
+
+        # Horizontal line at maximum speed y value
+        speed_max = max(speeds)
+        bmi_of_max_speed = y_values[speeds.index(speed_max)]
+        plt.axhline(
+            y=bmi_of_max_speed,
+            linestyle='dashed', linewidth=1, color='#CCCCCC')
+        plt.text(
+            x_autoscale_min,
+            bmi_of_max_speed,
+            '  BMI - Max Speed: {0:.3f}'.format(bmi_of_max_speed))
 
         # Create Axes labels
         plt.xlabel('Speed / Kg (m/Kg s)')
@@ -374,6 +426,7 @@ class Graph(object):
         # Get values to plot
         x_values = self._database.speed(stroke, distance, _gender)
         y_values = self._database.kgspeed(stroke, distance, _gender)
+        bmis = self._database.bmi(stroke, distance, _gender)
 
         print(len(x_values))
 
@@ -391,6 +444,29 @@ class Graph(object):
             facecolors='none',
             edgecolors=self._colors_gender[_gender],
             label=self._title_gender[_gender].replace('\'s', ''))
+
+        # Get the X axis min max to be used in chart for scaling
+        x_autoscale_min, _ = plt.xlim()
+
+        # Horizontal line at maximum efficiency y value
+        y_max = max(y_values)
+        x_max = max(x_values)
+        bmi_of_max_efficiency = bmis[y_values.index(y_max)]
+        plt.axhline(y=y_max, linestyle='dashed', linewidth=1, color='#CCCCCC')
+        plt.text(
+            x_autoscale_min,
+            y_max,
+            '  Max Efficiency: BMI {0:.3f}'.format(bmi_of_max_efficiency))
+
+        # Horizontal line at maximum speed y value
+        bmi_of_max_speed = bmis[x_values.index(x_max)]
+        plt.axhline(
+            y=y_values[x_values.index(x_max)],
+            linestyle='dashed', linewidth=1, color='#CCCCCC')
+        plt.text(
+            x_autoscale_min,
+            y_values[x_values.index(x_max)],
+            '  Max Speed: BMI {0:.3f}'.format(bmi_of_max_speed))
 
         # Create plot title
         plt.title(title)

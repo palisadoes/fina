@@ -45,8 +45,8 @@ def main():
     database_file = args.database_file
 
     distance = 200
-    gender = 'm'
-    stroke = 'medley'
+    gender = None
+    stroke = 'free'
     course = 'lcm'
 
     # Create database in memory
