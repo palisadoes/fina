@@ -496,6 +496,11 @@ class FileLenex(object):
 
         clubs = self.clubs()
         for club in clubs:
+            # Skip officials who are not part of a club
+            if 'code' not in club:
+                continue
+
+            # Get the club ID for identifying athletes
             club_id = club['code']
 
             # Get athlete data
@@ -718,6 +723,11 @@ class FileLenex(object):
 
                 _speed_per_kg = _speed / weight
                 speed_per_kg = str(round(_speed_per_kg, factor))
+
+            # We've seen errors heights cause very high BMIs.
+            if self._with_na is True:
+                if _bmi > 30:
+                    continue
 
             # Get birthyear
             birthyear = int(birthdate.split('-')[0])

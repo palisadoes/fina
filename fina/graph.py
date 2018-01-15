@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 class Data(object):
     """Process Database data."""
 
-    def __init__(self, filename, fastest=True):
+    def __init__(self, filename, fastest=True, course=None):
         """Method to instantiate the class.
 
         Args:
@@ -29,7 +29,7 @@ class Data(object):
         self._fastest = fastest
 
         # Generate globally necessary data
-        self._events = self._read_database()
+        self._events = self._read_database(course=course)
         self._superkeys = sorted(self._events.keys())
 
     def bmi(self, stroke, distance, gender):
@@ -122,11 +122,11 @@ class Data(object):
 
         return data
 
-    def _read_database(self):
+    def _read_database(self, course=None):
         """Process the database file.
 
         Args:
-            None
+            course: Course to filter by
 
         Returns:
             events: Anonymized dict of best results per athlete keyed by
@@ -144,6 +144,13 @@ class Data(object):
         with open(filename) as csvfile:
             f_handle = csv.reader(csvfile, delimiter=delimiter)
             for row in f_handle:
+                # Filter by course type
+                if course is not None:
+                    course_type = row[3].upper()
+                    if course_type != course.upper():
+                        continue
+
+                # Contiue processing the row
                 (_, _, _, _, _, _time, _, superkey) = _process_row(
                     row, fastest=self._fastest)
 
@@ -157,6 +164,12 @@ class Data(object):
         with open(filename) as csvfile:
             f_handle = csv.reader(csvfile, delimiter=delimiter)
             for row in f_handle:
+                # Filter by course type (Again)
+                if course is not None:
+                    course_type = row[3].upper()
+                    if course_type != course.upper():
+                        continue
+
                 (_, _, gender, stroke,
                  distance, _time, data, superkey) = _process_row(
                     row, fastest=self._fastest)
@@ -169,7 +182,7 @@ class Data(object):
 class Graph(object):
     """Create graphs."""
 
-    def __init__(self, filename, fastest=True):
+    def __init__(self, filename, fastest=True, course=None):
         """Method to instantiate the class.
 
         Args:
@@ -180,7 +193,7 @@ class Graph(object):
 
         """
         # Initialize key variables
-        self._database = Data(filename, fastest=fastest)
+        self._database = Data(filename, fastest=fastest, course=course)
         self._strokes = {
             'FLY': 'FLY',
             'BUT': 'FLY',
@@ -334,6 +347,54 @@ class Graph(object):
         # Create Axes labels
         plt.xlabel('Speed / Kg (m/Kg s)')
         plt.ylabel('BMI')
+
+        # Display plot
+        plt.show()
+
+    def speed_kgspeed(self, _stroke, distance, gender=None):
+        """Plot Speed / Kg vs Speed for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+
+        Returns:
+            None
+
+        """
+        # Initialize key variables
+        (stroke, _gender, title) = self._shared(_stroke, distance, gender)
+
+        # Get values to plot
+        x_values = self._database.speed(stroke, distance, _gender)
+        y_values = self._database.kgspeed(stroke, distance, _gender)
+
+        print(len(x_values))
+
+        '''
+        Create plot object in memory.
+
+         facecolors:
+           The string ‘none’ to plot unfilled outlines
+         edgecolors:
+            The string ‘none’ to plot faces with no outlines
+        '''
+        plt.scatter(
+            x_values, y_values,
+            marker='o',
+            facecolors='none',
+            edgecolors='r',
+            label=self._title_gender[_gender].replace('\'s', ''))
+
+        # Create plot title
+        plt.title(title)
+
+        # Create plot legend based on plot label
+        plt.legend()
+
+        # Create Axes labels
+        plt.xlabel('Speed')
+        plt.ylabel('Speed / Kg (m/Kg s)')
 
         # Display plot
         plt.show()

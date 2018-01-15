@@ -45,16 +45,19 @@ def main():
     database_file = args.database_file
 
     distance = 200
-    gender = 'm'
-    stroke = 'free'
-    # Create database in memory
-    plot = graph.Graph(database_file)
-    plot.bmi_kgspeed(stroke, distance, gender)
-    plot.bmi_speed(stroke, distance, gender)
+    gender = 'f'
+    stroke = 'medley'
+    course = 'lcm'
 
-    plot = graph.Graph(database_file, fastest=False)
+    # Create database in memory
+    plot = graph.Graph(database_file, course=course)
     plot.bmi_kgspeed(stroke, distance, gender)
     plot.bmi_speed(stroke, distance, gender)
+    plot.speed_kgspeed(stroke, distance, gender)
+
+    # plot = graph.Graph(database_file, fastest=False, course=course)
+    # plot.bmi_kgspeed(stroke, distance, gender)
+    # plot.bmi_speed(stroke, distance, gender)
 
 if __name__ == '__main__':
     main()
