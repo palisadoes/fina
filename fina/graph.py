@@ -216,6 +216,12 @@ class Graph(object):
             None: "Combined Men's and Women's",
             'B': "Men's and Women's"
         }
+        self._colors_gender = {
+            'M': '#4F81BD',
+            'F': '#000000',
+            None: '#FFA500',
+            'B': '#CCCCCC'
+        }
 
     def _shared(self, _stroke, distance, gender=None):
         """Plot BMI vs Speed for a given event and gender.
@@ -287,7 +293,7 @@ class Graph(object):
             x_values, y_values,
             marker='o',
             facecolors='none',
-            edgecolors='r',
+            edgecolors=self._colors_gender[_gender],
             label=self._title_gender[_gender].replace('\'s', ''))
 
         # Create plot title
@@ -335,7 +341,7 @@ class Graph(object):
             x_values, y_values,
             marker='o',
             facecolors='none',
-            edgecolors='r',
+            edgecolors=self._colors_gender[_gender],
             label=self._title_gender[_gender].replace('\'s', ''))
 
         # Create plot title
@@ -383,7 +389,7 @@ class Graph(object):
             x_values, y_values,
             marker='o',
             facecolors='none',
-            edgecolors='r',
+            edgecolors=self._colors_gender[_gender],
             label=self._title_gender[_gender].replace('\'s', ''))
 
         # Create plot title
