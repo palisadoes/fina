@@ -194,7 +194,10 @@ class Graph(object):
 
         """
         # Initialize key variables
-        self._database = Data(filename, fastest=fastest, course=course)
+        self.course = course
+
+        # Create lookup tables
+        self._database = Data(filename, fastest=fastest, course=self.course)
         self._strokes = {
             'FLY': 'FLY',
             'BUT': 'FLY',
@@ -221,7 +224,10 @@ class Graph(object):
             'M': '#4F81BD',
             'F': '#000000',
             None: '#FFA500',
-            'B': '#CCCCCC'
+        }
+        self._colors_line = {
+            'efficiency': '#0000FF',
+            'speed': '#00FFFF'
         }
 
     def _shared(self, _stroke, distance, gender=None):
@@ -254,10 +260,11 @@ class Graph(object):
 
         # Create plot title
         title = (
-            '{} {}m {}'.format(
+            '{} {}m {} ({})'.format(
                 self._title_gender[_gender],
                 distance,
-                self._title_strokes[stroke_abbreviation]))
+                self._title_strokes[stroke_abbreviation],
+                self.course.upper()))
 
         result = (stroke, _gender, title)
         return result
@@ -311,8 +318,8 @@ class Graph(object):
         plt.scatter(
             x_values, y_values,
             marker='o',
-            facecolors='none',
-            edgecolors=self._colors_gender[_gender],
+            facecolors=self._colors_gender[_gender],
+            alpha=0.5,
             label=self._title_gender[_gender].replace('\'s', ''))
 
         # Get the X axis min max to be used in chart for scaling
@@ -323,15 +330,13 @@ class Graph(object):
         bmi_of_max_speed = y_values[x_values.index(speed_max)]
         plt.axhline(
             y=bmi_of_max_speed,
+            label=('BMI of Max Speed: {0:.3f}'.format(bmi_of_max_speed)),
             linestyle='dashed',
-            linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            bmi_of_max_speed,
-            '  BMI - Max Speed: {0:.3f}'.format(bmi_of_max_speed))
+            linewidth=1, color=self._colors_line['speed'])
 
         # Create plot title
-        plt.title(title)
+        plt.suptitle(title)
+        plt.title('BMI vs. Speed', fontsize='smaller')
 
         # Create plot legend based on plot label
         plt.legend()
@@ -381,30 +386,13 @@ class Graph(object):
             plt.scatter(
                 x_values, y_values,
                 marker='o',
-                facecolors='none',
-                edgecolors=self._colors_gender[gender],
+                facecolors=self._colors_gender[gender],
+                alpha=0.5,
                 label=self._title_gender[gender].replace('\'s', ''))
 
-        """
-
-        # Get the X axis min max to be used in chart for scaling
-        x_autoscale_min, _ = plt.xlim()
-
-        # Horizontal line at maximum speed y value
-        speed_max = max(x_values)
-        bmi_of_max_speed = y_values[x_values.index(speed_max)]
-        plt.axhline(
-            y=bmi_of_max_speed,
-            linestyle='dashed',
-            linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            bmi_of_max_speed,
-            '  BMI - Max Speed: {0:.3f}'.format(bmi_of_max_speed))
-
-        """
         # Create plot title
-        plt.title(title)
+        plt.suptitle(title)
+        plt.title('BMI vs. Speed', fontsize='smaller')
 
         # Create plot legend based on plot label
         plt.legend()
@@ -466,15 +454,13 @@ class Graph(object):
         plt.scatter(
             x_values, y_values,
             marker='o',
-            facecolors='none',
-            edgecolors=self._colors_gender[_gender],
+            facecolors=self._colors_gender[_gender],
+            alpha=0.5,
             label=self._title_gender[_gender].replace('\'s', ''))
 
         # Create plot title
-        plt.title(title)
-
-        # Create plot legend based on plot label
-        plt.legend()
+        plt.suptitle(title)
+        plt.title('BMI vs. Swimming Efficiency', fontsize='smaller')
 
         # Create linear trendline (linear fitting)
         function = np.poly1d(np.polyfit(x_values, y_values, 1))
@@ -485,34 +471,33 @@ class Graph(object):
             linewidth=1,
             antialiased=False)
 
-        # Get the X axis min max to be used in chart for scaling
-        x_autoscale_min, _ = plt.xlim()
-
         # Horizontal line at minimum y value
         x_max = max(x_values)
         bmi_of_max_efficiency = y_values[x_values.index(x_max)]
         plt.axhline(
             y=bmi_of_max_efficiency,
+            label=(
+                'BMI of Max Efficiency: {0:.3f}'
+                ''.format(bmi_of_max_efficiency)),
             linestyle='dashed',
-            linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            bmi_of_max_efficiency,
-            '  BMI - Max Efficiency: {0:.3f}'.format(bmi_of_max_efficiency))
+            linewidth=1,
+            color=self._colors_line['efficiency'])
 
         # Horizontal line at maximum speed y value
         speed_max = max(speeds)
         bmi_of_max_speed = y_values[speeds.index(speed_max)]
         plt.axhline(
             y=bmi_of_max_speed,
-            linestyle='dashed', linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            bmi_of_max_speed,
-            '  BMI - Max Speed: {0:.3f}'.format(bmi_of_max_speed))
+            label=('BMI of Max Speed: {0:.3f}'.format(bmi_of_max_speed)),
+            linestyle='dashed',
+            linewidth=1,
+            color=self._colors_line['speed'])
+
+        # Create plot legend based on plot label
+        plt.legend()
 
         # Create Axes labels
-        plt.xlabel('Speed / Kg (m/Kg s)')
+        plt.xlabel('Speed / Kg (m/Kgs)')
         plt.ylabel('BMI')
 
         # Display plot
@@ -558,53 +543,19 @@ class Graph(object):
             plt.scatter(
                 x_values, y_values,
                 marker='o',
-                facecolors='none',
-                edgecolors=self._colors_gender[gender],
+                facecolors=self._colors_gender[gender],
+                alpha=0.5,
                 label=self._title_gender[gender].replace('\'s', ''))
 
         # Create plot title
-        plt.title(title)
+        plt.suptitle(title)
+        plt.title('BMI vs. Swimming Efficiency', fontsize='smaller')
 
         # Create plot legend based on plot label
         plt.legend()
 
-        """# Create linear trendline (linear fitting)
-        function = np.poly1d(np.polyfit(x_values, y_values, 1))
-        plt.plot(
-            x_values, function(x_values),
-            color=self._colors_gender[_gender],
-            linestyle='solid',
-            linewidth=1,
-            antialiased=False)
-
-        # Get the X axis min max to be used in chart for scaling
-        x_autoscale_min, _ = plt.xlim()
-
-        # Horizontal line at minimum y value
-        x_max = max(x_values)
-        bmi_of_max_efficiency = y_values[x_values.index(x_max)]
-        plt.axhline(
-            y=bmi_of_max_efficiency,
-            linestyle='dashed',
-            linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            bmi_of_max_efficiency,
-            '  BMI - Max Efficiency: {0:.3f}'.format(bmi_of_max_efficiency))
-
-        # Horizontal line at maximum speed y value
-        speed_max = max(speeds)
-        bmi_of_max_speed = y_values[speeds.index(speed_max)]
-        plt.axhline(
-            y=bmi_of_max_speed,
-            linestyle='dashed', linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            bmi_of_max_speed,
-            '  BMI - Max Speed: {0:.3f}'.format(bmi_of_max_speed))"""
-
         # Create Axes labels
-        plt.xlabel('Speed / Kg (m/Kg s)')
+        plt.xlabel('Speed / Kg (m/Kgs)')
         plt.ylabel('BMI')
 
         # Display plot
@@ -660,42 +611,44 @@ class Graph(object):
         plt.scatter(
             x_values, y_values,
             marker='o',
-            facecolors='none',
-            edgecolors=self._colors_gender[_gender],
+            facecolors=self._colors_gender[_gender],
+            alpha=0.5,
             label=self._title_gender[_gender].replace('\'s', ''))
-
-        # Get the X axis min max to be used in chart for scaling
-        x_autoscale_min, _ = plt.xlim()
 
         # Horizontal line at maximum efficiency y value
         y_max = max(y_values)
         x_max = max(x_values)
         bmi_of_max_efficiency = bmis[y_values.index(y_max)]
-        plt.axhline(y=y_max, linestyle='dashed', linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            y_max,
-            '  Max Efficiency: BMI {0:.3f}'.format(bmi_of_max_efficiency))
+        plt.axhline(
+            y=y_max,
+            label=(
+                'Max Efficiency (BMI: {0:.3f})'
+                ''.format(bmi_of_max_efficiency)),
+            linestyle='dashed',
+            linewidth=1,
+            color=self._colors_line['efficiency'])
 
         # Horizontal line at maximum speed y value
         bmi_of_max_speed = bmis[x_values.index(x_max)]
         plt.axhline(
             y=y_values[x_values.index(x_max)],
-            linestyle='dashed', linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            y_values[x_values.index(x_max)],
-            '  Max Speed: BMI {0:.3f}'.format(bmi_of_max_speed))
+            label=(
+                'Efficiency at Max Speed (BMI: {0:.3f})'
+                ''.format(bmi_of_max_speed)),
+            linestyle='dashed',
+            linewidth=1,
+            color=self._colors_line['speed'])
 
         # Create plot title
-        plt.title(title)
+        plt.suptitle(title)
+        plt.title('Swimming Efficiency vs. Speed', fontsize='smaller')
 
         # Create plot legend based on plot label
         plt.legend()
 
         # Create Axes labels
         plt.xlabel('Speed')
-        plt.ylabel('Speed / Kg (m/Kg s)')
+        plt.ylabel('Speed / Kg (m/Kgs)')
 
         # Display plot
         plt.show()
@@ -740,47 +693,21 @@ class Graph(object):
             plt.scatter(
                 x_values, y_values,
                 marker='o',
-                facecolors='none',
-                edgecolors=self._colors_gender[gender],
+                facecolors=self._colors_gender[gender],
+                alpha=0.5,
                 label=self._title_gender[gender].replace('\'s', ''))
             print(gender)
 
-        """
-
-        # Get the X axis min max to be used in chart for scaling
-        x_autoscale_min, _ = plt.xlim()
-
-        # Horizontal line at maximum efficiency y value
-        y_max = max(y_values)
-        x_max = max(x_values)
-        bmi_of_max_efficiency = bmis[y_values.index(y_max)]
-        plt.axhline(y=y_max, linestyle='dashed', linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            y_max,
-            '  Max Efficiency: BMI {0:.3f}'.format(bmi_of_max_efficiency))
-
-        # Horizontal line at maximum speed y value
-        bmi_of_max_speed = bmis[x_values.index(x_max)]
-        plt.axhline(
-            y=y_values[x_values.index(x_max)],
-            linestyle='dashed', linewidth=1, color='#CCCCCC')
-        plt.text(
-            x_autoscale_min,
-            y_values[x_values.index(x_max)],
-            '  Max Speed: BMI {0:.3f}'.format(bmi_of_max_speed))
-
-        """
-
         # Create plot title
-        plt.title(title)
+        plt.suptitle(title)
+        plt.title('Swimming Efficiency vs. Speed', fontsize='smaller')
 
         # Create plot legend based on plot label
         plt.legend()
 
         # Create Axes labels
         plt.xlabel('Speed')
-        plt.ylabel('Speed / Kg (m/Kg s)')
+        plt.ylabel('Speed / Kg (m/Kgs)')
 
         # Display plot
         plt.show()
