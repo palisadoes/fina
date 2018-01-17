@@ -219,7 +219,10 @@ def main():
 
     """
     # Initialize key variables
-    alldata = []
+    alldata = [[
+        'Meet', 'City', 'Country', 'Course', 'Event ID', 'Distance', 'Stroke',
+        'Round', 'Gender', 'Firstname', 'Lastname', 'Birthyear', 'Height cm',
+        'Weight Kg', 'BMI', 'Speed / Kg', 'Speed m/s', 'Time']]
     finadata = []
     olympicdata = []
     ts_start = int(time.time())
@@ -267,7 +270,7 @@ def main():
         writer.writerows(alldata)
 
     # Print status
-    print('Swimmer event results created {}'.format(len(alldata)))
+    print('Swimmer event results created: {}'.format(len(alldata) - 1))
     print('Duration: {}'.format(int(time.time() - ts_start)))
 
 

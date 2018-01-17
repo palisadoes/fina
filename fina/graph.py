@@ -10,6 +10,9 @@ from pprint import pprint
 # pip3 imports
 import matplotlib.pyplot as plt
 
+# Fina imports
+from fina import log
+log
 
 class Data(object):
     """Process Database data."""
@@ -99,7 +102,7 @@ class Data(object):
         """
         # Initialize key variables
         stroke = _stroke.upper()
-        distance = str(int(_distance))
+        distance = str(float(_distance)).replace('.0', '')
         data = []
 
         for superkey in self._superkeys:
@@ -142,9 +145,15 @@ class Data(object):
             lambda: defaultdict(lambda: defaultdict())))
 
         # Read CSV file
+        header = True
         with open(filename) as csvfile:
             f_handle = csv.reader(csvfile, delimiter=delimiter)
             for row in f_handle:
+                # Skip the header
+                if header is True:
+                    header = False
+                    continue
+
                 # Filter by course type
                 if course is not None:
                     course_type = row[3].upper()
@@ -162,9 +171,15 @@ class Data(object):
                     athletes[superkey] = _time
 
         # Read CSV file again
+        header = True
         with open(filename) as csvfile:
             f_handle = csv.reader(csvfile, delimiter=delimiter)
             for row in f_handle:
+                # Skip the header
+                if header is True:
+                    header = False
+                    continue
+
                 # Filter by course type (Again)
                 if course is not None:
                     course_type = row[3].upper()
@@ -269,12 +284,14 @@ class Graph(object):
         result = (stroke, _gender, title)
         return result
 
-    def bmi_speed(self, _stroke, distance, gender=None):
+    def bmi_speed(self, _stroke, distance, gender=None, filename=None):
         """Plot BMI vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
 
         Returns:
             None
@@ -283,16 +300,19 @@ class Graph(object):
         # Do multiple charts if necessary
         (stroke, _gender, _) = self._shared(_stroke, distance, gender)
         if _gender == 'B':
-            self._bmi_speed_2(stroke, distance)
+            self._bmi_speed_2(stroke, distance, filename=filename)
         else:
-            self._bmi_speed_1(stroke, distance, gender=gender)
+            self._bmi_speed_1(
+                stroke, distance, gender=gender, filename=filename)
 
-    def _bmi_speed_1(self, _stroke, distance, gender=None):
+    def _bmi_speed_1(self, _stroke, distance, gender=None, filename=None):
         """Plot BMI vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
 
         Returns:
             None
@@ -305,13 +325,20 @@ class Graph(object):
         x_values = self._database.speed(stroke, distance, _gender)
         y_values = self._database.bmi(stroke, distance, _gender)
 
-        print(len(x_values))
+        # Do nothing if there is no data
+        if bool(len(x_values)) is False:
+            log_message = (
+                'No data for stroke {}, distance {}, gender {}'
+                ''.format(stroke, distance, _gender))
+            log.log2warning(1007, log_message)
+            return
 
         '''
         Create plot object in memory.
 
          facecolors:
            The string ‘none’ to plot unfilled outlines
+
          edgecolors:
             The string ‘none’ to plot faces with no outlines
         '''
@@ -321,9 +348,6 @@ class Graph(object):
             facecolors=self._colors_gender[_gender],
             alpha=0.5,
             label=self._title_gender[_gender].replace('\'s', ''))
-
-        # Get the X axis min max to be used in chart for scaling
-        x_autoscale_min, _ = plt.xlim()
 
         # Horizontal line at maximum speed y value
         speed_max = max(x_values)
@@ -346,14 +370,19 @@ class Graph(object):
         plt.ylabel('BMI')
 
         # Display plot
-        plt.show()
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
 
-    def _bmi_speed_2(self, _stroke, distance):
+    def _bmi_speed_2(self, _stroke, distance, filename=None):
         """Plot BMI vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            filename: Filename to create
 
         Returns:
             None
@@ -377,6 +406,7 @@ class Graph(object):
 
          facecolors:
            The string ‘none’ to plot unfilled outlines
+
          edgecolors:
             The string ‘none’ to plot faces with no outlines
         '''
@@ -402,9 +432,13 @@ class Graph(object):
         plt.ylabel('BMI')
 
         # Display plot
-        plt.show()
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
 
-    def bmi_kgspeed(self, _stroke, distance, gender=None):
+    def bmi_kgspeed(self, _stroke, distance, gender=None, filename=None):
         """Plot BMI vs Speed for a given event and gender.
 
         Args:
@@ -418,16 +452,20 @@ class Graph(object):
         # Do multiple charts if necessary
         (stroke, _gender, _) = self._shared(_stroke, distance, gender)
         if _gender == 'B':
-            self._bmi_kgspeed_2(stroke, distance)
+            self._bmi_kgspeed_2(stroke, distance, filename=filename)
         else:
-            self._bmi_kgspeed_1(stroke, distance, gender=gender)
+            self._bmi_kgspeed_1(
+                stroke, distance, gender=gender, filename=filename)
 
-    def _bmi_kgspeed_1(self, _stroke, distance, gender=None):
+    def _bmi_kgspeed_1(
+            self, _stroke, distance, gender=None, filename=None):
         """Plot BMI vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
 
         Returns:
             None
@@ -441,13 +479,20 @@ class Graph(object):
         y_values = self._database.bmi(stroke, distance, _gender)
         speeds = self._database.speed(stroke, distance, _gender)
 
-        print(len(x_values))
+        # Do nothing if there is no data
+        if bool(len(x_values)) is False:
+            log_message = (
+                'No data for stroke {}, distance {}, gender {}'
+                ''.format(stroke, distance, _gender))
+            log.log2warning(1008, log_message)
+            return
 
         '''
         Create plot object in memory.
 
          facecolors:
            The string ‘none’ to plot unfilled outlines
+
          edgecolors:
             The string ‘none’ to plot faces with no outlines
         '''
@@ -501,14 +546,19 @@ class Graph(object):
         plt.ylabel('BMI')
 
         # Display plot
-        plt.show()
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
 
-    def _bmi_kgspeed_2(self, _stroke, distance):
+    def _bmi_kgspeed_2(self, _stroke, distance, filename=None):
         """Plot BMI vs Speed for a given event and both genders.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            filename: Filename to create
 
         Returns:
             None
@@ -527,13 +577,12 @@ class Graph(object):
                 'speed': self._database.speed(stroke, distance, gender)
             }
 
-        # print(len(x_values))
-
         '''
         Create plot object in memory.
 
          facecolors:
            The string ‘none’ to plot unfilled outlines
+
          edgecolors:
             The string ‘none’ to plot faces with no outlines
         '''
@@ -559,14 +608,20 @@ class Graph(object):
         plt.ylabel('BMI')
 
         # Display plot
-        plt.show()
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
 
-    def speed_kgspeed(self, _stroke, distance, gender=None):
+    def speed_kgspeed(self, _stroke, distance, gender=None, filename=None):
         """Plot Speed / Kg vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
 
         Returns:
             None
@@ -575,16 +630,19 @@ class Graph(object):
         # Do multiple charts if necessary
         (stroke, _gender, _) = self._shared(_stroke, distance, gender)
         if _gender == 'B':
-            self._speed_kgspeed_2(stroke, distance)
+            self._speed_kgspeed_2(stroke, distance, filename=filename)
         else:
-            self._speed_kgspeed_1(stroke, distance, gender=gender)
+            self._speed_kgspeed_1(
+                stroke, distance, gender=gender, filename=filename)
 
-    def _speed_kgspeed_1(self, _stroke, distance, gender=None):
+    def _speed_kgspeed_1(self, _stroke, distance, gender=None, filename=None):
         """Plot Speed / Kg vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
 
         Returns:
             None
@@ -598,13 +656,20 @@ class Graph(object):
         y_values = self._database.kgspeed(stroke, distance, _gender)
         bmis = self._database.bmi(stroke, distance, _gender)
 
-        print(len(x_values))
+        # Do nothing if there is no data
+        if bool(len(x_values)) is False:
+            log_message = (
+                'No data for stroke {}, distance {}, gender {}'
+                ''.format(stroke, distance, _gender))
+            log.log2warning(1009, log_message)
+            return
 
         '''
         Create plot object in memory.
 
          facecolors:
            The string ‘none’ to plot unfilled outlines
+
          edgecolors:
             The string ‘none’ to plot faces with no outlines
         '''
@@ -651,14 +716,19 @@ class Graph(object):
         plt.ylabel('Speed / Kg (m/Kgs)')
 
         # Display plot
-        plt.show()
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
 
-    def _speed_kgspeed_2(self, _stroke, distance):
+    def _speed_kgspeed_2(self, _stroke, distance, filename=None):
         """Plot Speed / Kg vs Speed for a given event and gender.
 
         Args:
             _stroke: Event stroke
             distance: Event distance
+            filename: Filename to create
 
         Returns:
             None
@@ -677,13 +747,12 @@ class Graph(object):
                 'bmis': self._database.bmi(stroke, distance, gender)
             }
 
-        # print(len(x_values))
-
         '''
         Create plot object in memory.
 
          facecolors:
            The string ‘none’ to plot unfilled outlines
+
          edgecolors:
             The string ‘none’ to plot faces with no outlines
         '''
@@ -696,7 +765,6 @@ class Graph(object):
                 facecolors=self._colors_gender[gender],
                 alpha=0.5,
                 label=self._title_gender[gender].replace('\'s', ''))
-            print(gender)
 
         # Create plot title
         plt.suptitle(title)
@@ -710,8 +778,11 @@ class Graph(object):
         plt.ylabel('Speed / Kg (m/Kgs)')
 
         # Display plot
-        plt.show()
-
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
 
 def _process_row(row, fastest=True):
     """Process the database row.
