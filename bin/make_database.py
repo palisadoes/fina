@@ -110,7 +110,7 @@ def _lenex(lenex_directory, profiles):
             if bool(found) is True:
                 data_directories.append(path)
 
-    for data_directory in data_directories:
+    for data_directory in sorted(data_directories):
         # Get a list of files in the meet directory
         files = os.listdir(data_directory)
         filenames = ['{}{}{}'.format(

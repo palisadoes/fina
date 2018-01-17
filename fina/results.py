@@ -725,7 +725,7 @@ class FileLenex(object):
                 speed_per_kg = str(round(_speed_per_kg, factor))
 
             # We've seen errors heights cause very high BMIs.
-            if self._with_na is True:
+            if self._with_na is False:
                 if _bmi > 30:
                     continue
 

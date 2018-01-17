@@ -513,6 +513,7 @@ class Graph(object):
             x_values, function(x_values),
             color=self._colors_gender[_gender],
             linestyle='solid',
+            label='SEEL',
             linewidth=1,
             antialiased=False)
 
@@ -799,7 +800,8 @@ def _process_row(row, fastest=True):
     # birthyear = int(float(row[11]))
     gender = row[8]
     stroke = row[6]
-    distance = str(int(float(row[5])))
+    # distance = str(int(float(row[5])))
+    distance = str(float(row[5])).replace('.0', '')
     _time = float(row[-1])
     _data = {
         'bmi': float(row[14]),
