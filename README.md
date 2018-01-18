@@ -45,7 +45,7 @@ Many of the files mentioned are used by the scripts in the creation of the final
 ## Script Usage
 The scripts are used in the following ways to use and create the data:
 
-###make_profiles.py
+### make_profiles.py
 Used to create the single unified athlete profile file.
 
 ```
@@ -67,7 +67,8 @@ optional arguments:
 bin/make_profiles.py -f data/athletes/fina.org -l data/athletes/entry-lists -p data/athletes/profiles
 ```
 
-###make_database.py
+### make_database.py
+
 Used to create the single unified athlete event database file.
 
 ```
@@ -92,7 +93,8 @@ optional arguments:
 bin/make_database.py -l data/meets/LENEX -o data/meets/olympics -p data/athletes/profiles -d data/analysis/all-meet-data.csv 
 ```
 
-###make_graphs.py
+### make_graphs.py
+
 Used to create charts for each event.
 
 **bin/make_graphs.py save**
