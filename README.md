@@ -1,15 +1,20 @@
 # fina
+
 The *fina* repostitory attempts to determine whether there is a correlation between the BMI of a professional swimmer and their performance.
 
 # Data
+
 The data used and created by *fina* each have a different stories.
+
 ## Data Created by *fina* Scripts
+
 Data from disparate, publicly available sources on the web is used to create: 
 1. **Swimmer profiles** of names, height, weight, and birthdate, 
 2. **Statistics** of swimmer performance per event that also includes their BMI, speed per Kg and overall time.
 3. **Graphs** of swimmer performance that compare various combinations of speed, BMI and efficiency (speed / Kg) by gender and swimming stroke over short and long courses, measured in both meters and yards.
 
 ##Original Data Sources
+
 The original sources of data used to create thes profiles and statistics include:
 1. **HTML** web scrapes of all the athlete profiles found on fina.org.
 2. **LENEX** data of multiple meets found on the web.
@@ -19,6 +24,7 @@ The original sources of data used to create thes profiles and statistics include
 These file formats were chosen to make the aggregation of information easier by the repository's python programming scripts.
 
 # File Layout
+
 The repository's data is located in an easy to navigate directory tree.
 
 | Subdirectory|Contains| 
@@ -43,9 +49,11 @@ Many of the files mentioned are used by the scripts in the creation of the final
 | *bin/make_profiles.py*| Creates graphs from the database|
 
 ## Script Usage
+
 The scripts are used in the following ways to use and create the data:
 
 ### make_profiles.py
+
 Used to create the single unified athlete profile file.
 
 ```
@@ -98,6 +106,7 @@ bin/make_database.py -l data/meets/LENEX -o data/meets/olympics -p data/athletes
 Used to create charts for each event.
 
 **bin/make_graphs.py save**
+
 Creates graphs in a specified directory
 
 ```
@@ -116,6 +125,7 @@ bin/make_graphs.py save -d data/analysis/all-meet-data.csv -o data/graphs
 ```
 
 **bin/make_graphs.py display**
+
 Displays graphs on the console for a specific event
 
 ```
