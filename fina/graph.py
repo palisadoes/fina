@@ -5,6 +5,7 @@ import csv
 import hashlib
 from collections import defaultdict
 import numpy as np
+import math
 from pprint import pprint
 
 # pip3 imports
@@ -68,6 +69,42 @@ class Data(object):
         # Initialize key variables
         measurement = 'speed'
         data = self._measurements(stroke, distance, gender, measurement)
+        return data
+
+    def sq_speed(self, stroke, distance, gender):
+        """Return list of square rood speed values sorted by superkey.
+
+        Args:
+            stroke: Stroke Name
+            distance: Distance of Event
+            gender: gender of Participants
+
+        Returns:
+            data: list of BMIs
+
+        """
+        # Initialize key variables
+        measurement = 'speed'
+        _data = self._measurements(stroke, distance, gender, measurement)
+        data = [_ * _ for _ in _data]
+        return data
+
+    def sqrt_speed(self, stroke, distance, gender):
+        """Return list of square rood speed values sorted by superkey.
+
+        Args:
+            stroke: Stroke Name
+            distance: Distance of Event
+            gender: gender of Participants
+
+        Returns:
+            data: list of BMIs
+
+        """
+        # Initialize key variables
+        measurement = 'speed'
+        _data = self._measurements(stroke, distance, gender, measurement)
+        data = [math.sqrt(_) for _ in _data]
         return data
 
     def kgspeed(self, stroke, distance, gender):
@@ -784,6 +821,297 @@ class Graph(object):
         else:
             plt.savefig(filename)
         plt.close()
+
+    def bmi_sqrt_speed(self, _stroke, distance, gender=None, filename=None):
+        """Plot BMI vs Square Root of Speed for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
+
+        Returns:
+            None
+
+        """
+        # Do multiple charts if necessary
+        (stroke, _gender, _) = self._shared(_stroke, distance, gender)
+        if _gender == 'B':
+            self._bmi_sqrt_speed_2(stroke, distance, filename=filename)
+        else:
+            self._bmi_sqrt_speed_1(
+                stroke, distance, gender=gender, filename=filename)
+
+    def _bmi_sqrt_speed_1(self, _stroke, distance, gender=None, filename=None):
+        """Plot BMI vs Square Root of Speed for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
+
+        Returns:
+            None
+
+        """
+        # Initialize key variables
+        (stroke, _gender, title) = self._shared(_stroke, distance, gender)
+
+        # Get values to plot
+        x_values = self._database.sqrt_speed(stroke, distance, _gender)
+        y_values = self._database.bmi(stroke, distance, _gender)
+
+        # Do nothing if there is no data
+        if bool(len(x_values)) is False:
+            log_message = (
+                'No data for stroke {}, distance {}, gender {}'
+                ''.format(stroke, distance, _gender))
+            log.log2warning(1007, log_message)
+            return
+
+        '''
+        Create plot object in memory.
+
+         facecolors:
+           The string ‘none’ to plot unfilled outlines
+
+         edgecolors:
+            The string ‘none’ to plot faces with no outlines
+        '''
+        plt.scatter(
+            x_values, y_values,
+            marker='o',
+            facecolors=self._colors_gender[_gender],
+            alpha=0.5,
+            label=self._title_gender[_gender].replace('\'s', ''))
+
+        # Create plot title
+        plt.suptitle(title)
+        plt.title('BMI vs. Square Root Speed', fontsize='smaller')
+
+        # Create plot legend based on plot label
+        plt.legend()
+
+        # Create Axes labels
+        plt.xlabel('Square Root Speed (m/s)')
+        plt.ylabel('BMI')
+
+        # Display plot
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
+
+    def _bmi_sqrt_speed_2(self, _stroke, distance, filename=None):
+        """Plot BMI vs Square Root of Speed for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+            filename: Filename to create
+
+        Returns:
+            None
+
+        """
+        # Initialize key variables
+        genders = ['M', 'F']
+        data = {}
+        (stroke, _gender, title) = self._shared(_stroke, distance, 'B')
+
+        # Get values to plot
+        for gender in genders:
+            # Get values to plot
+            data[gender] = {
+                'x': self._database.sqrt_speed(stroke, distance, gender),
+                'y': self._database.bmi(stroke, distance, gender)
+            }
+
+        '''
+        Create plot object in memory.
+
+         facecolors:
+           The string ‘none’ to plot unfilled outlines
+
+         edgecolors:
+            The string ‘none’ to plot faces with no outlines
+        '''
+        for gender in genders:
+            x_values = data[gender]['x']
+            y_values = data[gender]['y']
+            plt.scatter(
+                x_values, y_values,
+                marker='o',
+                facecolors=self._colors_gender[gender],
+                alpha=0.5,
+                label=self._title_gender[gender].replace('\'s', ''))
+
+        # Create plot title
+        plt.suptitle(title)
+        plt.title('BMI vs. Square Root Speed', fontsize='smaller')
+
+        # Create plot legend based on plot label
+        plt.legend()
+
+        # Create Axes labels
+        plt.xlabel('Square Root Speed (m/s)')
+        plt.ylabel('BMI')
+
+        # Display plot
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
+
+    def bmi_sq_speed(self, _stroke, distance, gender=None, filename=None):
+        """Plot BMI vs Speed Squared for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
+
+        Returns:
+            None
+
+        """
+        # Do multiple charts if necessary
+        (stroke, _gender, _) = self._shared(_stroke, distance, gender)
+        if _gender == 'B':
+            self._bmi_sq_speed_2(stroke, distance, filename=filename)
+        else:
+            self._bmi_sq_speed_1(
+                stroke, distance, gender=gender, filename=filename)
+
+    def _bmi_sq_speed_1(self, _stroke, distance, gender=None, filename=None):
+        """Plot BMI vs Speed Squared for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+            gender: Gender of participants
+            filename: Filename to create
+
+        Returns:
+            None
+
+        """
+        # Initialize key variables
+        (stroke, _gender, title) = self._shared(_stroke, distance, gender)
+
+        # Get values to plot
+        x_values = self._database.sq_speed(stroke, distance, _gender)
+        y_values = self._database.bmi(stroke, distance, _gender)
+
+        # Do nothing if there is no data
+        if bool(len(x_values)) is False:
+            log_message = (
+                'No data for stroke {}, distance {}, gender {}'
+                ''.format(stroke, distance, _gender))
+            log.log2warning(1007, log_message)
+            return
+
+        '''
+        Create plot object in memory.
+
+         facecolors:
+           The string ‘none’ to plot unfilled outlines
+
+         edgecolors:
+            The string ‘none’ to plot faces with no outlines
+        '''
+        plt.scatter(
+            x_values, y_values,
+            marker='o',
+            facecolors=self._colors_gender[_gender],
+            alpha=0.5,
+            label=self._title_gender[_gender].replace('\'s', ''))
+
+        # Create plot title
+        plt.suptitle(title)
+        plt.title('BMI vs. Speed Squared', fontsize='smaller')
+
+        # Create plot legend based on plot label
+        plt.legend()
+
+        # Create Axes labels
+        plt.xlabel('Speed Squared (mm/ss')
+        plt.ylabel('BMI')
+
+        # Display plot
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
+
+    def _bmi_sq_speed_2(self, _stroke, distance, filename=None):
+        """Plot BMI vs Speed Squared for a given event and gender.
+
+        Args:
+            _stroke: Event stroke
+            distance: Event distance
+            filename: Filename to create
+
+        Returns:
+            None
+
+        """
+        # Initialize key variables
+        genders = ['M', 'F']
+        data = {}
+        (stroke, _gender, title) = self._shared(_stroke, distance, 'B')
+
+        # Get values to plot
+        for gender in genders:
+            # Get values to plot
+            data[gender] = {
+                'x': self._database.sq_speed(stroke, distance, gender),
+                'y': self._database.bmi(stroke, distance, gender)
+            }
+
+        '''
+        Create plot object in memory.
+
+         facecolors:
+           The string ‘none’ to plot unfilled outlines
+
+         edgecolors:
+            The string ‘none’ to plot faces with no outlines
+        '''
+        for gender in genders:
+            x_values = data[gender]['x']
+            y_values = data[gender]['y']
+            plt.scatter(
+                x_values, y_values,
+                marker='o',
+                facecolors=self._colors_gender[gender],
+                alpha=0.5,
+                label=self._title_gender[gender].replace('\'s', ''))
+
+        # Create plot title
+        plt.suptitle(title)
+        plt.title('BMI vs. Speed Squared', fontsize='smaller')
+
+        # Create plot legend based on plot label
+        plt.legend()
+
+        # Create Axes labels
+        plt.xlabel('Speed Squared (mm/ss')
+        plt.ylabel('BMI')
+
+        # Display plot
+        if filename is None:
+            plt.show()
+        else:
+            plt.savefig(filename)
+        plt.close()
+
 
 def _process_row(row, fastest=True):
     """Process the database row.

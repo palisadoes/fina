@@ -221,8 +221,10 @@ def _display_graph(args):
 
     # Create database in memory
     plot = graph.Graph(database_file, course=course)
-    plot.bmi_kgspeed(stroke, distance, gender)
     plot.bmi_speed(stroke, distance, gender)
+    plot.bmi_sqrt_speed(stroke, distance, gender)
+    plot.bmi_sq_speed(stroke, distance, gender)
+    plot.bmi_kgspeed(stroke, distance, gender)
     plot.speed_kgspeed(stroke, distance, gender)
 
 
